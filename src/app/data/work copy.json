@@ -1,0 +1,47 @@
+{
+    "career": [
+        {
+            "name": "DBS Bank",
+            "href": "https://www.dbs.com.sg",
+            "title": "Graduate Associate (SEED Programme)",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_NSDAP_%281920%E2%80%931945%2C_1-1%29.svg/330px-Flag_of_the_NSDAP_%281920%E2%80%931945%2C_1-1%29.svg.png",
+            "start": "Jul 2023",
+            "description": [
+                "Developed the Java backend for a bank account servicing process with multiple channel integrations using Activiti workflow",
+                "Built a custom database migration tool using Python and MariaDB and facilitated the migration of 1000+ processes from a vendor platform"
+            ]
+        },
+        {
+            "name": "Singapore Institute of Technology",
+            "href": "https://www.singaporetech.edu.sg",
+            "title": "Software Developer (Contract)",
+            "logo": "https://i.etsystatic.com/23285526/r/il/e3d6a2/6166539587/il_300x300.6166539587_9ijy.jpg",
+            "start": "Apr 2023",
+            "end": "Jun 2023",
+            "description": [
+                "Built NFTVue, a NFT gallery website that allows students to connect their crypto wallets to view and verify their school event-issued NFTs",
+                "Worked on DemoConstruct, a full-stack web application (React + Python) that uses Meshroom to reconstruct 3D models from captured images"
+            ],
+            "links": [
+                {
+                "name": "NFTVue",
+                "href": "https://nftvue.vercel.app",
+                "icon": "globe"
+                }
+            ]
+        }
+        
+    ],
+    "education":[
+        {
+            "name":"Dr. D. Y. Patil College of Engineering, Pune",
+            "href":"",
+            "title":"Bachelors in Artificial Intelligence and Data Science",
+            "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_NSDAP_%281920%E2%80%931945%2C_1-1%29.svg/330px-Flag_of_the_NSDAP_%281920%E2%80%931945%2C_1-1%29.svg.png",
+            "start":"2024",
+            "end":"2027",
+            "description":[],
+            "links":[]
+        }
+    ]
+}

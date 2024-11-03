@@ -1,0 +1,36 @@
+[
+
+        {
+            "img_src": "https://images.unsplash.com/photo-1718018192921-0175c4f160aa?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "Portfolio Website",
+            "description": "A personal portfolio website to showcase projects and skills.",
+            "tech_stack": ["JavaScript", "TailwindCSS", "Next.js"],
+            "link": "View Project",
+            "link_url": ""
+        },
+        {
+            "img_src": "https://images.unsplash.com/photo-1542372712-fc07597133cd?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "React Food Delivery",
+            "description": "An online simulation of a food delivery app with a shopping cart, product filtering, and checkout.",
+            "tech_stack": ["React","JavaScript","TailwindCSS"],
+            "link": "Visit Site",
+            "link_url": "https://swayam-rajput.github.io/react-food-delivery-simulator/"
+        },
+        {
+            "img_src": "https://images.unsplash.com/photo-1542704504091-49b394c14bb2?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "Banking System",
+            "description": "A Swing-based banking app with JDBC, role-based access, and data security.",
+            "tech_stack": ["Java", "Swing"],
+            "link": "Source Code",
+            "link_url": ""
+        },
+        {
+            "img_src":"https://images.unsplash.com/photo-1727949063400-fe75ba9f43da?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title":"Job Portal Website",
+            "description":"",
+            "tech_stack":["Django","Python","Bootstrap","HTML","JavaScript"],
+            "link":"Source Code",
+            "link_url":"https://github.com/swayam-rajput/WorkConnect"
+        }
+    ]
+    

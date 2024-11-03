@@ -1,0 +1,42 @@
+{
+    "career": [
+        {
+            "name": "Compilers Technologies",
+            "href": "",
+            "title": "Software Developer (Intern)",
+            "logo": "",
+            "start": "Jun 2023",
+            "end": "Jul 2023",
+            "description": [
+                "Developed a multi-window GUI application in Java, gaining hands-on experience in Swing and JDBC for building interactive graphical interfaces.",
+                "Received mentorship from experienced Java professionals, strengthening skills for real-world Java development."
+            ]
+        }
+    ],
+    "education":[
+        {
+            "name":"D. Y. Patil College of Engineering, Pune",
+            "href":"",
+            "title":"Bachelors in Artificial Intelligence and Data Science",
+            "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_NSDAP_%281920%E2%80%931945%2C_1-1%29.svg/330px-Flag_of_the_NSDAP_%281920%E2%80%931945%2C_1-1%29.svg.png",
+            "start":"2024",
+            "end":"2027",
+            "description":[]
+        },
+        {
+            "name":"Dr. P. D. Polytechnic",
+            "href":"",
+            "title":"Diploma in Computer Engineering",
+            "logo":"",
+            "start":"2022",
+            "end":"2024",
+            "description":[],
+            "links":[
+                {
+                    "name":"Final Year Project",
+                    "href":"https://github.com"
+                }
+            ]
+        }
+    ]
+}

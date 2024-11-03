@@ -1,101 +1,68 @@
-import Image from "next/image";
+'use client'
+
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Projects } from "./components/Projects";
+import Link from "next/link";
+import { Socials } from "./components/Socials";
+import TechStack from "./components/TechStack";
+import { Timeline } from "./components/Timeline";
+import Experience from "./components/Experience";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    
+    return (
+        <div className="flex  flex-col  gap-16">
+        <div className="">
+            {/* <Navbar/> */}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
+        <main className="grow">
+            <div className=" flex flex-col gap-16 pb-16"> 
+                {/* line above is the parent */}
+                <div className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
+                    <img fetchPriority="high" width='175' height='175' className="shadow-md aspect-square overflow-clip rounded-md object-cover" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=256&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    <div className="flex flex-col gap-1 mr-2">
+                        <h1 className="text-3xl font-bold font-quicksand ">Simon says Hello!</h1>
+                        <div className=" mt-4 text-gray-400 text-background ">19 year old guy who loves to code and watch movies</div>  
+                        <div className="opacity-90 text-background"></div>  
+                        <div className="mt-8 flex items-center gap-10">
+                            <a href="" className="flex flex-row">
+                                <Button variant={'outline'} className="bg-transparent shadow-sm hover:bg-slate-100 dark:hover:bg-accent  border-slate-200 dark:border-slate-800" >
+                                    Resume
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className=" ml-2 size-5 opacity-80"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+                                </Button>
+                            </a>
+                            <Socials/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="flex gap-6 mb-16 flex-col">
+                <h1 className="font-quicksand font-semibold text-xl">things I know</h1>
+                <TechStack/>
+            </div>
+
+
+            {/* tab */}
+            <Experience/>
+            
+            <div className="flex flex-col mt-2 px-2 gap-6">
+                <div className="flex flex-row items-center justify-between">
+                    <h1 className="text-lg font-semibold font-quicksand">projects</h1>
+                    <Link href={'/projects'}>
+                    <Button variant={'ghost'} className=" opacity-80 hover:opacity-100 ">see more {'->'}</Button>
+                    </Link>
+                </div>
+                <Projects limit={2}/>
+            </div>
+        </main>
+        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+            <div>
+            
+            </div>
+        </footer>
+        </div>
   );
 }
