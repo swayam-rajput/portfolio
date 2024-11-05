@@ -11,7 +11,10 @@ export const Timeline = ({info}:Prop) => {
                 <div className="p-0">
                     <ul className="ml-10 border-l">
                         {info.map((data,idx)=>(
-                            <TimelineItem key={idx} {...data}/>
+                            <TimelineItem name={""} href={""} title={""} logo={{
+                                src: "",
+                                alt: ""
+                            }} start={""} key={idx} {...data}/>
 
                         ))}
                     </ul>

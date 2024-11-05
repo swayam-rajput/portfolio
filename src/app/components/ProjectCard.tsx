@@ -23,13 +23,13 @@ export const ProjectCard = ({
 
                 <div className="gap-1 flex-wrap text-xs flex ">
                     {tech_stack.map((tag,index)=>(
-                        <div key={index} className="dark:bg-slate-800 bg-gray-200 px-2 py-1 text-xs scale-95 rounded-md">{tag}</div>
+                        <div key={index} className="dark:bg-slate-800 duration-150 bg-gray-200 px-2 py-1 shadow opacity-80 hover:opacity-100 cursor-default text-xs scale-95 rounded-md">{tag}</div>
                     ))}
                 </div>
                 <div className="link">
                     {/* add a github link for the project */}
                     <Link target="blank" href={link_url}>
-                        <Button className="h-8 px-2 text-xs font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-white bg-black" variant={'default'} size={"sm"}>{link}</Button>
+                        <Button className="h-8 px-2 text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-white bg-black" variant={'default'} size={"sm"}>{link}</Button>
                     
                     </Link>
                 </div>

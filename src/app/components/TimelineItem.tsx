@@ -1,11 +1,12 @@
 import career from "@/app/data/work.json"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 interface Prop {
     name: string;
     href: string;
     title: string;
-    logo: string;
+    logo: {"src":string,"alt":string};
     start: string;
     end?: string;
     description?: string[];
@@ -13,16 +14,39 @@ interface Prop {
   }
   
 const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop) => {
+    const [isValid,setValid] = useState(404)
+    useEffect(() => {
+        const checkImage = async () => {
+            try {
+                const response = await fetch(logo.src);
+                setValid(response.ok ? 200 : 404);
+            } catch (error) {
+                setValid(404);
+            }
+        };
+
+        if (logo.src) {
+            checkImage();
+        }
+    }, [logo.src]);
     
     
     return (
         <li className="relative ml-10 py-4">
             {
-                logo?
-                <a target="_blank" className="absolute -left-16 top-4 flex items-center justify-center rounded-full bg-white" href={href}><span className={`relative flex shrink-0 overflow-hidden rounded-full size-12 border`}><img className="aspect-square h-full w-full bg-background object-contain" alt="DBS Bank" src={logo?logo:""}/></span></a>
-                :<div className="absolute -left-16 top-4 flex items-center justify-center rounded-full">
-                    <span className={`relative flex shrink-0 overflow-hidden rounded-full aspect-square bg-background size-12 border`}></span>
-                </div>
+                <a target="_blank" className="absolute -left-16 top-4 flex items-center justify-center rounded-full bg-white" href={href}>
+                {
+                    isValid==200
+                    ?
+                    <span className={`relative flex shrink-0 overflow-hidden rounded-full size-12 border`}>
+                        <img className="aspect-square h-full w-full bg-background object-contain" alt={logo.alt??null} src={logo.src?logo.src:""}/>
+                    </span>
+                    :
+                    <span className={`relative flex pl-0.5 text-lg font-bold overflow-hidden rounded-full aspect-square bg-background size-12 border justify-center items-center`}>
+                        {logo.alt}
+                    </span>
+                }
+                </a>
             }
 
 

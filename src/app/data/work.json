@@ -4,7 +4,10 @@
             "name": "Compilers Technologies",
             "href": "",
             "title": "Software Developer (Intern)",
-            "logo": "",
+            "logo": {
+                "src":"https://www.dypcoeakurdi.ac.in/assets/images/DYP_LOGO.png",
+                "alt":"CT"
+            },
             "start": "Jun 2023",
             "end": "Jul 2023",
             "description": [
@@ -18,7 +21,11 @@
             "name":"D. Y. Patil College of Engineering, Pune",
             "href":"",
             "title":"Bachelors in Artificial Intelligence and Data Science",
-            "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_NSDAP_%281920%E2%80%931945%2C_1-1%29.svg/330px-Flag_of_the_NSDAP_%281920%E2%80%931945%2C_1-1%29.svg.png",
+            "logo":{
+                "src":"https://www.dypcoeakurdi.ac.in/assets/images/DYP_LOGO.png",
+                "alt":"DYP"
+            },
+                
             "start":"2024",
             "end":"2027",
             "description":[]
@@ -27,7 +34,10 @@
             "name":"Dr. P. D. Polytechnic",
             "href":"",
             "title":"Diploma in Computer Engineering",
-            "logo":"",
+            "logo":{
+                "src":"",
+                "alt":"PDP"
+            },
             "start":"2022",
             "end":"2024",
             "description":[],

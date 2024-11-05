@@ -43,6 +43,8 @@ const TechStack = () => {
         </svg>
         }/>
 
+        <TechStackItem title='C' progress={25} child={<svg width="36" height="36" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><title>file_type_c2</title><path d="M23,19.418A6.971,6.971,0,1,1,22.95,12.5l6.093-3.509a14,14,0,1,0,.036,13.95Z" style={{"fill":"#005f91"}}></path></g></svg>}/>
+
         <TechStackItem title='C++' progress={25}  child={<svg className='ml-1' width="40" height="40" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#005f91">
         <g id="SVGRepo_bgCarrier" strokeWidth="0">
             </g>
@@ -165,7 +167,8 @@ const TechStack = () => {
         </g> 
         </g>
         </svg>}/>
-    
+        
+
     </div>
 
     )
