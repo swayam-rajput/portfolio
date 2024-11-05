@@ -24,9 +24,9 @@ export const Navbar = () => {
         <header className="sticky top-0 py-6 z-50  backdrop-blur-sm">
             <nav className="flex flex-row gap-10  items-center justify-between">
                 <ul className="justify-between flex flex-row gap-4 sm:gap-10 sticky z-50 backdrop-blur-sm">
-                    <Link href={'/'} className="hover:opacity-100 opacity-80 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">home</Link>
-                    <Link href={'/projects'} className="hover:opacity-100 opacity-80 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">projects</Link>
-                    <Link href={'/contact'} className="hover:opacity-100 opacity-80 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">contact</Link>
+                    <Link href={'/'} className="hover:opacity-100 opacity-70 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">home</Link>
+                    <Link href={'/projects'} className="hover:opacity-100 opacity-70 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">projects</Link>
+                    <Link href={'/contact'} className="hover:opacity-100 opacity-70 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">contact</Link>
                     {/* <Link href={'/'} className="hover:opacity-100 opacity-80 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">certifications</Link> */}
                 </ul>
                 <div>

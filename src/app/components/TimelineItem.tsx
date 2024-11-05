@@ -1,4 +1,4 @@
-import career from "@/app/data/work.json"
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -34,15 +34,15 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
     return (
         <li className="relative ml-10 py-4">
             {
-                <a target="_blank" className="absolute -left-16 top-4 flex items-center justify-center rounded-full bg-white" href={href}>
+                <a target="_blank" className="absolute -left-16 top-4 flex items-center justify-center  rounded-full bg-white" href={href}>
                 {
                     isValid==200
                     ?
-                    <span className={`relative flex shrink-0 overflow-hidden rounded-full size-12 border`}>
+                    <span className={`relative flex shrink-0 overflow-hidden rounded-full size-12 `}>
                         <img className="aspect-square h-full w-full bg-background object-contain" alt={logo.alt??null} src={logo.src?logo.src:""}/>
                     </span>
                     :
-                    <span className={`relative flex pl-0.5 text-lg font-bold overflow-hidden rounded-full aspect-square bg-background size-12 border justify-center items-center`}>
+                    <span className={`relative flex pl-0.5 font-bold overflow-hidden rounded-full aspect-square bg-background size-12 border justify-center items-center`}>
                         {logo.alt}
                     </span>
                 }
@@ -50,13 +50,21 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
             }
 
 
-            <div className="flex flex-1 flex-col justify-start gap-1">
-                <time className="text-xs text-muted-foreground">
-                    <span>{start}</span>
-                    <span> - </span>
-                    <span>{end}</span>
-                </time>
+            <div className="flex flex-1 flex-col mt-4 justify-start gap-1">
+                
+                
             <h2 className="font-semibold leading-none">{name}</h2>
+            <div className="text-xs text-muted-foreground">
+                {start && end ?
+                    (<>
+                        <span>{start}</span>
+                        <span> - </span>
+                        <span>{end}</span>    
+                    </>
+                    )
+                    :<span className=""></span>
+                }
+            </div>
             <p className="text-sm text-muted-foreground">{title}</p>
             {description && (
                 <ul className="ml-4 opacity-80 list-outside list-disc">

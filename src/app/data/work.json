@@ -18,28 +18,28 @@
     ],
     "education":[
         {
-            "name":"D. Y. Patil College of Engineering, Pune",
+            "name":"Bachelors in Artificial Intelligence and Data Science",
             "href":"",
-            "title":"Bachelors in Artificial Intelligence and Data Science",
+            "title":"2024 - 2027",
             "logo":{
                 "src":"https://www.dypcoeakurdi.ac.in/assets/images/DYP_LOGO.png",
-                "alt":"DYP"
+                "alt":""
             },
                 
-            "start":"2024",
-            "end":"2027",
+            "start":"",
+            "end":"",
             "description":[]
         },
         {
-            "name":"Dr. P. D. Polytechnic",
+            "name":"Diploma in Computer Engineering",
             "href":"",
-            "title":"Diploma in Computer Engineering",
+            "title":"2022 - 2024",
             "logo":{
                 "src":"",
-                "alt":"PDP"
+                "alt":""
             },
-            "start":"2022",
-            "end":"2024",
+            "start":"",
+            "end":"",
             "description":[],
             "links":[
                 {

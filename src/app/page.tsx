@@ -1,12 +1,10 @@
 'use client'
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Projects } from "./components/Projects";
 import Link from "next/link";
 import { Socials } from "./components/Socials";
 import TechStack from "./components/TechStack";
-import { Timeline } from "./components/Timeline";
 import Experience from "./components/Experience";
 
 export default function Home() {
@@ -15,7 +13,6 @@ export default function Home() {
         <div className="flex  flex-col  gap-16">
         <div className="">
             {/* <Navbar/> */}
-
         </div>
         {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
         <main className="grow">
@@ -64,5 +61,5 @@ export default function Home() {
             </div>
         </footer>
         </div>
-  );
+    );
 }

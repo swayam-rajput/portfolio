@@ -7,15 +7,17 @@ const Experience = () => {
     const [data,setData] = useState(career.career)
     return (
         <div className="flex flex-col mt-6 mb-6">
-                <div role="tablist" aria-orientation="horizontal" className=" items-center justify-center rounded-lg bg-muted p-1 text-muted-foreground mb-2 grid w-full grid-cols-2" data-orientation="horizontal" style={{"outline": "none"}}>
-                    
-                    <Button variant={"radio"} type="button" aria-selected={activeTab === 'work' ? 'true' : 'false' } aria-controls="radix-:r6:-content-work" data-state={activeTab === 'work' ? 'active' : 'inactive'} id="radix-:r6:-trigger-work" className=" font-medium overflow-hidden data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow" onClick={() => {setTab('work');setData(career.career)}}>Work</Button>
+            <div role="tablist" aria-orientation="horizontal" className=" items-center justify-center rounded-lg bg-muted p-1 text-muted-foreground mb-2 grid w-full grid-cols-2" data-orientation="horizontal" style={{"outline": "none"}}>
                 
-                    <Button variant={"radio"} type="button" aria-selected={activeTab === 'education'?'true' : 'false' } aria-controls="radix-:r6:-content-education" data-state={activeTab === 'education' ? 'active' : 'inactive'} id="radix-:r6:-trigger-education" className=" font-medium overflow-hidden  data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow" onClick={() => {setTab('education');setData(career.education)}}
-                    >Education</Button>
-                </div>
-                <Timeline info={data}/>
+                <Button variant={"radio"} type="button" aria-selected={activeTab === 'work' ? 'true' : 'false' } aria-controls="radix-:r6:-content-work" data-state={activeTab === 'work' ? 'active' : 'inactive'} id="radix-:r6:-trigger-work" className=" font-medium overflow-hidden data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow" onClick={() => {setTab('work');setData(career.career)}}>Work</Button>
+            
+                <Button variant={"radio"} type="button" aria-selected={activeTab === 'education'?'true' : 'false' } aria-controls="radix-:r6:-content-education" data-state={activeTab === 'education' ? 'active' : 'inactive'} id="radix-:r6:-trigger-education" className=" font-medium overflow-hidden  data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow" onClick={() => {setTab('education');setData(career.education)}}>Education</Button>
+
             </div>
+
+            <Timeline info={data}/>
+        
+        </div>
     );
 }
 
