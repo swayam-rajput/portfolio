@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) 
 {
   return (
-    <html lang="en" style={{"colorScheme":"light"}} className=" light">
+    <html lang="en" style={{"colorScheme":"dark"}} className=" dark">
       {/* <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
@@ -52,7 +52,7 @@ export default function RootLayout({
       </head>
       <body
         // className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased mx-auto flex min-h-screen max-w-3xl flex-col px-6 font-sans `}
-        className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black font-sans px-4 pb-8 sm:px-6 `}
+        className={` antialiased mx-auto flex h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black font-sans px-4 pb-8 sm:px-6 `}
       >
         {/* <Providers> */}
           <Navbar/>

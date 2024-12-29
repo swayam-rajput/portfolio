@@ -20,7 +20,7 @@ export const TechStackItem = ({ title,child, progress=50 }: Props) => {
         <div  className="relative inline-flex  items-center justify-center w-16 h-16 rounded-full">
             <div style={{
         borderColor: `conic-gradient(#4caf50 ${progress * 3.6}deg, #e0e0e0 0deg)`,
-      }} className={"absolute inset-0  rounded-full -rotate-45 border-4 dark:border-slate-800 shadow-md border-transparent "+col} ></div>
+      }} className={"absolute inset-0  rounded-full -rotate-45 border-4 dark:border-slate-800  shadow-md border-transparent "+col} ></div>
 
             <div className="z-10 w-14 h-14  overflow-clip rounded-full flex items-center justify-center ">
                 {/* <svg xmlns="http://www.w3.org/2000/svg" className="" fill="none" viewBox="0 0 24 24" stroke="currentColor"> */}

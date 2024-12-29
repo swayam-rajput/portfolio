@@ -10,7 +10,7 @@ export const ProjectCard = ({
     link_url=''}
 ) => {
     return (
-        <div className="flex flex-col p-8 rounded-lg justify-between shadow border  ">
+        <div className="flex flex-col p-8 rounded-lg justify-between shadow hover:shadow-md border transition ">
             <div className="flex flex-col gap-2">
                 <div className="img">
                     <img src={img_src} width={600} loading="eager" className="flex rounded-md outline-none h-40 w-full object-cover "/>
@@ -28,7 +28,7 @@ export const ProjectCard = ({
                 </div>
                 <div className="link">
                     {/* add a github link for the project */}
-                    <Link target="blank" href={link_url}>
+                    <Link target="_blank" href={link_url}>
                         <Button className="h-8 px-2 text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-white bg-black" variant={'default'} size={"sm"}>{link}</Button>
                     
                     </Link>

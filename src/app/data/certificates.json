@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Frontend Developer (React)",
+        "description": "It covers topics like React, CSS, and JavaScript.",
+        "image": "./certifs/frontend-dev-react.png",
+        "site": "Hackerrank",
+        "link": "",
+        "buttonText": "View",
+        "bsuttonLink":"https://www.hackerrank.com/certificates/a2f83fb394c6",
+        "buttonLink":"./certifs/frontend-dev-react.png"
+    },
+    {
+        "title": "JavaScript Basic",
+        "description": "It covers topics like, Functions, Currying, Hoisting, Scope, Inheritance, Events and Error Handling.",
+        "image": "./certifs/js-basic.png",
+        "site": "Hackerrank",
+        "link": "",
+        "buttonText": "View",
+        "buttonLisnk":"https://www.hackerrank.com/certificates/1362477992e9",
+        "buttonLink":"./certifs/js-basic.png"
+    }
+    
+]

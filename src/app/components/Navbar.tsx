@@ -20,13 +20,35 @@ export const Navbar = () => {
 		setDark(!isDark);
 	}
 
+    const navitemstyle = 'flex flex-row opacity-80 active:opacity-100 transition hover:opacity-100 cursor-pointer'
+
     return (
         <header className="sticky top-0 py-6 z-50  backdrop-blur-sm">
             <nav className="flex flex-row gap-10  items-center justify-between">
-                <ul className="justify-between flex flex-row gap-4 sm:gap-10 sticky z-50 backdrop-blur-sm">
-                    <Link href={'/'} className="hover:opacity-100 opacity-70 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">home</Link>
-                    <Link href={'/projects'} className="hover:opacity-100 opacity-70 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">projects</Link>
-                    <Link href={'/contact'} className="hover:opacity-100 opacity-70 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">contact</Link>
+                <ul className=" flex flex-row gap-8 md:gap-10 sticky z-50 backdrop-blur-sm">
+                    <Link href={'/'} className={navitemstyle}>
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="md:hidden feather feather-home">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg> */}
+                        
+                        <div className="">home</div>
+
+                    </Link>
+
+                    <Link href={'/projects'} className={navitemstyle}>
+                        
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="md:hidden feather feather-home">
+                        <polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg> */}
+                        <div className="">projects</div>
+
+                    </Link>
+                    <Link href={'/certifications'} className={navitemstyle}>
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="md:hidden">
+                            <circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                     */}
+                        <div className="">certifications</div>
+               
+                    </Link>
                     {/* <Link href={'/'} className="hover:opacity-100 opacity-80 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">certifications</Link> */}
                 </ul>
                 <div>

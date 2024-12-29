@@ -5,7 +5,7 @@ import { useState,useEffect } from "react";
 
 interface Props {
     limit?: number;
-  }
+}
 export const Projects = ({limit}:Props) => {
     const [projects, setProjects] = useState([]);
     

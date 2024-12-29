@@ -5,7 +5,8 @@
             "href": "",
             "title": "Software Developer (Intern)",
             "logo": {
-                "src":"https://www.dypcoeakurdi.ac.in/assets/images/DYP_LOGO.png",
+                "src":"",
+                "svg":null,
                 "alt":"CT"
             },
             "start": "Jun 2023",
@@ -22,7 +23,8 @@
             "href":"",
             "title":"2024 - 2027",
             "logo":{
-                "src":"https://www.dypcoeakurdi.ac.in/assets/images/DYP_LOGO.png",
+                "src":"",
+                "svg": "<path d=\"M480-240 252-364v-180l-104-56 332-180 332 180v236h-28v-220l-76 40v180L480-240Zm0-212 273-148-273-148-273 148 273 148Zm0 180 200-108v-148L480-420.19 280-528v148l200 108Zm0-180Zm0 44Zm0 0Z\"/>",
                 "alt":""
             },
                 
@@ -35,7 +37,8 @@
             "href":"",
             "title":"2022 - 2024",
             "logo":{
-                "src":"",
+                "src":null,
+                "svg":"<path d=\"M480-240 252-364v-180l-104-56 332-180 332 180v236h-28v-220l-76 40v180L480-240Zm0-212 273-148-273-148-273 148 273 148Zm0 180 200-108v-148L480-420.19 280-528v148l200 108Zm0-180Zm0 44Zm0 0Z\"/>",
                 "alt":""
             },
             "start":"",

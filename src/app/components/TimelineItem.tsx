@@ -6,7 +6,7 @@ interface Prop {
     name: string;
     href: string;
     title: string;
-    logo: {"src":string,"alt":string};
+    logo: {"src":string,"svg":string | null,"alt":string};
     start: string;
     end?: string;
     description?: string[];
@@ -15,42 +15,54 @@ interface Prop {
   
 const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop) => {
     const [isValid,setValid] = useState(404)
-    useEffect(() => {
-        const checkImage = async () => {
-            try {
-                const response = await fetch(logo.src);
-                setValid(response.ok ? 200 : 404);
-            } catch (error) {
-                setValid(404);
-            }
-        };
+    // useEffect(() => {
+    //     const checkImage = async () => {
+    //         try {
+    //             const response = await fetch(logo.src);
+    //             setValid(response.ok ? 200 : 404);
+    //         } catch (error) {
+    //             setValid(404);
+    //         }
+    //     };
 
-        if (logo.src) {
-            checkImage();
-        }
-    }, [logo.src]);
+    //     if (logo.src) {
+    //         checkImage();
+    //     }
+    // }, [logo.src]);
     
     
     return (
         <li className="relative ml-10 py-4">
             {
-                <a target="_blank" className="absolute -left-16 top-4 flex items-center justify-center  rounded-full bg-white" href={href}>
+                <a target="_blank" className="absolute -left-16 top-4 flex items-center justify-center z-30 bg-background rounded-full " href={href}>
                 {
-                    isValid==200
+                    logo.src
                     ?
-                    <span className={`relative flex shrink-0 overflow-hidden rounded-full size-12 `}>
-                        <img className="aspect-square h-full w-full bg-background object-contain" alt={logo.alt??null} src={logo.src?logo.src:""}/>
+                    <span className={`relative flex shrink-0 overflow-hidden border rounded-full size-12 `}>
+                        {/* {logo.src ? <img className="aspect-square h-full w-full bg-background object-contain" alt={logo.alt??null} src={logo.src?logo.src:""}/> : logo.svg } */}
+                        
+                        <img
+                            className="aspect-square h-full  scale-50 w-full bg-background object-contain"
+                            alt={logo.alt ?? null}
+                            src={logo.src ?? ""}
+                        />
                     </span>
-                    :
-                    <span className={`relative flex pl-0.5 font-bold overflow-hidden rounded-full aspect-square bg-background size-12 border justify-center items-center`}>
-                        {logo.alt}
-                    </span>
+                    :(
+                        
+                        <span className="relative flex pr-0.5 pt-0.5 overflow-hidden rounded-full aspect-square size-12 border justify-center items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" width="36" height="36" stroke="currentColor" fill="currentColor"   className="opacity-80" 
+                            dangerouslySetInnerHTML={{__html:logo.svg||""}}>
+                            
+                            </svg>
+                        </span>
+
+                    )
                 }
                 </a>
             }
 
 
-            <div className="flex flex-1 flex-col mt-4 justify-start gap-1">
+            <div className="flex flex-1 flex-col mt-2 justify-start gap-1">
                 
                 
             <h2 className="font-semibold leading-none">{name}</h2>
