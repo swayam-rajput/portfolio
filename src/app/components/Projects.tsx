@@ -1,5 +1,4 @@
 import data from "../data/projects.json";
-import { Navbar } from "./Navbar";
 import { ProjectCard } from "./ProjectCard" 
 import { useState,useEffect } from "react";
 
@@ -7,7 +6,7 @@ interface Props {
     limit?: number;
 }
 export const Projects = ({limit}:Props) => {
-    const [projects, setProjects] = useState([]);
+    const [projects, setProjects] = useState<object[]>([]);
     
     useEffect(()=>{
         if (limit){
@@ -16,7 +15,7 @@ export const Projects = ({limit}:Props) => {
         }else{
             setProjects(data);
         }
-    },[limit,data])
+    },[limit])
     // useEffect(() => {
     //         fetch('/projects.json')
     //     .then((res) => res.json())
@@ -25,8 +24,10 @@ export const Projects = ({limit}:Props) => {
     // }, []);
 
     return (
+        
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {projects.map((project:[],index)=>(
+        
+            {projects.map((project,index:number)=>(
                 <ProjectCard key={index} {...project} />
             ))}
         </div>

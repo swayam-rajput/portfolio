@@ -1,7 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 interface Prop {
     name: string;
     href: string;
@@ -11,10 +10,9 @@ interface Prop {
     end?: string;
     description?: string[];
     links?: { name: string; href: string }[];
-  }
+}
   
 const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop) => {
-    const [isValid,setValid] = useState(404)
     // useEffect(() => {
     //     const checkImage = async () => {
     //         try {

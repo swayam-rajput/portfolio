@@ -1,12 +1,12 @@
 'use client'
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
-
+import { FormEvent,  useState } from "react";
+import React from 'react'
 
 const page = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [isdisabled,setDisabled] = useState(false)
-    const handleSubmit= (e)=>{
+    const handleSubmit= (e:FormEvent)=>{
         e.preventDefault();
         const { name, email, message } = formData;
         if (!name.trim() || !email.trim() || !message.trim()) {

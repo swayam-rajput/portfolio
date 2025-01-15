@@ -1,23 +1,38 @@
 [
     {
         "title": "Frontend Developer (React)",
-        "description": "It covers topics like React, CSS, and JavaScript.",
+        "description": "It covered topics like React, CSS, and JavaScript.",
         "image": "./certifs/frontend-dev-react.png",
         "site": "Hackerrank",
-        "link": "",
+        "link": "./certifs/frontend-dev-react.png",
         "buttonText": "View",
-        "bsuttonLink":"https://www.hackerrank.com/certificates/a2f83fb394c6",
-        "buttonLink":"./certifs/frontend-dev-react.png"
+        "buttonLink":"https://www.hackerrank.com/certificates/a2f83fb394c6"
     },
     {
-        "title": "JavaScript Basic",
-        "description": "It covers topics like, Functions, Currying, Hoisting, Scope, Inheritance, Events and Error Handling.",
-        "image": "./certifs/js-basic.png",
-        "site": "Hackerrank",
-        "link": "",
+        "title": "Data Analytics",
+        "description": "It covered data cleaning, data analysis, data visualization, strategic thinking and presentation skills.",
+        "image": "./certifs/accenture-ds.png",
+        "site": "Accenture",
+        "link": "./certifs/accenture-ds.png",
         "buttonText": "View",
-        "buttonLisnk":"https://www.hackerrank.com/certificates/1362477992e9",
-        "buttonLink":"./certifs/js-basic.png"
-    }
-    
+        "buttonLink":"./certifs/accenture-ds.png"
+    },
+    {
+        "title": "Operations Analyst",
+        "description": "Analyzed financial data and identified issues in trade settlements and asset transfers for high net worth clients.",
+        "image": "./certifs/goldman-sachs-operations.png",
+        "site": "Goldman Sachs",
+        "link": "./certifs/goldman-sachs-operations.png",
+        "buttonText": "View",
+        "buttonLink":"./certifs/goldman-sachs-operations.png"
+    },
+    {
+        "title": "Java",
+        "description": "It covered basic topics in Java language such as classes, data structures, inheritance, exception handling, etc.",
+        "image": "./certifs/java-basic.png",
+        "site": "Hackerrank",
+        "link": "./certifs/java-basic.png",
+        "buttonText": "View",
+        "buttonLink":"https://www.hackerrank.com/certificates/484ad5cb443a"
+    }   
 ]

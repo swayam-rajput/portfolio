@@ -6,7 +6,7 @@
             "title": "Software Developer (Intern)",
             "logo": {
                 "src":"",
-                "svg":null,
+                "svg":"",
                 "alt":"CT"
             },
             "start": "Jun 2023",
@@ -47,7 +47,7 @@
             "links":[
                 {
                     "name":"Final Year Project",
-                    "href":"https://github.com"
+                    "href":"https://github.com/swayam-rajput/WorkConnect"
                 }
             ]
         }

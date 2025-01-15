@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export const ProjectCard = ({
-    img_src=null,
+    img_src='',
     title='',
     description='',
     tech_stack=[],
@@ -13,7 +13,7 @@ export const ProjectCard = ({
         <div className="flex flex-col p-8 rounded-lg justify-between shadow hover:shadow-md border transition ">
             <div className="flex flex-col gap-2">
                 <div className="img">
-                    <img src={img_src} width={600} loading="eager" className="flex rounded-md outline-none h-40 w-full object-cover "/>
+                    <img src={img_src} alt={title} width={600} loading="eager" className="flex rounded-md outline-none h-40 w-full object-cover "/>
                 </div>
                 <div className="title  font-medium text-lg font-sans mt-2 ">{title}</div>
                 <div className="descript text-sm text-gray-400 mb-6">{description}</div>
@@ -29,8 +29,7 @@ export const ProjectCard = ({
                 <div className="link">
                     {/* add a github link for the project */}
                     <Link target="_blank" href={link_url}>
-                        <Button className="h-8 px-2 text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-white bg-black" variant={'default'} size={"sm"}>{link}</Button>
-                    
+                        <Button className="h-8 px-2.5  text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-gray-100 bg-gray-700" variant={'default'} size={"sm"}>{link}</Button>
                     </Link>
                 </div>
             </div>

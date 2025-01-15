@@ -1,6 +1,8 @@
+import { ReactNode } from "react";
+
 type Props = {
     title:string,
-    child: any;
+    child: ReactNode;
     progress: number;
 };
 
@@ -22,7 +24,7 @@ export const TechStackItem = ({ title,child, progress=50 }: Props) => {
         borderColor: `conic-gradient(#4caf50 ${progress * 3.6}deg, #e0e0e0 0deg)`,
       }} className={"absolute inset-0  rounded-full -rotate-45 border-4 dark:border-slate-800  shadow-md border-transparent "+col} ></div>
 
-            <div className="z-10 w-14 h-14  overflow-clip rounded-full flex items-center justify-center ">
+            <div title={title} className="z-10 w-14 h-14  overflow-clip rounded-full flex items-center justify-center ">
                 {/* <svg xmlns="http://www.w3.org/2000/svg" className="" fill="none" viewBox="0 0 24 24" stroke="currentColor"> */}
                     {/* <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v8l4 4" /> */}
                 {/* <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> */}
