@@ -12,7 +12,7 @@ const CertificateCard = ({
     buttonLink=''
 }) => {
     return (
-        <div className="flex p-8 rounded-lg shadow  border  ">
+        <div className="flex p-8 rounded-lg shadow hover:shadow-md transition border  ">
             <div className="flex justify-between  flex-col md:flex-row-reverse flex-grow gap-4 md:gap-8">
                 
                 <div className="flex justify-end shrink-0 ">

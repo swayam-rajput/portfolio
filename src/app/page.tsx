@@ -14,6 +14,7 @@ export default function Home() {
         <div className="">
             {/* <Navbar/> */}
         </div>
+        
         {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
         <main className="grow">
             <div className=" flex flex-col gap-16 pb-16"> 

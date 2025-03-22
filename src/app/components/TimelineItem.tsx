@@ -75,11 +75,11 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                     :<span className=""></span>
                 }
             </div>
-            <p className="text-sm text-muted-foreground">{title}</p>
+            <p className="text-sm font-medium    text-muted-foreground">{title}</p>
             {description && (
-                <ul className="ml-4 opacity-80 list-outside list-disc">
+                <ul className="ml-4 opacity-60 list-outside list-disc">
                     {description.map((desc, i) => (
-                    <li key={i} className="prose pr-8 text-sm dark:prose-invert">
+                    <li key={i} className=" pr-8 text-sm dark:prose-invert">
                         {desc}
                     </li>
                     ))}

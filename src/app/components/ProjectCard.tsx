@@ -9,6 +9,7 @@ export const ProjectCard = ({
     link='',
     link_url=''}
 ) => {
+    console.log(img_src);
     return (
         <div className="flex flex-col p-8 rounded-lg justify-between shadow hover:shadow-md border transition ">
             <div className="flex flex-col gap-2">
