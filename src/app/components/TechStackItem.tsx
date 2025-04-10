@@ -14,7 +14,7 @@ type Props = {
 };
 
 export const TechStackItem = ({ title,child, progress=100,className='' }: Props) => {
-    // let col = ''
+    // const col = ''
     let col = 'border-neutral-200 '
     if (progress>=25){
         col +=' dark:border-t-slate-700 border-t-gray-300  '
@@ -26,6 +26,7 @@ export const TechStackItem = ({ title,child, progress=100,className='' }: Props)
         col+= ' dark:border-r-slate-700 border-r-gray-300  '
     }
     if(progress<25) col=''
+
     const [stateOpen, setOpened] = useState(false);
     useEffect(() => {
         if (stateOpen) {
@@ -35,7 +36,7 @@ export const TechStackItem = ({ title,child, progress=100,className='' }: Props)
         }
     }, [stateOpen]);    
     return (
-        <div  className="relative shadow transition-all  hover:shadow-md dark:bg-[linear-gradient(145deg,#111111,#222222)] bg-[linear-gradient(145deg,#dfe1e3,#ffffff)]   inline-flex cursor-pointer  items-center justify-center w-16 h-16 rounded-full">
+        <div  className="relative shadow transition-all hover:shadow-md dark:bg-[linear-gradient(145deg,#111111,#222222)] bg-[linear-gradient(145deg,#dfe1e3,#ffffff)]   inline-flex cursor-pointer  items-center justify-center w-16 h-16 rounded-full">
             <div style={{
                 borderColor: `conic-gradient(#4caf50 ${progress * 3.6}deg, #e0e0e0 0deg)`,
             }} className={"absolute inset-0  rounded-full -rotate-45 border-4   dark:shadow-md border-transparent  "+col} ></div>
@@ -50,7 +51,7 @@ export const TechStackItem = ({ title,child, progress=100,className='' }: Props)
                         {child}
                     </div>
                     </TooltipTrigger>
-                    <TooltipContent sideOffset={10} side="bottom" className=" dark:bg-[linear-gradient(145deg,#111111,#222222)] bg-[linear-gradient(145deg,#dfe1e3,#ffffff)] ">
+                    <TooltipContent sideOffset={8} side="bottom" className=" font-quicksand dark:bg-[linear-gradient(145deg,#111111,#222222)] bg-[linear-gradient(145deg,#dfe1e3,#ffffff)] ">
                         {title}
                     </TooltipContent>
                 </Tooltip>
