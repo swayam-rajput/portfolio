@@ -9,7 +9,7 @@ const Footer = () => {
                 <span>© 2024</span> 
                 {/* <a className="link" href="/">tedawf.com</a>  */}
             </p>
-            <Link className="flex flex-row justify-center items-center py-4 hover:opacity-85 active:opacity-50 text-sm transition-all text-gray-400 dark:text-gray-300 font-mono font-semibold" href={'/contact'} >{'<'}
+            <Link className="flex flex-row justify-center items-center py-4 hover:opacity-45 active:opacity-50 text-sm transition-all text-gray-400 dark:text-gray-300 font-mono font-semibold" href={'/contact'} >{'<'}
             contact me
             {'>'}</Link >
             <Socials/>        

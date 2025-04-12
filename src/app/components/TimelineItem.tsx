@@ -47,7 +47,7 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                     </span>
                     :(
                         
-                        <span className="relative flex pr-0.5 pt-0.5 overflow-hidden rounded-full aspect-square size-12 border justify-center items-center ">
+                        <span className="relative flex pr-0.5 pt-0.5 overflow-hidden rounded-full border-input dark:border-accent aspect-square size-12 border justify-center items-center ">
                             <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" width="36" height="36" stroke="currentColor" fill="currentColor"   className="opacity-80" 
                             dangerouslySetInnerHTML={{__html:logo.svg||""}}>
                             
@@ -61,37 +61,35 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
 
 
             <div className="flex flex-1 flex-col mt-2 justify-start gap-1">
-                
-                
-            <h2 className="font-semibold leading-none">{name}</h2>
-            <div className="text-xs text-muted-foreground">
-                {start && end ?
-                    (<>
-                        <span>{start}</span>
-                        <span> - </span>
-                        <span>{end}</span>    
-                    </>
-                    )
-                    :<span className=""></span>
-                }
-            </div>
-            <p className="text-sm font-medium    text-muted-foreground">{title}</p>
-            {description && (
-                <ul className="ml-4 opacity-60 list-outside list-disc">
-                    {description.map((desc, i) => (
-                    <li key={i} className=" pr-8 text-sm dark:prose-invert">
-                        {desc}
-                    </li>
-                    ))}
-                </ul>
-                )}
+                <h2 className="font-semibold leading-none">{name}</h2>
+                <div className="text-xs text-muted-foreground">
+                    {start && end ?
+                        (<>
+                            <span>{start}</span>
+                            <span> - </span>
+                            <span>{end}</span>    
+                        </>
+                        )
+                        :<span className=""></span>
+                    }
+                </div>
+                <p className="text-sm font-medium text-muted-foreground">{title}</p>
+                {description && (
+                    <ul className="ml-4 opacity-60 list-outside list-disc">
+                        {description.map((desc, i) => (
+                        <li key={i} className=" pr-8 text-sm dark:prose-invert">
+                            {desc}
+                        </li>
+                        ))}
+                    </ul>
+                    )}
             </div>
             {links && links.length > 0 && (
                 <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
                 {links?.map((link, idx) => (
                     <Link href={link.href} target="_blank" key={idx} className="flex">
                         {/* <Button className="h-8 px-2 text-xs py-0  font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-white bg-black" variant={'default'} size={"sm"}> */}
-                        <Button className="dark:text-white text-black shadow-sm h-7 text-xs hover:bg-slate-200 dark:hover:bg-slate-200  bg-transparent  dark:hover:bg-accent  border dark:border-slate-800 border-slate-200 " variant={"default"} size={"sm"}>
+                        <Button className="dark:text-white text-black shadow-sm h-7 text-xs hover:bg-neutral-200 dark:hover:bg-neutral-200  bg-transparent  dark:hover:bg-accent  border  dark:border-accent " variant={"default"} size={"sm"}>
                             {link.name}
                         </Button>
                     </Link>

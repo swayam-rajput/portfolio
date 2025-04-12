@@ -37,10 +37,9 @@ children: React.ReactNode;
 
             {/* <Providers> */}
                 <Navbar/>
-
-                {children}
-            {/* </Providers> */}
+                    {children}
                 <Footer/>
+            {/* </Providers> */}
             </body>
         </html>
     );

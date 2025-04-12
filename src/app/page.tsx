@@ -7,6 +7,7 @@ import { Socials } from "./components/Socials";
 import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
 import Image from "next/image";
+import Certificate from "./components/Certificate";
 
 export default function Home() {
     return (
@@ -34,7 +35,7 @@ export default function Home() {
                             {/* <div className="opacity-90 text-background"></div>   */}
                             <div className="mt-8 flex items-center gap-10">
                                 <a href="" className="flex flex-row">
-                                    <Button variant={'outline'} className="bg-transparent shadow hover:bg-slate-100 dark:hover:bg-accent hover:border-slate-300  border-slate-200 dark:border-slate-800">
+                                    <Button variant={'outline'} className="bg-background shadow hover:bg-slate-100 dark:hover:bg-accent hover:border-accent-foreground/20  border-accent">
                                         Resume
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className=" ml-2 size-5 opacity-80"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
                                     </Button>
@@ -53,14 +54,30 @@ export default function Home() {
                 {/* tab */}
                 <Experience/>
                 
-                <div className="flex flex-col mt-2 px-2 gap-6">
+                <div className="flex flex-col mt-2 px-2 mb-6 gap-6">
                     <div className="flex flex-row items-center justify-between">
                         <h1 className="text-lg font-semibold font-quicksand">projects</h1>
                         <Link href={'/projects'}>
-                        <Button variant={'ghost'} className=" opacity-80 hover:opacity-100 ">see more {'->'}</Button>
+                            <Button variant={'ghost'} className="hover:bg-neutral-200 gap-1 hover:shadow dark:hover:bg-neutral-800 opacity-80 hover:opacity-100 ">
+                                <p className="hidden md:flex">see more</p> {' ->'}</Button>
                         </Link>
                     </div>
-                    <Projects limit={2}/>
+                    <div className="">
+                        <Projects limit={2}/>
+                    </div>
+                </div>
+
+                <div className="flex flex-col mt-2 px-2 gap-6">
+                    <div className="flex flex-row items-center justify-between">
+                        <h1 className="text-lg font-semibold font-quicksand">certifications</h1>
+                        <Link href={'/certifications'}>
+                            <Button variant={'ghost'} className="hover:bg-neutral-200 gap-1 hover:shadow dark:hover:bg-neutral-800 opacity-80 hover:opacity-100 ">
+                                <p className="hidden md:flex">see more</p> {' ->'}</Button>
+                        </Link>
+                    </div>
+                    <div className="">
+                        <Certificate limit={2}/>
+                    </div>
                 </div>
             </main>
         </div>

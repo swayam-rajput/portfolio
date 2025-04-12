@@ -11,7 +11,7 @@ export const ProjectCard = ({
 ) => {
     console.log(img_src);
     return (
-        <div className="flex flex-col p-8 rounded-lg justify-between shadow hover:shadow-md border transition ">
+        <div className="flex flex-col p-8 rounded-lg justify-between shadow hover:shadow-md border dark:border-accent transition ">
             <div className="flex flex-col gap-2">
                 <div className="img">
                     <img src={img_src} alt={title} width={600} loading="eager" className="flex rounded-md outline-none h-40 w-full object-cover "/>
@@ -24,13 +24,13 @@ export const ProjectCard = ({
 
                 <div className="gap-1 flex-wrap text-xs flex ">
                     {tech_stack.map((tag,index)=>(
-                        <div key={index} className="dark:bg-slate-800 duration-150 bg-gray-200 px-2 py-1 shadow opacity-80 hover:opacity-100 cursor-default text-xs scale-95 rounded-md">{tag}</div>
+                        <div key={index} className="dark:bg-neutral-700 duration-150 bg-neutral-300/50 px-2 py-1 shadow opacity-80 hover:opacity-100 cursor-default text-xs scale-95 rounded-md">{tag}</div>
                     ))}
                 </div>
                 <div className="link">
                     {/* add a github link for the project */}
                     <Link target="_blank" href={link_url}>
-                        <Button className="h-8 px-2.5  text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-gray-100 bg-gray-700" variant={'default'} size={"sm"}>{link}</Button>
+                        <Button className="h-8 px-3  text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-gray-100 bg-neutral-700" variant={'default'} size={"sm"}>{link}</Button>
                     </Link>
                 </div>
             </div>
