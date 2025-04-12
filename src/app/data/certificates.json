@@ -1,14 +1,5 @@
 [
     {
-        "title": "Fundamentals of Deep Learning",
-        "description": "Explored the fundamentals of Deep Learning, including neural networks and classification.",
-        "image": "./certifs/nvidia-dl.png",
-        "site": "Nvidia",
-        "link": "./certifs/nvidia-dl.png",
-        "buttonText": "View",
-        "buttonLink":"https://learn.nvidia.com/certificates?id=eTTmRvwpT-ux6Rb-l7Y7WA#"
-    },
-    {
         "title": "Frontend Developer (React)",
         "description": "It covered topics like React, CSS, and JavaScript.",
         "image": "./certifs/frontend-dev-react.png",
@@ -25,6 +16,15 @@
         "link": "./certifs/accenture-ds.png",
         "buttonText": "View",
         "buttonLink":"./certifs/accenture-ds.png"
+    },
+    {
+        "title": "Fundamentals of Deep Learning",
+        "description": "Explored the fundamentals of Deep Learning, including neural networks and classification.",
+        "image": "./certifs/nvidia-dl.png",
+        "site": "Nvidia",
+        "link": "./certifs/nvidia-dl.png",
+        "buttonText": "View",
+        "buttonLink":"https://learn.nvidia.com/certificates?id=eTTmRvwpT-ux6Rb-l7Y7WA#"
     },
     {
         "title": "Operations Analyst",

@@ -4,7 +4,7 @@
             "img_src": "./react-food.png",
             "title": "React Food Delivery Simulator",
             "description": "An online simulation of a food delivery app with a shopping cart, product filtering, and checkout.",
-            "tech_stack": ["React","TailwindCSS","Redux"],
+            "tech_stack": ["React","JavaScript","TailwindCSS","Redux"],
             "link": "Visit Site",
             "link_url": "https://swayam-rajput.github.io/react-food-delivery-simulator/"
         },
@@ -12,7 +12,7 @@
             "img_src": "./pomodoro.png",
             "title": "Pomodoro",
             "description": "Pomodoro app for study focus.",
-            "tech_stack": ["NextJS", "TailwindCSS"],
+            "tech_stack": ["JavaScript", "TailwindCSS", "NextJS"],
             "link": "Visit Site",
             "link_url": "https://swayam-rajput.github.io/pomodoro"
         },
@@ -29,7 +29,7 @@
             "img_src": "https://images.unsplash.com/photo-1718018192921-0175c4f160aa?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "title": "Portfolio Website",
             "description": "A personal portfolio website to showcase projects and skills.",
-            "tech_stack": ["NextJS", "TailwindCSS"],
+            "tech_stack": ["JavaScript", "TailwindCSS", "NextJS"],
             "link": "Visit Site",
             "link_url": ""
         },

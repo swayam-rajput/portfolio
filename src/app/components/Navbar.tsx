@@ -41,13 +41,13 @@ export const Navbar = () => {
 
     return (
         <header className="sticky top-0 z-50 sm:pt-4">            
-            <div className="dark:bg-[#29292980]/25 bg-gray-300/10 shadow-sm rounded-lg  -mx-4 px-4 pb-5 pt-6 backdrop-blur-2xl">
+            <div className="dark:bg-[#29292980]/25 bg-zinc-300/20 shadow-sm rounded-lg  -mx-4 px-4 pb-5 pt-6 backdrop-blur-2xl">
                 <nav  className="flex items-center justify-between " 
                     >
                     <ul ref = {navRef} onMouseLeave={handleMouseLeave}
                         className="relative   flex text-sm sm:text-base  gap-0.5 md:gap-4 ">
                         <div
-                            className="absolute py-4  shadow -z-20 top-1/2 -translate-y-1/2 h-7 sm:h-9 rounded-md dark:bg-neutral-800 bg-neutral-200 transition-all duration-300"
+                            className="absolute py-4  shadow -z-20 top-1/2 -translate-y-1/2 h-7 sm:h-9 rounded-md dark:bg-stone-700/40 bg-stone-300/70 transition-all duration-300"
                             style={{
                                 left: hoverStyle.left,
                                 width: hoverStyle.width,
@@ -71,7 +71,6 @@ export const Navbar = () => {
                                 certifications
                             </Link>
                         </li>
-                        {/* <Link href={'/'} className="hover:opacity-100 opacity-80 transition border-white border-opacity-0 hover:border-opacity-100 cursor-pointer">certifications</Link> */}
                     </ul>
                     <div className="flex justify-end">
                         <button onClick={toggleMode} onMouseEnter={handleMouseEnter} className="transition  hover:text-accent-foreground duration-300 rounded-sm px-2 py-2">
