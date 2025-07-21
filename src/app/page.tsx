@@ -10,8 +10,9 @@ import Image from "next/image";
 import Certificate from "./components/Certificate";
 
 export default function Home() {
+    const age = new Date().getFullYear() - 2005;    
     return (
-        <div className="flex  flex-col  gap-16">
+        <div className="flex flex-col  gap-16">
             <div className="">
                 {/* <Navbar/> */}
             </div>
@@ -21,17 +22,17 @@ export default function Home() {
                 <div className=" flex flex-col gap-16 pb-16"> 
                     {/* line above is the parent */}
                     <div className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
-                    <Image 
+                        <Image 
                             alt="pfp" 
                             fetchPriority="high" 
                             width={175} 
                             height={175} 
-                            className="shadow-md aspect-square overflow-clip rounded-md object-cover" 
-                            src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=256&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            className=" aspect-square md:translate-x-0 -translate-x-8 overflow-clip rounded-md object-cover" 
+                            src="/pfp-nobg.png"
                         />
                         <div className="flex flex-col gap-1 mr-2">
-                            <h1 className="text-3xl font-bold font-quicksand ">Simon says Hello!</h1>
-                            <div className=" mt-4 text-gray-400 text-background ">19 year old guy who loves to code and watch movies</div>  
+                            <h1 className="text-3xl font-medium  ">S R</h1>
+                            {/* <div className=" mt-4 text-gray-400 text-background ">{age} year old guy who loves to code</div>   */}
                             {/* <div className="opacity-90 text-background"></div>   */}
                             <div className="mt-8 flex items-center gap-10">
                                 <a href="" className="flex flex-row">
@@ -59,7 +60,7 @@ export default function Home() {
                         <h1 className="text-lg font-semibold font-quicksand">projects</h1>
                         <Link href={'/projects'}>
                             <Button variant={'ghost'} className="hover:bg-neutral-200 gap-1 hover:shadow dark:hover:bg-neutral-800 opacity-80 hover:opacity-100 ">
-                                <p className="hidden md:flex">see more</p> {' ->'}
+                                <p className="hidden md:flex">see more</p> <p className="max-md:scale-x-150">{' ->'}</p>
                             </Button>
                         </Link>
                     </div>
@@ -73,7 +74,7 @@ export default function Home() {
                         <h1 className="text-lg font-semibold font-quicksand">certifications</h1>
                         <Link href={'/certifications'}>
                             <Button variant={'ghost'} className="hover:bg-neutral-200 gap-1 hover:shadow dark:hover:bg-neutral-800 opacity-80 hover:opacity-100 ">
-                                <p className="hidden md:flex">see more</p> {' ->'}</Button>
+                                <p className="hidden md:flex">see more</p><p className="max-md:scale-x-150">{' ->'}</p></Button>
                         </Link>
                     </div>
                     {/* <div className="md:flex hidden"> */}

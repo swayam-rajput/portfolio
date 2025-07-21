@@ -88,7 +88,11 @@ module.exports = {
   			quicksand: [
   				'Quicksand',
   				'mono'
-  			]
+  			],
+			manrope: [
+				'Manrope',
+				'mono'
+			]
   		}
   	}
   },

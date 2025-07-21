@@ -16,13 +16,16 @@ const page = () => {
         }
         setDisabled(true);
 
+        
         const recipient = "sr.dumpinbox@gmail.com";
-        const body = encodeURIComponent(
-            `Name: ${name}\n\nEmail: ${email}\n\nMessage:\n\n${message}`
-        );    
-        const mailtoLink = `mailto:${recipient}?&body=${body}`;
+        const subject = `Message from ${name}`;
+        const body = `Name: ${name}\n\nEmail: ${email}\n\nMessage:\n\n${message}`;
 
-        window.location.href = mailtoLink;
+        const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+            recipient
+        )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.open(gmailURL, "_blank");
 
         setFormData({ name: '', email: '', message: '' });
         setDisabled(false);
@@ -31,18 +34,18 @@ const page = () => {
     return (
         <article className="mt-8 flex flex-col gap-8  pb-16">
             <h1 className="title font-quicksand text-5xl">contact me.</h1>
-            <form onSubmit={handleSubmit}>
+            <form className="font-manrope" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                <div className="h-16">
-                    <input required autoComplete="off" onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="flex h-9 w-full rounded-md border border-neutral-300 dark:border-neutral-700/50 focus-visible:border-opacity-100 bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground dark:focus-visible:border-neutral-600 focus-visible:border-neutral-400  focus-visible:outline-none  disabled:cursor-not-allowed disabled:opacity-50" id="name" placeholder="Name"  type="text" name="name"/>
-                </div>
-                <div className="h-16">
-                    <input required autoComplete="off" onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="flex h-9 w-full rounded-md border border-neutral-300 dark:border-neutral-700/50  focus-visible:border-opacity-100 bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none dark:focus-visible:border-neutral-600 focus-visible:border-neutral-400   disabled:cursor-not-allowed disabled:opacity-50" id="email" placeholder="Email"  type="email" name="email"/>
-                </div>
-                <div className="h-32 sm:col-span-2">
-                    <textarea  onChange={(e) => setFormData({ ...formData, message: e.target.value })} required className="flex min-h-[60px] w-full rounded-md border border-neutral-300 dark:border-neutral-700/50  focus-visible:border-opacity-100 bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none dark:focus-visible:border-neutral-600 focus-visible:border-neutral-400  disabled:cursor-not-allowed disabled:opacity-50 resize-none" rows={4} placeholder="Leave feedback about the site, career opportunities or just to say hello"  name="message">
-                    </textarea>
-                </div>
+                    <div className="h-16">
+                        <input required autoComplete="off" onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="flex h-9 w-full rounded-md border border-neutral-300 dark:border-neutral-700/50 focus-visible:border-opacity-100 bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground dark:focus-visible:border-neutral-600 focus-visible:border-neutral-400  focus-visible:outline-none  disabled:cursor-not-allowed disabled:opacity-50" id="name" placeholder="Name"  type="text" name="name"/>
+                    </div>
+                    <div className="h-16">
+                        <input required autoComplete="off" onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="flex h-9 w-full rounded-md border border-neutral-300 dark:border-neutral-700/50  focus-visible:border-opacity-100 bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none dark:focus-visible:border-neutral-600 focus-visible:border-neutral-400   disabled:cursor-not-allowed disabled:opacity-50" id="email" placeholder="Email"  type="email" name="email"/>
+                    </div>
+                    <div className="h-32 sm:col-span-2">
+                        <textarea  onChange={(e) => setFormData({ ...formData, message: e.target.value })} required className="flex min-h-[60px] w-full rounded-md border border-neutral-300 dark:border-neutral-700/50  focus-visible:border-opacity-100 bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none dark:focus-visible:border-neutral-600 focus-visible:border-neutral-400  disabled:cursor-not-allowed disabled:opacity-50 resize-none" rows={4} placeholder="Leave feedback about the site, career opportunities or just to say hello"  name="message">
+                        </textarea>
+                    </div>
                 </div>
                 <div className="mt-2 flex justify-start ">
                     <Button disabled={isdisabled}  className=" group transition active:opacity-80 " variant={"default"} type="submit" >

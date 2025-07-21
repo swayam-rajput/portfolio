@@ -19,7 +19,7 @@ const Certificate = ({limit}:Props) => {
     
 
     return (
-        <div className="grid grid-cols-1 gap-4 justify-center">
+        <div className=" grid grid-cols-1 gap-4 justify-center">
             {certifs.map((certif:object,index)=>(
                 <CertificateCard key={index} {...certif}/>
 

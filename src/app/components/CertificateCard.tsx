@@ -24,7 +24,7 @@ const CertificateCard = ({
                 <div className="flex justify-between flex-col ">
                     <div className='flex flex-col gap-3'>
                         <div className=" font-bold text-lg font-sans mt-2 ">{title}</div>
-                        <div className="opacity-80 font-medium flex-wrap cursor-default text-sm flex items-center gap-1 rounded-md">
+                        <div className="opacity-80 font-medium flex-wrap  text-sm flex items-center gap-1 rounded-md">
                             {site}
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                         </div>
@@ -32,9 +32,8 @@ const CertificateCard = ({
                     </div>
                     <div className='flex '>
                         <a target='_blank' className='flex' href={buttonLink}>
-                            <Button className="px-2.5 h-8 text-xs shadow-sm shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-zinc-100 bg-zinc-700 gap-1" variant={'default'} size={"sm"}>{buttonText}
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className='mb-1' strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-
+                            <Button className="px-2.5 h-8 text-xs shadow-sm shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-zinc-100 bg-zinc-700 " variant={'default'} size={"sm"}>{buttonText}
+                                <svg width="20" height="20" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg" className="fill-white dark:fill-black" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z"></path> </g> </g></svg>
                             </Button>
 
                         </a>

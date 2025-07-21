@@ -1,5 +1,14 @@
 [
     {
+        "title": "Supervised Machine Learning - Regression and Classification",
+        "description": "Learned to build prediction and classification models using NumPy and scikit-learn.",
+        "image": "./certifs/stanford-smlrc.png",
+        "site": "Stanford University",
+        "link": "./certifs/stanford-smlrc.png",
+        "buttonText": "View",
+        "buttonLink":"https://www.coursera.org/account/accomplishments/certificate/177LM6RJ7486"
+    },
+    {
         "title": "Frontend Developer (React)",
         "description": "It covered topics like React, CSS, and JavaScript.",
         "image": "./certifs/frontend-dev-react.png",

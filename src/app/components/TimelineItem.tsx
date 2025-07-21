@@ -59,7 +59,7 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
 
 
             <div className="flex flex-1 flex-col mt-2 justify-start gap-1">                    
-                <h2 className="font-semibold leading-none">{name}</h2>
+                <h2 className="font-medium font-sans leading-none">{name}</h2>
                 <div className="text-xs text-muted-foreground">
                     {start && end ?
                         (<>

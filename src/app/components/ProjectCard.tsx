@@ -16,7 +16,8 @@ export const ProjectCard = ({
                 <div className="img">
                     <img src={img_src} alt={title} width={600} loading="eager" className="flex rounded-md outline-none h-40 w-full object-cover "/>
                 </div>
-                <div className="title  font-medium text-lg font-sans mt-2 ">{title}</div>
+                    <div className="title  font-bold text-lg font-sans mt-2 ">{title}</div>
+            
                 <div className="descript text-sm text-gray-400 mb-6">{description}</div>
 
             </div>
@@ -24,13 +25,16 @@ export const ProjectCard = ({
 
                 <div className="gap-1 flex-wrap text-xs flex ">
                     {tech_stack.map((tag,index)=>(
-                        <div key={index} className="dark:bg-zinc-800 duration-150 bg-zinc-300/50 px-2 py-1 shadow opacity-80 hover:opacity-100 cursor-default text-xs scale-95 rounded-md">{tag}</div>
+                        <div key={index} className="dark:bg-zinc-800 duration-150 bg-zinc-300/50 px-2 py-1 shadow opacity-80 hover:opacity-100  text-xs scale-95 rounded-md">{tag}</div>
                     ))}
                 </div>
                 <div className="link">
                     {/* add a github link for the project */}
                     <Link target="_blank" href={link_url}>
-                        <Button className="h-8 px-2.5  text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-zinc-100 bg-zinc-700" variant={'default'} size={"sm"}>{link}</Button>
+                        <Button className="h-8 px-2.5  text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-zinc-100 bg-zinc-700" variant={'default'} size={"sm"}>{link}
+                            <svg width="21" height="21" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg" className="fill-white dark:fill-black" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z"></path> </g> </g></svg>
+
+                        </Button>
                     </Link>
                 </div>
             </div>
