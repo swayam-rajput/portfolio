@@ -81,6 +81,10 @@ module.exports = {
   			
   		},
   		fontFamily: {
+  			dmono: [
+  				'DM Mono',
+  				'sans-serif'
+  			],
   			sans: [
   				'Inter',
   				'sans-serif'

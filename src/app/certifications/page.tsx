@@ -5,7 +5,7 @@ import Certificate from '../components/Certificate'
 const page = () => {
     return (
         <div className="mt-8 px-2 flex flex-col gap-8 pb-16 ">
-			<h1 className="font-quicksand text-4xl font-bold">certifications</h1>
+			<h1 className="font-dmono text-2xl font-bold">certifications</h1>
             <Certificate/>
         </div>            
     )

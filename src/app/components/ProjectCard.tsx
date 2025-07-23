@@ -13,12 +13,12 @@ export const ProjectCard = ({
     return (
         <div className="flex flex-col p-8 rounded-lg justify-between shadow hover:shadow-md border transition ">
             <div className="flex flex-col gap-2">
-                <div className="img">
+                <div className="img md:flex hidden">
                     <img src={img_src} alt={title} width={600} loading="eager" className="flex rounded-md outline-none h-40 w-full object-cover "/>
                 </div>
-                    <div className="title  font-bold text-lg font-sans mt-2 ">{title}</div>
+                    <div className="title  font-semibold text-lg font-sans mt-2 ">{title}</div>
             
-                <div className="descript text-sm text-gray-400 mb-6">{description}</div>
+                <div className="descript text-sm text-gray-500 mb-6">{description}</div>
 
             </div>
             <div className=" flex  flex-col items-start justify-between gap-4">
@@ -31,7 +31,7 @@ export const ProjectCard = ({
                 <div className="link">
                     {/* add a github link for the project */}
                     <Link target="_blank" href={link_url}>
-                        <Button className="h-8 px-2.5  text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-zinc-100 bg-zinc-700" variant={'default'} size={"sm"}>{link}
+                        <Button className="h-8 px-2.5 text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-zinc-200 tracking-wide bg-zinc-700" variant={'default'} size={"sm"}>{link}
                             <svg width="21" height="21" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg" className="fill-white dark:fill-black" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z"></path> </g> </g></svg>
 
                         </Button>

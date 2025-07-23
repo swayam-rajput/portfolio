@@ -18,11 +18,11 @@ export default function Home() {
             </div>
             
             {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
-            <main className="grow">
-                <div className=" flex flex-col gap-16 pb-16"> 
+            <main className="grow flex flex-col gap-8">
+                <div className=" flex flex-col gap-16  pb-16"> 
                     {/* line above is the parent */}
                     <div className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
-                        <Image 
+                    <Image 
                             alt="pfp" 
                             fetchPriority="high" 
                             width={175} 
@@ -31,7 +31,7 @@ export default function Home() {
                             src="/pfp-nobg.png"
                         />
                         <div className="flex flex-col gap-1 mr-2">
-                            <h1 className="text-3xl font-medium  ">S R</h1>
+                            <h1 className="text-3xl font-medium  ">Swayam Rajput</h1>
                             {/* <div className=" mt-4 text-gray-400 text-background ">{age} year old guy who loves to code</div>   */}
                             {/* <div className="opacity-90 text-background"></div>   */}
                             <div className="mt-8 flex items-center gap-10">
@@ -47,7 +47,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex gap-6 mb-16 sm:mx-0 mx-2 flex-col">
-                    <h1 className="font-quicksand font-semibold text-xl">things I know</h1>
+                    <h1 className="font-dmono font-semibold text-xl">things I know</h1>
                     <TechStack/>
                 </div>
 
@@ -57,11 +57,11 @@ export default function Home() {
                 
                 <div className="flex flex-col mt-2 mb-6 px-2 gap-6">
                     <div className="flex flex-row items-center justify-between">
-                        <h1 className="text-lg font-semibold font-quicksand">projects</h1>
-                        <Link href={'/projects'}>
-                            <Button variant={'ghost'} className="hover:bg-neutral-200 gap-1 hover:shadow dark:hover:bg-neutral-800 opacity-80 hover:opacity-100 ">
-                                <p className="hidden md:flex">see more</p> <p className="max-md:scale-x-150">{' ->'}</p>
-                            </Button>
+                        <Link href={'/projects'} className="items-center flex group gap-2">                        
+                            
+                            <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70  font-dmono"> projects</p>
+                            <p className="text-2xl opacity-80 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all group-hover:translate-x-1 font-bold">{'> '}</p> 
+                            
                         </Link>
                     </div>
                     {/* <div className="md:flex hidden"> */}
@@ -71,10 +71,11 @@ export default function Home() {
 
                 <div className="flex flex-col mt-2 px-2 gap-6">
                     <div className="flex flex-row items-center justify-between">
-                        <h1 className="text-lg font-semibold font-quicksand">certifications</h1>
-                        <Link href={'/certifications'}>
-                            <Button variant={'ghost'} className="hover:bg-neutral-200 gap-1 hover:shadow dark:hover:bg-neutral-800 opacity-80 hover:opacity-100 ">
-                                <p className="hidden md:flex">see more</p><p className="max-md:scale-x-150">{' ->'}</p></Button>
+                        <Link href={'/certifications'} className="items-center flex group gap-2">
+                            
+                            <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70 font-dmono">  certifications</p>
+                            <p className="text-2xl opacity-80 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all group-hover:translate-x-1 font-bold">{'> '}</p>
+                            
                         </Link>
                     </div>
                     {/* <div className="md:flex hidden"> */}

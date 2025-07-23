@@ -17,7 +17,7 @@ children: React.ReactNode;
 {
     
     return (
-        <html lang="en" style={{"colorScheme":"light"}} className=" light">
+        <html lang="en" style={{"colorScheme":"dark"}} className=" dark">
         {/* <style>
             @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
@@ -25,6 +25,7 @@ children: React.ReactNode;
         
         <head>
             <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet"></link>
             <link
                 href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
                 rel="stylesheet"
@@ -33,7 +34,7 @@ children: React.ReactNode;
 
         </head>
         <body
-            // className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased mx-auto flex min-h-screen max-w-3xl flex-col px-6 font-sans `}
+            // className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased mx-auto flex min-h-screen max-w-3xl flex-col px-6 font-dmono `}
             className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black font-manrope px-4 pb-8 sm:px-6 `}>
             {/* <Cursor/> */}
             {/* <Providers> */}
