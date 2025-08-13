@@ -100,7 +100,7 @@ export default function Cat() {
     const diffY = nekoPos.y - mousePos.y;
     const distance = Math.sqrt(diffX ** 2 + diffY ** 2);
 
-    if (distance < NEKO_SPEED || distance < 24) {
+    if (distance < NEKO_SPEED || distance < 48) {
       handleIdle();
       return;
     }
@@ -175,8 +175,8 @@ export default function Cat() {
         position: 'fixed',
         pointerEvents: 'none',
         imageRendering: 'pixelated',
-        left: `${nekoPos.x - 10}px`,
-        top: `${nekoPos.y - 10}px`,
+        left: `${nekoPos.x - 16}px`,
+        top: `${nekoPos.y - 16}px`,
         zIndex: 2147483647,
         backgroundImage: 'url(/oneko.gif)',
       }}
