@@ -13,7 +13,7 @@ export const ProjectCard = ({
     return (
         <div className="flex flex-col p-8 rounded-lg justify-between shadow hover:shadow-md border transition ">
             <div className="flex flex-col gap-2">
-                <div className="img md:flex hidden">
+                <div className="img">
                     <img src={img_src} alt={title} width={600} loading="eager" className="flex rounded-md outline-none h-40 w-full object-cover "/>
                 </div>
                     <div className="title  font-semibold text-lg font-sans mt-2 ">{title}</div>

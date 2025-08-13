@@ -15,7 +15,7 @@ const CertificateCard = ({
         <div className="flex p-8 rounded-lg shadow hover:shadow-md transition border  ">
             <div className="flex justify-between  flex-col md:flex-row-reverse flex-grow gap-4 md:gap-8">
                 
-                <div className="md:flex hidden justify-end shrink-0 ">
+                <div className="flex justify-end shrink-0 ">
                         <a target='_blank' className='flex' href={link}>
                             <img src={image} alt={title}  loading="eager" className="flex border dark:border-none border-gray-300 rounded-md outline-none md:h-44 w-full  object-cover "/>
                         </a>

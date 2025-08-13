@@ -81,22 +81,18 @@ module.exports = {
   			
   		},
   		fontFamily: {
-  			dmono: [
-  				'DM Mono',
-  				'sans-serif'
-  			],
+  			spacegrotesk: [
+				'Space Grotesk',
+				'sans-serif'
+			],
   			sans: [
-  				'Inter',
+  				'Space Grotesk',
   				'sans-serif'
   			],
   			quicksand: [
   				'Quicksand',
   				'mono'
   			],
-			manrope: [
-				'Manrope',
-				'mono'
-			]
   		}
   	}
   },

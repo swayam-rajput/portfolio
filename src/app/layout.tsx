@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
+import Cat from "./components/Cat";
 
 export const metadata: Metadata = {
 title: "Portfolio",
@@ -24,8 +25,10 @@ children: React.ReactNode;
         </style> */}
         
         <head>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet"></link>
-            <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"></link>
             <link
                 href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
                 rel="stylesheet"
@@ -34,10 +37,10 @@ children: React.ReactNode;
 
         </head>
         <body
-            // className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased mx-auto flex min-h-screen max-w-3xl flex-col px-6 font-dmono `}
-            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black font-manrope px-4 pb-8 sm:px-6 `}>
-            {/* <Cursor/> */}
+            // className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased mx-auto flex min-h-screen max-w-3xl flex-col px-6 font-spacegrotesk `}
+            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black font-spacegrotesk px-4 pb-8 sm:px-6 `}>
             {/* <Providers> */}
+                <Cat show={false}/>
                 <Navbar/>
 
                 {children}

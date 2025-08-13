@@ -33,8 +33,8 @@ const page = () => {
     
     return (
         <article className="mt-8 flex flex-col gap-8  pb-16">
-            <h1 className="title font-dmono text-3xl md:text-5xl">contact me.</h1>
-            <form className="font-manrope" onSubmit={handleSubmit}>
+            <h1 className="title font-spacegrotesk text-2xl md:text-5xl">contact me.</h1>
+            <form className="font-spacegrotesk" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                     <div className="md:h-16 h-12">
                         <input required autoComplete="off" onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="flex h-9 w-full rounded-md border border-neutral-300 dark:border-neutral-700/50 focus-visible:border-opacity-100 bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground dark:focus-visible:border-neutral-600 focus-visible:border-neutral-400  focus-visible:outline-none  disabled:cursor-not-allowed disabled:opacity-50" id="name" placeholder="Name"  type="text" name="name"/>
