@@ -14,7 +14,7 @@ export const ProjectCard = ({
         <div className="flex flex-col p-8 rounded-lg justify-between shadow hover:shadow-md border transition ">
             <div className="flex flex-col gap-2">
                 <div className="img">
-                    <img src={img_src} alt={title} width={600} loading="eager" className="flex rounded-md outline-none h-40 w-full object-cover "/>
+                    <img src={img_src} alt={title} width={600} loading="eager" className="flex rounded-md h-40 w-full object-cover "/>
                 </div>
                     <div className="title  font-semibold text-lg font-sans mt-2 ">{title}</div>
             
@@ -23,9 +23,9 @@ export const ProjectCard = ({
             </div>
             <div className=" flex  flex-col items-start justify-between gap-4">
 
-                <div className="gap-1 flex-wrap text-xs flex ">
+                <div className="gap-1.5 flex-wrap text-xs flex ">
                     {tech_stack.map((tag,index)=>(
-                        <div key={index} className="dark:bg-zinc-800 duration-150 bg-zinc-300/50 px-2 py-1 shadow opacity-80 hover:opacity-100  text-xs scale-95 rounded-md">{tag}</div>
+                        <div key={index} className="dark:bg-zinc-700 duration-150 bg-zinc-300/70 px-2 py-1 shadow opacity-80 hover:opacity-100  text-xs scale-95 rounded-sm">{tag}</div>
                     ))}
                 </div>
                 <div className="link">

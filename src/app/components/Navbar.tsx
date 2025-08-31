@@ -74,7 +74,7 @@ export const Navbar = () => {
                             </Link>
                         </li>
                     </ul>
-                    <div className="flex justify-end gap-2 ">
+                    <div className="flex justify-end flex-row-reverse gap-2 ">
                         <button onClick={toggleMode} onMouseEnter={handleMouseEnter} className="transition  hover:text-accent-foreground duration-300 rounded-sm px-2 py-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" >
                                 {
@@ -90,13 +90,13 @@ export const Navbar = () => {
                         </button>
                         <button onMouseEnter={handleMouseEnter} onClick={()=>{showCat(prev=>!prev)}} className="transition  hover:text-accent-foreground duration-300 rounded-sm px-1 py-2">
                             
-                            <svg width="28"  height="28" className="dark:stroke-white stroke-black" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="28"  height="28" className={` dark:stroke-white stroke-black ${!catShown?'opacity-80':''}`} viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier">
                                     {
                                         catShown?
                                         ''
                                         :
-                                        (<path d="M320 320 80 80" strokeWidth={18}></path>)
+                                        (<path d="M320 320 80 80"  strokeWidth={18}></path>)
 
                                     }
                                     

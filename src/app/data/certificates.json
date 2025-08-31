@@ -1,5 +1,14 @@
 [
     {
+        "title": "Advanced Learning Algorithms",
+        "description": "Built neural networks and tree ensembles, applying ML best practices for real-world classification tasks.",
+        "image": "./certifs/adv-learn-algo.png",
+        "site": "Stanford University",
+        "link": "./certifs/adv-learn-algo.png",
+        "buttonText": "View",
+        "buttonLink":"https://www.coursera.org/account/accomplishments/certificate/7ZBGUQJ6E157"
+    },
+    {
         "title": "Supervised Machine Learning - Regression and Classification",
         "description": "Learned to build prediction and classification models using NumPy and scikit-learn.",
         "image": "./certifs/stanford-smlrc.png",
