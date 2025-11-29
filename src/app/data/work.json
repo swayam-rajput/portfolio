@@ -1,0 +1,55 @@
+{
+    "career": [
+        {
+            "name": "Compilers Technologies",
+            "href": "",
+            "title": "Java Developer (Intern)",
+            "logo": {
+                "src":"",
+                "svg":"<path d=\"M336-276 132-480l204-204 14 14-189 189 190 190-15 15Zm288 0-14-14 189-189-190-190 15-15 204 204-204 204Z\"/>",
+                "alt":"CT"
+            },
+            "start": "Jun 2023",
+            "end": "Jul 2023",
+            "description": [
+                "Developed a multi-window GUI application in Java, gaining hands-on experience in Swing and JDBC for building interactive graphical interfaces.",
+                "Received mentorship from experienced Java professionals, strengthening skills for real-world Java development."
+            ]
+        }
+    ],
+    "education":[
+        {
+            "name":"Bachelors in Artificial Intelligence and Data Science",
+            "href":"",
+            "title":"2024 - 2027",
+            "logo":{
+                "src":"",
+                "svg": "<path d=\"M480-240 252-364v-180l-104-56 332-180 332 180v236h-28v-220l-76 40v180L480-240Zm0-212 273-148-273-148-273 148 273 148Zm0 180 200-108v-148L480-420.19 280-528v148l200 108Zm0-180Zm0 44Zm0 0Z\"/>",
+                "alt":""
+            },
+                
+            "start":"",
+            "end":"",
+            "description":[]
+        },
+        {
+            "name":"Diploma in Computer Engineering",
+            "href":"",
+            "title":"2022 - 2024",
+            "logo":{
+                "src":"",
+                "svg":"<path d=\"M480-240 252-364v-180l-104-56 332-180 332 180v236h-28v-220l-76 40v180L480-240Zm0-212 273-148-273-148-273 148 273 148Zm0 180 200-108v-148L480-420.19 280-528v148l200 108Zm0-180Zm0 44Zm0 0Z\"/>",
+                "alt":""
+            },
+            "start":"",
+            "end":"",
+            "description":[],
+            "links":[
+                {
+                    "name":"Final Year Project",
+                    "href":"https://github.com/swayam-rajput/WorkConnect"
+                }
+            ]
+        }
+    ]
+}

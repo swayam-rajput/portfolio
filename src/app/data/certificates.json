@@ -1,0 +1,66 @@
+[
+    {
+        "title": "Advanced Learning Algorithms",
+        "description": "Built neural networks and tree ensembles, applying ML best practices for real-world classification tasks.",
+        "image": "./certifs/adv-learn-algo.png",
+        "site": "Stanford University",
+        "link": "./certifs/adv-learn-algo.png",
+        "buttonText": "View",
+        "buttonLink":"https://www.coursera.org/account/accomplishments/certificate/7ZBGUQJ6E157"
+    },
+    {
+        "title": "Supervised Machine Learning - Regression and Classification",
+        "description": "Learned to build prediction and classification models using NumPy and scikit-learn.",
+        "image": "./certifs/stanford-smlrc.png",
+        "site": "Stanford University",
+        "link": "./certifs/stanford-smlrc.png",
+        "buttonText": "View",
+        "buttonLink":"https://www.coursera.org/account/accomplishments/certificate/177LM6RJ7486"
+    },
+    {
+        "title": "Fundamentals of Deep Learning",
+        "description": "Explored the fundamentals of Deep Learning, including neural networks and classification.",
+        "image": "./certifs/nvidia-dl.png",
+        "site": "Nvidia",
+        "link": "./certifs/nvidia-dl.png",
+        "buttonText": "View",
+        "buttonLink":"https://learn.nvidia.com/certificates?id=eTTmRvwpT-ux6Rb-l7Y7WA#"
+    },
+    {
+        "title": "Frontend Developer (React)",
+        "description": "It covered topics like React, CSS, and JavaScript.",
+        "image": "./certifs/frontend-dev-react.png",
+        "site": "Hackerrank",
+        "link": "./certifs/frontend-dev-react.png",
+        "buttonText": "View",
+        "buttonLink":"https://www.hackerrank.com/certificates/a2f83fb394c6"
+    },
+    {
+        "title": "SQL (Advanced)",
+        "description": "It covers topics like query optimization, data modeling, Indexing, window functions, and pivots in SQL.",
+        "image": "./certifs/sql-advanced.png",
+        "site": "Hackerrank",
+        "link": "./certifs/sql-advanced.png",
+        "buttonText": "View",
+        "buttonLink":"https://www.hackerrank.com/certificates/67a102389360"
+    },
+    {
+        "title": "Java",
+        "description": "It covered basic topics in Java language such as classes, data structures, inheritance, exception handling, etc.",
+        "image": "./certifs/java-basic.png",
+        "site": "Hackerrank",
+        "link": "./certifs/java-basic.png",
+        "buttonText": "View",
+        "buttonLink":"https://www.hackerrank.com/certificates/484ad5cb443a"
+    },
+    {
+        "title": "Data Analytics",
+        "description": "It covered data cleaning, data analysis, data visualization, strategic thinking and presentation skills.",
+        "image": "./certifs/accenture-ds.png",
+        "site": "Accenture",
+        "link": "./certifs/accenture-ds.png",
+        "buttonText": "View",
+        "buttonLink":"./certifs/accenture-ds.png"
+    }
+       
+]

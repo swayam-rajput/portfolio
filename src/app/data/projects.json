@@ -1,0 +1,55 @@
+[
+        {
+            "img_src":"./lura.png",
+            "title":"Lura",
+            "description":"Local RAG engine with FAISS, GGUF, and multi-format ingestion.",
+            "tech_stack":["Python","RAG","FAISS"],
+            "link":"Source Code",
+            "link_url":"https://github.com/swayam-rajput/lura"
+        },
+        {
+            "img_src":"./workconnect.png",
+            "title":"WorkConnect",
+            "description":"Platform connecting residents with local vendors for management",
+            "tech_stack":["Django","Python","Bootstrap","JavaScript"],
+            "link":"Source Code",
+            "link_url":"https://github.com/swayam-rajput/WorkConnect"
+        },
+        {
+            "img_src":"https://raw.githubusercontent.com/swayam-rajput/Banking-Management-Sys/refs/heads/main/snapshots/customer_creation.png?fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "Banking System",
+            "description": "A Swing-based banking app with JDBC, role-based access, and data security.",
+            "tech_stack": ["Java", "Swing","MySQL"],
+            "link": "Source Code",
+            "link_url": "https://github.com/swayam-rajput/Banking-Management-Sys"
+        },
+        {
+            "img_src": "./pomodoro.png",
+            "title": "Pomodoro",
+            "description": "Pomodoro app for focus.",
+            "tech_stack": ["JavaScript", "TailwindCSS", "NextJS"],
+            "link": "Visit Site",
+            "link_url": "https://swayam-rajput.github.io/pomodoro"
+        },
+        
+        {
+            "img_src": "./portfolio.png",
+            "title": "Portfolio Website",
+            "description": "A personal portfolio website to showcase projects and skills.",
+            "tech_stack": ["JavaScript", "TailwindCSS", "NextJS"],
+            "link": "Visit Site",
+            "link_url": ""
+        },
+        
+        
+        {
+            "img_src": "./react-food.png",
+            "title": "React Food Delivery Simulator",
+            "description": "An online simulation of a food delivery app with a shopping cart, product filtering, and checkout.",
+            "tech_stack": ["React","JavaScript","TailwindCSS","Redux"],
+            "link": "Visit Site",
+            "link_url": "https://swayam-rajput.github.io/react-food-delivery-simulator/"
+        }
+        
+    ]
+    
