@@ -1,5 +1,13 @@
 [
         {
+            "img_src":"./soko.png",
+            "title":"Soko",
+            "description":"Agentic RAG-based intelligent file system built with LangGraph for semantic search, deduplication, and question answering.",
+            "tech_stack":["Python","RAG","ChromaDB", "LangGraph", "Gemini API"],
+            "link":"Source Code",
+            "link_url":"https://github.com/swayam-rajput/soko"
+        },
+        {
             "img_src":"./lura.png",
             "title":"Lura",
             "description":"Local RAG engine with FAISS, GGUF, and multi-format ingestion.",
