@@ -200,7 +200,7 @@ const TechStack = () => {
                 
             </StackDiv>
             
-            <StackDiv title='To Learn'>  
+            <StackDiv title='Interested In'>  
             
             
             <TechStackItem title='Prisma' grayscale={1} child={
