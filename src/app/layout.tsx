@@ -34,7 +34,7 @@ export default function RootLayout({
 
         </head>
             <body
-            // className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased mx-auto flex min-h-screen max-w-3xl flex-col px-6 font-spacegrotesk `}
+            // classNameName={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased mx-auto flex min-h-screen max-w-3xl flex-col px-6 font-spacegrotesk `}
             className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black font-spacegrotesk px-4 pb-8 sm:px-6 `}>
             {/* <Providers> */}
                 <Cat show={false}/>
@@ -42,6 +42,36 @@ export default function RootLayout({
                 <Navbar/>
                     {children}   
                 <Footer/>
+                <div className="fixed  sm:flex hidden bottom-0 left-0 right-0 z-[101] h-20 w-full pointer-events-none opacity-100">
+                    <div className="relative w-full h-full">
+                        
+                        <div
+                        className="absolute inset-0 opacity-100
+                                [mask-image:linear-gradient(transparent_0%,black_25%,black_50%,transparent_60%)]
+                                backdrop-blur-[0.25rem]">
+                        </div>
+
+                        <div
+                        className="absolute inset-0 opacity-100
+                                [mask-image:linear-gradient(transparent_20%,black_50%,black_75%,transparent_80%)]
+                                backdrop-blur-[0.375rem]">
+                        </div>
+
+                        <div
+                        className="absolute inset-0 opacity-100
+                                [mask-image:linear-gradient(transparent_40%,black_75%,black_100%,transparent_100%)]
+                                backdrop-blur-[0.5rem]">
+                        </div>
+
+                        <div
+                        className="absolute inset-0 opacity-100
+                                [mask-image:linear-gradient(transparent_60%,black_100%,black_100%)]
+                                backdrop-blur-[0.625rem]">
+                        </div>
+
+
+                    </div>
+                </div>
 
             </body>
         </html>
