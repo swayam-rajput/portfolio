@@ -32,6 +32,15 @@
             "link_url": "https://github.com/swayam-rajput/Banking-Management-Sys"
         },
         {
+            "img_src": "./portfolio.png",
+            "title": "Portfolio Website",
+            "description": "A personal portfolio website to showcase projects and skills.",
+            "tech_stack": ["JavaScript", "TailwindCSS", "NextJS"],
+            "link": "Visit Site",
+            "link_url": ""
+        },
+        
+        {
             "img_src": "./pomodoro.png",
             "title": "Pomodoro",
             "description": "Pomodoro app for focus.",
@@ -40,14 +49,6 @@
             "link_url": "https://swayam-rajput.github.io/pomodoro"
         },
         
-        {
-            "img_src": "./portfolio.png",
-            "title": "Portfolio Website",
-            "description": "A personal portfolio website to showcase projects and skills.",
-            "tech_stack": ["JavaScript", "TailwindCSS", "NextJS"],
-            "link": "Visit Site",
-            "link_url": ""
-        },
         
         
         {
