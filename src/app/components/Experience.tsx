@@ -17,7 +17,7 @@ const Experience = () => {
       setTab(tab);
       setData(tab === 'work' ? career.career : career.education);
       setIsAnimating(false);
-    }, 100);
+    }, 150);
   };
 
   return (
@@ -50,7 +50,7 @@ const Experience = () => {
 
       <div
         className={`
-          transition-all duration-1000 overflow-hidden ease-out
+          transition-all duration-500 overflow-hidden ease-out
           ${isAnimating
             ? 'opacity-0 scale-95 blur-sm'
             : 'opacity-100 scale-100 blur-0'}
