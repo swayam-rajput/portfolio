@@ -47,18 +47,9 @@
             "tech_stack": ["JavaScript", "TailwindCSS", "NextJS"],
             "link": "Visit Site",
             "link_url": "https://swayam-rajput.github.io/pomodoro"
-        },
-        
-        
-        
-        {
-            "img_src": "./react-food.png",
-            "title": "React Food Delivery Simulator",
-            "description": "An online simulation of a food delivery app with a shopping cart, product filtering, and checkout.",
-            "tech_stack": ["React","JavaScript","TailwindCSS","Redux"],
-            "link": "Visit Site",
-            "link_url": "https://swayam-rajput.github.io/react-food-delivery-simulator/"
         }
         
-    ]
+        
+        
+]
     
