@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -41,7 +42,8 @@ export default function RootLayout({
                 <Cat />
 
                 <Navbar/>
-                    {children}   
+                    {children}
+                <Analytics />   
                 <Footer/>
                 <div className="fixed blur-3xl sm:flex hidden bottom-0 left-0 right-0 z-[101] h-20 w-full pointer-events-none opacity-100">
                     <div className="relative w-full h-full">
