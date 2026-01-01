@@ -59,7 +59,9 @@ export default function Home() {
 
 
                     {/* tab */}
-                    <Experience/>
+                    <div className="transition-all duration-500 ease-out">
+                        <Experience />
+                    </div>
                     
                     <div className="flex flex-col mt-2 mb-6 px-2 gap-6">
                         <div className="flex flex-row items-center justify-between">

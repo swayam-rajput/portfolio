@@ -21,7 +21,7 @@ const Experience = () => {
   };
 
   return (
-    <div className="flex flex-col mx-1 mt-6 mb-6">
+    <div className="flex flex-col mx-1 mt-6  mb-6">
       <div
         role="tablist"
         aria-orientation="horizontal"
@@ -50,7 +50,7 @@ const Experience = () => {
 
       <div
         className={`
-          transition-all duration-100 ease-out
+          transition-all duration-1000 overflow-hidden ease-out
           ${isAnimating
             ? 'opacity-0 scale-95 blur-sm'
             : 'opacity-100 scale-100 blur-0'}

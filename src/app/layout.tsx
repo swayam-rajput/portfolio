@@ -43,7 +43,7 @@ export default function RootLayout({
                 <Navbar/>
                     {children}   
                 <Footer/>
-                <div className="fixed  sm:flex hidden bottom-0 left-0 right-0 z-[101] h-20 w-full pointer-events-none opacity-100">
+                <div className="fixed blur-3xl sm:flex hidden bottom-0 left-0 right-0 z-[101] h-20 w-full pointer-events-none opacity-100">
                     <div className="relative w-full h-full">
                         
                         <div
