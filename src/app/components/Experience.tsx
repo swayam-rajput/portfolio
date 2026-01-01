@@ -1,25 +1,65 @@
 import { Button } from "@/components/ui/button";
 import { Timeline } from "./Timeline";
 import { useState } from "react";
-import career from '@/app/data/work.json'
+import career from "@/app/data/work.json";
 
 const Experience = () => {
-    const [activeTab,setTab] = useState('work')
-    const [data,setData] = useState(career.career)
-    return (
-        <div className="flex flex-col mx-1 mt-6 mb-6">
-            <div role="tablist" aria-orientation="horizontal" className=" items-center justify-center  rounded-lg bg-muted dark:bg-background p-1 text-muted-foreground mb-2 grid w-full grid-cols-2" data-orientation="horizontal" style={{"outline": "none"}}>
-                
-                <Button variant={"radio"} type="button" aria-selected={activeTab === 'work' ? 'true' : 'false' } aria-controls="radix-:r6:-content-work" data-state={activeTab === 'work' ? 'active' : 'inactive'} id="radix-:r6:-trigger-work" className=" font-medium overflow-hidden data-[state=active]:bg-background dark:data-[state=active]:bg-muted data-[state=active]:text-foreground data-[state=active]:shadow" onClick={() => {setTab('work');setData(career.career)}}>Work</Button>
-            
-                <Button variant={"radio"} type="button" aria-selected={activeTab === 'education'?'true' : 'false' } aria-controls="radix-:r6:-content-education" data-state={activeTab === 'education' ? 'active' : 'inactive'} id="radix-:r6:-trigger-education" className=" font-medium overflow-hidden  data-[state=active]:bg-background dark:data-[state=active]:bg-muted data-[state=active]:text-foreground data-[state=active]:shadow" onClick={() => {setTab('education');setData(career.education)}}>Education</Button>
+  const [activeTab, setTab] = useState<'work' | 'education'>('work');
+  const [data, setData] = useState(career.career);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-            </div>
+  const switchTab = (tab: 'work' | 'education') => {
+    if (tab === activeTab) return;
 
-            <Timeline info={data}/>
-        
-        </div>
-    );
-}
+    setIsAnimating(true);
 
-export default Experience
+    setTimeout(() => {
+      setTab(tab);
+      setData(tab === 'work' ? career.career : career.education);
+      setIsAnimating(false);
+    }, 100);
+  };
+
+  return (
+    <div className="flex flex-col mx-1 mt-6 mb-6">
+      <div
+        role="tablist"
+        aria-orientation="horizontal"
+        className="mb-2 grid w-full grid-cols-2 items-center justify-center rounded-lg bg-muted p-1 text-muted-foreground dark:bg-background"
+      >
+        <Button
+          variant="radio"
+          aria-selected={activeTab === 'work'}
+          data-state={activeTab === 'work' ? 'active' : 'inactive'}
+          onClick={() => switchTab('work')}
+          className=" font-medium overflow-hidden data-[state=active]:bg-background dark:data-[state=active]:bg-muted data-[state=active]:text-foreground data-[state=active]:shadow"
+        >
+          Work
+        </Button>
+
+        <Button
+          variant="radio"
+          aria-selected={activeTab === 'education'}
+          data-state={activeTab === 'education' ? 'active' : 'inactive'}
+          onClick={() => switchTab('education')}
+          className=" font-medium overflow-hidden  data-[state=active]:bg-background dark:data-[state=active]:bg-muted data-[state=active]:text-foreground data-[state=active]:shadow"
+        >
+          Education
+        </Button>
+      </div>
+
+      <div
+        className={`
+          transition-all duration-100 ease-out
+          ${isAnimating
+            ? 'opacity-0 scale-95 blur-sm'
+            : 'opacity-100 scale-100 blur-0'}
+        `}
+      >
+        <Timeline info={data} />
+      </div>
+    </div>
+  );
+};
+
+export default Experience;
