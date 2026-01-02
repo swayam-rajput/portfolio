@@ -32,7 +32,7 @@ const Experience = () => {
           aria-selected={activeTab === 'work'}
           data-state={activeTab === 'work' ? 'active' : 'inactive'}
           onClick={() => switchTab('work')}
-          className=" font-medium overflow-hidden data-[state=active]:bg-background dark:data-[state=active]:bg-muted data-[state=active]:text-foreground data-[state=active]:shadow transition-all duration-500 ease-out"
+          className=" font-medium overflow-hidden data-[state=active]:bg-background dark:data-[state=active]:bg-muted data-[state=active]:text-foreground data-[state=active]:shadow transition-all duration-200 ease-out"
         >
           Work
         </Button>
@@ -42,7 +42,7 @@ const Experience = () => {
           aria-selected={activeTab === 'education'}
           data-state={activeTab === 'education' ? 'active' : 'inactive'}
           onClick={() => switchTab('education')}
-          className=" font-medium overflow-hidden  data-[state=active]:bg-background dark:data-[state=active]:bg-muted data-[state=active]:text-foreground data-[state=active]:shadow transition-all duration-500 ease-out"
+          className=" font-medium overflow-hidden  data-[state=active]:bg-background dark:data-[state=active]:bg-muted data-[state=active]:text-foreground data-[state=active]:shadow transition-all duration-200 ease-out"
         >
           Education
         </Button>
