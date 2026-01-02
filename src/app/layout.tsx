@@ -5,7 +5,6 @@ import "./globals.css";
 
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
-import Cat from "./components/Cat";
 import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
     title: "Portfolio",
@@ -38,9 +37,9 @@ export default function RootLayout({
             // classNameName={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased mx-auto flex min-h-screen max-w-3xl flex-col px-6 font-spacegrotesk `}
             className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black font-spacegrotesk px-4 pb-8 sm:px-6 `}>
             {/* <Providers> */}
-                <Cat />
-
-                <Navbar/>
+                <Navbar  />
+                
+                
                     {children}   
                     <Analytics/>
                 <Footer/>
