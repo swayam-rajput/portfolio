@@ -16,7 +16,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.0",
     "lucide-react": "^0.454.0",
-    "motion": "^12.6.5",
+    "motion": "^12.23.26",
     "next": "^16.1.1",
     "portfolio": "file:",
     "react": "^19.2.3",
