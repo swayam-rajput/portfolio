@@ -50,7 +50,7 @@ const Experience = () => {
 
       <div
         className={`
-          transition-all sm:duration-500 duration-200 overflow-hidden ease-out
+          transition-all sm:duration-50 duration-200 overflow-hidden ease-out
           ${isAnimating
             ? 'opacity-0 scale-95 blur-sm'
             : 'opacity-100 scale-100 blur-0'}
