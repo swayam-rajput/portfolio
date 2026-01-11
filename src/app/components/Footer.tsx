@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Socials } from "./Socials"
 
 const Footer = () => {
+    
     return (
         
         <div className=" flex justify-center items-center flex-col-reverse sm:flex-row gap-6 sm:justify-between px-4 my-4 top-0 py-6">
