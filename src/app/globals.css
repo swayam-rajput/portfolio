@@ -68,7 +68,7 @@
   }
   body::-webkit-scrollbar{
     width: 5px;
-    
+
   }
   body::-webkit-scrollbar-track {
     background: none    ;    /* color of the tracking area */
@@ -76,11 +76,11 @@
   body::-webkit-scrollbar-thumb {
     background: rgba(128, 128, 128, 0.638);        /* color of the tracking area */
     border-radius: 200px;
-    
+
   }
 }
 
-
-
-
-
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}

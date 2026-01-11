@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, ReactElement } from "react";
 import Cat from "./Cat";
 import { SunIcon } from "@/components/ui/sun";
 import { MoonIcon } from "@/components/ui/moon";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 export const Navbar = () => {
     const [isDark,setDark] = useState(false);
     const [hoverStyle, setHoverStyle] = useState({ left: 0, width: 0, opacity: 0 });
@@ -93,14 +94,8 @@ export const Navbar = () => {
                                     }
                                 </svg>
                             </button> */}
-                            <button onClick={toggleMode} onMouseEnter={handleMouseEnter} className="transition  hover:text-accent-foreground duration-300 rounded-sm px-2 py-2">
-                                {
-                                    (!isDark)?
-                                    <SunIcon/>:
-                                    <MoonIcon/>
-                                }
-                                
-                            </button>
+
+                            <AnimatedThemeToggler onMouseEnter={handleMouseEnter} className="transition  hover:text-accent-foreground duration-300 rounded-sm px-2 py-2"/>
                             <button onMouseEnter={handleMouseEnter} onClick={()=>{setCatShown(prev=>!prev)}} className="transition  hover:text-accent-foreground duration-300 rounded-sm px-1 py-2">
                                 
                                 <svg width="28"  height="28" className={` dark:stroke-white stroke-black ${!catShown?'opacity-80':''}`} viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
