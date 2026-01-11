@@ -68,11 +68,11 @@ export default function Home() {
                     <div className="flex flex-col mt-2 mb-6 px-2 gap-6">
                         <div className="flex flex-row items-center justify-between">
                             <Link href={'/projects'} className="flex w-full group justify-between">                        
-                                <div className="items-center flex  gap-3">
+                                <div className="  items-center flex  gap-3">
                                     <p className="text-2xl opacity-80 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all font-bold"><TerminalIcon/></p> 
-                                    <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70  font-spacegrotesk"> projects</p>
+                                    <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70  font-spacegrotesk"> proof of work</p>
                                 </div>
-                                <p className="text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight /></p>
+                                <p className="group-hover:translate-x-1.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight /></p>
                                 
                             </Link>
                         </div>
@@ -82,13 +82,13 @@ export default function Home() {
                     </div>
 
                     <div className="flex flex-col mt-2 px-2 gap-6">
-                        <div className="flex flex-row items-center justify-between">
+                        <div className="flex group flex-row items-center justify-between">
                             <Link href={'/certifications'} className="flex w-full group justify-between">
                                 <div className="flex items-center justify-between  gap-2">
                                     <p className="text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><FileCode2Icon strokeWidth={1.5}/></p>
                                     <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70 font-spacegrotesk">certifications</p>
                                 </div>
-                                <p className="text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight/></p>
+                                <p className="group-hover:translate-x-1.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight/></p>
                                 
                             </Link>
                         </div>
