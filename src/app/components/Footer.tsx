@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Socials } from "./Socials"
+import { Button } from "@/components/ui/button"
 
 const Footer = () => {
     
@@ -10,9 +11,11 @@ const Footer = () => {
                 <span>© {new Date().getFullYear()}</span> 
                 {/* <a className="link" href="/">tedawf.com</a>  */}
             </p>
-            <Link className="flex flex-row justify-center items-center py-4 opacity-85 hover:opacity-100 active:opacity-50 text-sm transition-all underline underline-offset-2  text-gray-500 dark:text-gray-400 font-mono font-semibold" href={'/contact'} >{'<'}
-            contact me
-            {'>'}</Link >
+            <Link className="flex flex-row justify-center items-center py-4 opacity-85 hover:opacity-100 active:opacity-50 text-sm transition-all   text-gray-500 dark:text-gray-400 font-semibold" href={'/contact'}>
+            <Button variant={"link"}>
+                Contact Me
+            </Button>
+            {/* contact me */}</Link >
             <Socials/>        
         </div>
     )
