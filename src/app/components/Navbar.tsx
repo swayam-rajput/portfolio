@@ -9,7 +9,7 @@ export const Navbar = () => {
     const [isDark,setDark] = useState(false);
     const [hoverStyle, setHoverStyle] = useState({ left: 0, width: 0, opacity: 0 });
     const navRef = useRef<HTMLUListElement>(null);
-    const [catShown, setCatShown] = useState(true)
+    const [catShown, setCatShown] = useState(false)
     
 
 
