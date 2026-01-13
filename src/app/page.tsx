@@ -41,7 +41,7 @@ export default function Home() {
                                 <div className="mt-8 flex items-center gap-10">
                                     
                                         <Link target="_blank" className="flex flex-row" href={'https://drive.google.com/file/d/1jPTrLtIH0V0E5whY0t2JqudRM-DLBFEE/view?usp=drive_link'}>
-                                            <Button variant={'outline'}  className="bg-transparent shadow hover:bg-zinc-100 dark:hover:bg-accent hover:border-zinc-100  border-zinc-300 dark:border-zinc-800
+                                            <Button variant={'outline'}  className="bg-transparent shadow-md hover:shadow hover:bg-zinc-100 dark:hover:bg-accent hover:border-zinc-100  border-zinc-300 dark:border-zinc-800
                                         dark:hover:border-zinc-800">
                                             
                                             Resume
@@ -49,7 +49,7 @@ export default function Home() {
                                         </Button>
                                         </Link>
                                     
-                                    <Socials/>
+                                        <Socials/>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,11 @@ export default function Home() {
 
 
                     {/* tab */}
-                    <Experience />
+                    <div className="">
+                        <h1 className=" font-semibold flex text-xl">experience</h1>
+                        <Experience />
+
+                    </div>
                     
                     <div className="flex flex-col mt-2 mb-6 px-2 gap-6">
                         <div className="flex flex-row items-center justify-between">
