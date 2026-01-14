@@ -89,18 +89,18 @@ export default function Home() {
                     </div>
 
                     <div className="flex flex-col mt-2 px-2 gap-6">
-                        <div className="flex group flex-row items-center justify-between">
+                        <div className="flex group flex-row items-center ">
                             <Link href={'/certifications'} className="flex w-full group gap-4">
                                 <div className="flex items-center justify-between  gap-2">
-                                    <p className="text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><FileCode2Icon strokeWidth={1.5}/></p>
+                                    <p className="text-2xl opacity-80 -translate-y-1 scale-90 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><FileCode2Icon strokeWidth={1.5}/></p>
                                     <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70 font-spacegrotesk">certifications</p>
                                 </div>
-                                <p className="group-hover:translate-x-1.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight/></p>
+                                <p className="group-hover:translate-x-1.5 translate-y-0.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight/></p>
                                 
                             </Link>
                         </div>
                         {/* <div className="md:flex hidden"> */}
-                            <Certificate limit={2}/>
+                            {/* <Certificate limit={2}/> */}
                         {/* </div> */}
                     </div>
                 </main>
