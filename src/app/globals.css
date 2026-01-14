@@ -63,7 +63,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-zinc-50 dark:bg-[#121212]  text-white dark:text-foreground;
+    @apply bg-zinc-50 dark:bg-[#18181b]  text-white dark:text-foreground;
     /* font-family: 'Inter',sans-serif; */
   }
   body::-webkit-scrollbar{

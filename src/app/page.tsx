@@ -11,11 +11,26 @@ import Certificate from "./components/Certificate";
 import { ArrowRight , FileCode2Icon, TerminalIcon } from "lucide-react";
 import AnimationWrapper from "@/components/ui/animwrapper";
 
+const LineBreakDesign = ()=>{
+    return (
+        <i></i>
+        // <div className="relative flex bg-bg-base h-8 w-full border-border-primary border-b border-dashed overflow-hidden">
+        //     <div
+        //         className="pointer-events-none absolute inset-0 opacity-50 z-0"
+        //         style={{
+        //         backgroundImage:
+        //             "repeating-linear-gradient(315deg, rgba(82,82,91,0.3) 0px, rgba(82,82,91,0.3) 1px, transparent 1px, transparent 10px)",
+        //         }}
+        //     />
+        // </div>
+    )
+}
+
 export default function Home() {
     const age = new Date().getFullYear() - 2005;    
     return (
         <AnimationWrapper>
-            <div className="flex flex-col  gap-16">
+            <div className="flex flex-col sm:px-2 px-0 gap-16">
                 <div className="">
                     {/* <Navbar/> */}
                 </div>
@@ -55,8 +70,9 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="flex gap-6 mb-16 sm:mx-0 mx-2 flex-col">
-                        <span className="flex gap-3 flex-row">
-                            <h1 className=" font-semibold flex items-center text-xl">things I know</h1>    
+                        <span className="flex gap-2 flex-row items-center">
+                            
+                            <h1 className=" font-semibold flex items-center text-xl">Tech Stack </h1>    
 
                         </span>
                         <TechStack/>
@@ -64,20 +80,26 @@ export default function Home() {
                         
                     </div>
 
+                    <LineBreakDesign/>
 
                     {/* tab */}
                     <div className="">
-                        <h1 className=" font-semibold flex text-xl">experience</h1>
+                        <div className="flex flex-row pl-2 items-center gap-2.5">
+                            
+                            <h1 className=" font-semibold flex text-xl">Experience</h1>
+
+                        </div>
                         <Experience />
 
                     </div>
                     
+                    <LineBreakDesign/>
                     <div className="flex flex-col mt-2 mb-6 px-2 gap-6">
                         <div className="flex flex-row items-center justify-between">
                             <Link href={'/projects'} className="flex w-full group justify-between">                        
                                 <div className="  items-center flex  gap-3">
                                     <p className="text-2xl opacity-80 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all font-bold"><TerminalIcon/></p> 
-                                    <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70  font-spacegrotesk"> proof of work</p>
+                                    <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70  font-spacegrotesk"> Proof of Work</p>
                                 </div>
                                 <p className="group-hover:translate-x-1.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight /></p>
                                 
@@ -87,25 +109,26 @@ export default function Home() {
                             <Projects limit={2}/>
                         {/* </div> */}
                     </div>
-
+                    <LineBreakDesign/>
                     <div className="flex flex-col mt-2 px-2 gap-6">
                         <div className="flex group flex-row items-center ">
-                            <Link href={'/certifications'} className="flex w-full group gap-4">
+                            <Link href={'/certifications'} className="flex w-full justify-between group gap-4">
                                 <div className="flex items-center justify-between  gap-2">
-                                    <p className="text-2xl opacity-80 -translate-y-1 scale-90 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><FileCode2Icon strokeWidth={1.5}/></p>
-                                    <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70 font-spacegrotesk">certifications</p>
+                                    <p className="text-2xl opacity-80  scale-90 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><FileCode2Icon strokeWidth={1.5}/></p>
+                                    <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70 font-spacegrotesk">Certifications</p>
                                 </div>
                                 <p className="group-hover:translate-x-1.5 translate-y-0.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight/></p>
                                 
                             </Link>
                         </div>
                         {/* <div className="md:flex hidden"> */}
-                            {/* <Certificate limit={2}/> */}
+                            <Certificate limit={2}/>
                         {/* </div> */}
                     </div>
                 </main>
+                <LineBreakDesign/>
             </div>
-
+                
         </AnimationWrapper>
     );
         

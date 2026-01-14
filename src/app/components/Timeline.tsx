@@ -13,7 +13,7 @@ export const Timeline = ({info}:Prop) => {
                         {info.map((data,idx)=>(
                             <TimelineItem name={""} href={""} title={""} logo={{
                                 src: "",
-                                svg:"",
+                                type:"",
                                 alt: ""
                             }} start={""} key={idx} {...data}/>
 

@@ -1,17 +1,20 @@
 
 import { Button } from "@/components/ui/button";
+import { LucideBriefcase, LucideBriefcaseBusiness, LucideGraduationCap } from "lucide-react";
 import Link from "next/link";
 interface Prop {
     name: string;
     href: string;
     title: string;
-    logo: { src: string | null; svg: string | null; alt: string }
+    logo: { src: string | null; type: string | null; alt: string }
     start: string;
     end?: string;
     description?: string[];
     links?: { name: string; href: string }[];
 }
-  
+
+
+
 const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop) => {
     // useEffect(() => {
     //     const checkImage = async () => {
@@ -47,11 +50,9 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                     :(
                         
                         <span className="relative flex pr-0.5 pt-0.5 overflow-hidden rounded-full aspect-square size-12 border justify-center items-center ">
-                            {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="36" height="36"    className="opacity-80 dark:stroke-white stroke-black dark:fill-white fill-black" 
-                            dangerouslySetInnerHTML={{__html:logo.svg??""}}>
-                            
-                            </svg> */}
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            { logo.type == 'edu' && <LucideGraduationCap strokeWidth={2} className=" opacity-60 size-5"/> || logo.type == 'work' && <LucideBriefcase strokeWidth={2} className="opacity-60 size-5"/>}
+                            {/* {logo.svg} */}
+                            {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <g fill="none">
                                     <path d="M9.12015 8.16C10.1529 7.38542 10.6693 6.99813 11.2364 6.84884C11.737 6.71706 12.2632 6.71705 12.7638 6.84883C13.331 6.99812 13.8474 7.38541 14.8801 8.15999L20.5868 12.44C21.7448 13.3085 22.3238 13.7427 22.5308 14.275C22.7122 14.7413 22.7122 15.2586 22.5308 15.7249C22.3238 16.2573 21.7448 16.6915 20.5868 17.56L14.8801 21.84C13.8474 22.6146 13.331 23.0019 12.7638 23.1512C12.2632 23.2829 11.737 23.2829 11.2364 23.1512C10.6693 23.0019 10.1529 22.6146 9.12014 21.84L3.41349 17.56C2.25552 16.6915 1.67654 16.2573 1.4695 15.7249C1.28816 15.2586 1.28816 14.7413 1.46951 14.275C1.67655 13.7427 2.25553 13.3085 3.41349 12.44L9.12015 8.16Z" fill="url(#1752500502793-639649_layers_existing_0_b0rh2cs4r)" data-glass="origin" mask="url(#1752500502793-639649_layers_mask_lh5t9hjjm)"></path>
                                     <path d="M9.12015 8.16C10.1529 7.38542 10.6693 6.99813 11.2364 6.84884C11.737 6.71706 12.2632 6.71705 12.7638 6.84883C13.331 6.99812 13.8474 7.38541 14.8801 8.15999L20.5868 12.44C21.7448 13.3085 22.3238 13.7427 22.5308 14.275C22.7122 14.7413 22.7122 15.2586 22.5308 15.7249C22.3238 16.2573 21.7448 16.6915 20.5868 17.56L14.8801 21.84C13.8474 22.6146 13.331 23.0019 12.7638 23.1512C12.2632 23.2829 11.737 23.2829 11.2364 23.1512C10.6693 23.0019 10.1529 22.6146 9.12014 21.84L3.41349 17.56C2.25552 16.6915 1.67654 16.2573 1.4695 15.7249C1.28816 15.2586 1.28816 14.7413 1.46951 14.275C1.67655 13.7427 2.25553 13.3085 3.41349 12.44L9.12015 8.16Z" fill="url(#1752500502793-639649_layers_existing_0_b0rh2cs4r)" data-glass="clone" filter="url(#1752500502793-639649_layers_filter_kkalz5ssh)" clipPath="url(#1752500502793-639649_layers_clipPath_il5y28du5)"></path>
@@ -82,7 +83,7 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                                     </mask>
                                     </defs>
                                 </g>
-                            </svg>
+                            </svg> */}
                         </span>
 
                     )
