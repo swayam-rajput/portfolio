@@ -5,8 +5,9 @@ import CertificateCard from './CertificateCard';
 
 interface Props{
     limit?: number;
+    showImage:boolean;
 }
-const Certificate = ({limit}:Props) => {
+const Certificate = ({limit,showImage}:Props) => {
     const [certifs, setCertifs] = useState(data);    
     // const certifs = data;    
     useEffect(()=>{
@@ -21,7 +22,7 @@ const Certificate = ({limit}:Props) => {
     return (
         <div className=" grid grid-cols-1 gap-4 justify-center">
             {certifs.map((certif:object,index)=>(
-                <CertificateCard key={index} {...certif}/>
+                <CertificateCard showImage={showImage} key={index} {...certif}/>
 
             ))}
         </div>

@@ -11,21 +11,6 @@ import Certificate from "./components/Certificate";
 import { ArrowRight , FileCode2Icon, TerminalIcon } from "lucide-react";
 import AnimationWrapper from "@/components/ui/animwrapper";
 
-const LineBreakDesign = ()=>{
-    return (
-        <i></i>
-        // <div className="relative flex bg-bg-base h-8 w-full border-border-primary border-b border-dashed overflow-hidden">
-        //     <div
-        //         className="pointer-events-none absolute inset-0 opacity-50 z-0"
-        //         style={{
-        //         backgroundImage:
-        //             "repeating-linear-gradient(315deg, rgba(82,82,91,0.3) 0px, rgba(82,82,91,0.3) 1px, transparent 1px, transparent 10px)",
-        //         }}
-        //     />
-        // </div>
-    )
-}
-
 export default function Home() {
     const age = new Date().getFullYear() - 2005;    
     return (
@@ -69,7 +54,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex gap-6 mb-16 sm:mx-0 mx-2 flex-col">
+                    <div className="flex gap-6 mb-10 sm:mx-0 mx-2 flex-col">
                         <span className="flex gap-2 flex-row items-center">
                             
                             <h1 className=" font-semibold flex items-center text-xl">Tech Stack </h1>    
@@ -80,7 +65,7 @@ export default function Home() {
                         
                     </div>
 
-                    <LineBreakDesign/>
+                    
 
                     {/* tab */}
                     <div className="">
@@ -93,7 +78,7 @@ export default function Home() {
 
                     </div>
                     
-                    <LineBreakDesign/>
+                    
                     <div className="flex flex-col mt-2 mb-6 px-2 gap-6">
                         <div className="flex flex-row items-center justify-between">
                             <Link href={'/projects'} className="flex w-full group justify-between">                        
@@ -109,7 +94,7 @@ export default function Home() {
                             <Projects limit={2}/>
                         {/* </div> */}
                     </div>
-                    <LineBreakDesign/>
+                    
                     <div className="flex flex-col mt-2 px-2 gap-6">
                         <div className="flex group flex-row items-center ">
                             <Link href={'/certifications'} className="flex w-full justify-between group gap-4">
@@ -122,13 +107,12 @@ export default function Home() {
                             </Link>
                         </div>
                         {/* <div className="md:flex hidden"> */}
-                            <Certificate limit={2}/>
+                            <Certificate showImage={false} limit={2}/>
                         {/* </div> */}
                     </div>
                 </main>
-                <LineBreakDesign/>
             </div>
-                
+
         </AnimationWrapper>
     );
         

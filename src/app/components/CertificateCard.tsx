@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-
+import { cn } from '@/lib/utils';
 import React from 'react'
 
 const CertificateCard = ({
@@ -9,17 +9,20 @@ const CertificateCard = ({
     site='',
     link='',
     buttonText='View',
-    buttonLink=''
+    buttonLink='',
+    showImage=true
 }) => {
     return (
         <div className="flex p-8 rounded-lg shadow hover:shadow-md transition border  ">
             <div className="flex justify-between  flex-col md:flex-row-reverse flex-grow gap-4 md:gap-8">
-                
-                <div className="sm:flex justify-end shrink-0 hidden ">
-                        <a target='_blank' className='flex' href={link}>
-                            <img src={image} alt={title}  loading="lazy" className="flex  border dark:border-none border-gray-300 rounded-md outline-none md:h-44 w-full  object-cover "/>
-                        </a>
-                </div>
+                {
+                    <div className={cn(" justify-end shrink-0",(!showImage) && 'md:flex hidden')}>
+                            <a target='_blank' className='flex' href={link}>
+                                <img src={image} alt={title}  loading="lazy" className="flex  border dark:border-none border-gray-300 rounded-md outline-none md:h-44 w-full  object-cover "/>
+                            </a>
+                    </div>
+
+                }
                 
                 <div className="flex justify-between flex-col ">
                     <div className='flex flex-col gap-3'>
