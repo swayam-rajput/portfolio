@@ -41,6 +41,7 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                             className="aspect-square h-full  scale-50 w-full bg-background object-contain"
                             alt={logo.alt ?? null}
                             src={logo.src ?? ""}
+                            loading="lazy"
                         />
                     </span>
                     :(

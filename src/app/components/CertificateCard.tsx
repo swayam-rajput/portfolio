@@ -17,7 +17,7 @@ const CertificateCard = ({
                 
                 <div className="flex justify-end shrink-0 ">
                         <a target='_blank' className='flex' href={link}>
-                            <img src={image} alt={title}  loading="eager" className="flex border dark:border-none border-gray-300 rounded-md outline-none md:h-44 w-full  object-cover "/>
+                            <img src={image} alt={title}  loading="lazy" className="flex border dark:border-none border-gray-300 rounded-md outline-none md:h-44 w-full  object-cover "/>
                         </a>
                 </div>
                 

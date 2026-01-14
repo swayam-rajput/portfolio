@@ -55,7 +55,10 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="flex gap-6 mb-16 sm:mx-0 mx-2 flex-col">
-                        <h1 className=" font-semibold flex items-center text-xl">things I know</h1>    
+                        <span className="flex gap-3 flex-row">
+                            <h1 className=" font-semibold flex items-center text-xl">things I know</h1>    
+
+                        </span>
                         <TechStack/>
                         {/* Simplify tech stack div to show it in text also, easy to copy */}
                         
@@ -87,7 +90,7 @@ export default function Home() {
 
                     <div className="flex flex-col mt-2 px-2 gap-6">
                         <div className="flex group flex-row items-center justify-between">
-                            <Link href={'/certifications'} className="flex w-full group justify-between">
+                            <Link href={'/certifications'} className="flex w-full group gap-4">
                                 <div className="flex items-center justify-between  gap-2">
                                     <p className="text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><FileCode2Icon strokeWidth={1.5}/></p>
                                     <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70 font-spacegrotesk">certifications</p>
