@@ -30,12 +30,20 @@ export const ProjectCard = ({
                 </div>
                 <div className="link">
                     {/* add a github link for the project */}
-                    <Link target="_blank" href={link_url}>
-                        <Button className="md:h-8 px-2.5 text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-zinc-200 tracking-wide bg-zinc-700" variant={'default'} size={"sm"}>{link}
-                            <svg width="21" height="21" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg" className="fill-white dark:fill-black" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z"></path> </g> </g></svg>
+                    
+                    {
+                        link_url!==''?(
+                            <Link target="_blank" href={link_url}>
+                                <Button className="md:h-8 px-2.5 text-xs shadow shadow-inherit font-bold hover:bg-opacity-80 dark:hover:bg-opacity-70 dark:text-black text-white dark:bg-zinc-200 tracking-wide bg-zinc-700" variant={'default'} size={"sm"}>{link}
+                                    <svg width="21" height="21" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg" className="fill-white dark:fill-black" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z"></path> </g> </g></svg>
 
-                        </Button>
-                    </Link>
+                                </Button>
+                            </Link>
+
+                        ):
+                            <Button className="md:h-8 px-2.5 text-xs " disabled variant={'default'}>{link}</Button>
+
+                    }
                 </div>
             </div>
         </div>
