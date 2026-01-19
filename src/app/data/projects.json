@@ -5,7 +5,7 @@
             "title":"Untitled App",
             "description":"A social web app that lets users save, organize, and share links (articles, videos, posts, etc.) into public or private groups",
             "tech_stack":["NextJS","Prisma", "SQLite/PostgreSQL","TailwindCSS","Zod"],
-            "link":"Under Development",
+            "link":"Launching Soon!",
             "link_url":""
         },
         {
