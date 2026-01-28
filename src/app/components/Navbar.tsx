@@ -50,7 +50,7 @@ export const Navbar = () => {
                         <ul ref = {navRef}  onMouseLeave={handleMouseLeave}
                             className="relative  flex text-sm sm:text-base  gap-0.5 md:gap-4 ">
                                 <div
-                                    className="absolute py-4 shadow -z-20 top-1/2 -translate-y-1/2 h-7 sm:h-9 rounded-md dark:bg-stone-700/40 bg-stone-300/60 transition-all duration-300"
+                                    className="absolute py-4 shadow -z-20 top-1/2 -translate-y-1/2 h-7 sm:h-9 rounded-md dark:bg-stone-700/40 bg-stone-300/60 transition-all duration-100"
                                     style={{
                                         left: hoverStyle.left,
                                         width: hoverStyle.width,
