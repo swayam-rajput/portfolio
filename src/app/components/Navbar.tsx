@@ -47,7 +47,7 @@ export const Navbar = () => {
                 <div className="dark:bg-[#29292980]/25  bg-zinc-300/20 shadow-sm rounded-lg -mx-2 px-4 pb-5 pt-6 backdrop-blur-md">
                     <nav  className="flex items-center justify-between " 
                         >
-                        <ul ref = {navRef}  onMouseLeave={handleMouseLeave}
+                        <ul ref = {navRef} 
                             className="relative  flex text-sm sm:text-base  gap-0.5 md:gap-4 ">
                                 <div
                                     className="absolute py-4 shadow -z-20 top-1/2 -translate-y-1/2 h-7 sm:h-9 rounded-md dark:bg-stone-700/40 bg-stone-300/60 transition-all duration-200"
