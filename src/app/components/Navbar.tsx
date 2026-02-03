@@ -47,7 +47,7 @@ export const Navbar = () => {
                 <div className="dark:bg-[#29292980]/25  bg-zinc-300/20 shadow-sm rounded-lg -mx-2 px-4 pb-5 pt-6 backdrop-blur-md">
                     <nav  className="flex items-center justify-between " 
                         >
-                        <ul ref = {navRef} 
+                        <ul ref = {navRef} onMouseLeave={handleMouseLeave}
                             className="relative  flex text-sm sm:text-base  gap-0.5 md:gap-4 ">
                                 <div
                                     className="absolute py-4 shadow -z-20 top-1/2 -translate-y-1/2 h-7 sm:h-9 rounded-md dark:bg-stone-700/40 bg-stone-300/60 transition-all duration-200"
@@ -80,7 +80,7 @@ export const Navbar = () => {
                                 </Link>
                             </li> */}
                         </ul>
-                        <div className="flex justify-end flex-row-reverse gap-2 ">
+                        <div onMouseLeave={handleMouseLeave} className="flex justify-end flex-row-reverse gap-2 ">
                             {/* <button onClick={toggleMode} onMouseEnter={handleMouseEnter} className="transition  hover:text-accent-foreground duration-300 rounded-sm px-2 py-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" >
                                     {
@@ -96,7 +96,8 @@ export const Navbar = () => {
                             </button> */}
 
                             <AnimatedThemeToggler onMouseEnter={handleMouseEnter} className="transition  hover:text-accent-foreground duration-200 rounded-sm px-2 py-2"/>
-                            <button onMouseEnter={handleMouseEnter} onClick={()=>{setCatShown(prev=>!prev)}} className="transition  hover:text-accent-foreground duration-200 rounded-sm px-1 py-2">
+                                
+                                <button onMouseEnter={handleMouseEnter} onClick={()=>{setCatShown(prev=>!prev)}} className="transition  hover:text-accent-foreground duration-200 rounded-sm px-1 py-2">
                                 
                                 <svg width="28"  height="28" className={` dark:stroke-white stroke-black ${!catShown?'opacity-80':''}`} viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier">
