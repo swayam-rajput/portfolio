@@ -35,7 +35,7 @@ export default function Home() {
                             /> */}
                             <div className="flex flex-col gap-1 mr-2">
                                 {/* need to add my photo when hovered over the name https://dribbble.com/shots/12909488-Clipped-Image-Reveal-on-Hover */}
-                                <h1 className="text-3xl font-medium  ">Swayam Rajput</h1>
+                                <h1 className="text-3xl font-medium max-w-fit cursor-default  animate-underline">Swayam Rajput</h1>
                                 {/* <div className=" mt-4 text-gray-400 text-background ">{age} year old guy who loves to code</div>   */}
                                 {/* <div className="opacity-90 text-background"></div>   */}
                                 <div className="mt-8 flex items-center gap-10">

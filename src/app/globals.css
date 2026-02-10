@@ -78,6 +78,32 @@
     border-radius: 200px;
 
   }
+    .animate-underline {
+    --top: 100%;
+    display: inline;
+    text-decoration: none;
+
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    background-position: 100% var(--top);
+    
+    transition:
+      background-size 200ms ease,
+      color 150ms ease;
+  }
+
+  .animate-underline:hover,
+  .animate-underline:focus-visible {
+    background-size: 100% 1px;
+    background-position: 0 var(--top);
+  }
+
+  .animate-underline::after,
+  .animate-underline:focus-visible::after {
+    background-size: 0% 1px;
+    background-position: 0 var(--top);
+  }
 }
 
 ::view-transition-old(root), ::view-transition-new(root) {
