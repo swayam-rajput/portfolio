@@ -7,7 +7,7 @@ import "./globals.css";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next";
-
+import { ReactLenis } from "@/lib/lenis";
 export const metadata: Metadata = {
     title: "Swayam Rajput | Porfolio",
     description: "AI Engineer | SWE | Freelancer",
@@ -41,8 +41,10 @@ export default function RootLayout({
             className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black font-spacegrotesk px-4 pb-8 sm:px-6 `}>
             {/* <Providers> */}
                 <Navbar  />
-                
-                    {children}   
+                    <ReactLenis root>
+                        {children}   
+
+                    </ReactLenis>
                     <Analytics/>
                 <Footer/>
                 <div className="fixed sm:flex hidden bottom-0 left-0 right-0 z-[101] h-20 w-full pointer-events-none opacity-100">
