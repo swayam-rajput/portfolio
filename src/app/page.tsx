@@ -10,6 +10,7 @@ import Image from "next/image";
 import Certificate from "./components/Certificate";
 import { ArrowRight , FileCode2Icon, TerminalIcon } from "lucide-react";
 import AnimationWrapper from "@/components/ui/animwrapper";
+import { LinkPreview } from "@/components/ui/link-preview";
 
 export default function Home() {
     const age = new Date().getFullYear() - 2005;    
@@ -22,7 +23,7 @@ export default function Home() {
                 
                 {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
                 <main className="grow flex flex-col gap-8">
-                    <div className=" flex flex-col gap-16  pb-16"> 
+                    <div className=" flex flex-col gap-16 z-50  pb-16"> 
                         {/* line above is the parent */}
                         <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
                         {/* <Image 
@@ -39,22 +40,24 @@ export default function Home() {
                                 {/* <div className=" mt-4 text-gray-400 text-background ">{age} year old guy who loves to code</div>   */}
                                 {/* <div className="opacity-90 text-background"></div>   */}
                                 <div className="mt-8 flex items-center gap-10">
-                                    
-                                        <Link target="_blank" className="flex flex-row" href={'https://drive.google.com/file/d/1jPTrLtIH0V0E5whY0t2JqudRM-DLBFEE/view?usp=drive_link'}>
+
+                                        <LinkPreview  className="flex flex-row rounded-sm border border-border"  isStatic imageSrc="/resume.png" url="https://drive.google.com/file/d/1jPTrLtIH0V0E5whY0t2JqudRM-DLBFEE/view?usp=drive_link">
+                                            {/* <Link href= target="_blank" rel="noopener noreferrer"> */}
                                             <Button variant={'outline'}  className="bg-transparent shadow-md hover:shadow hover:bg-zinc-100 dark:hover:bg-accent hover:border-zinc-100  border-zinc-300 dark:border-zinc-800
                                         dark:hover:border-zinc-800">
                                             
                                             Resume
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className=" ml-2 size-5 opacity-80"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
                                         </Button>
-                                        </Link>
+                                        {/* </Link> */}
+                                        </LinkPreview>
                                     
                                         <Socials/>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="flex gap-6 mb-10 sm:mx-0 mx-2 flex-col">
+                    <div className="flex gap-6 z-0 mb-10 sm:mx-0 mx-2 flex-col">
                         <span className="flex gap-2 flex-row items-center">
                             
                             <h1 className=" font-semibold flex items-center text-xl">Tech Stack </h1>    
