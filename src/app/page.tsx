@@ -23,7 +23,7 @@ export default function Home() {
                 
                 {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
                 <main className="grow flex flex-col gap-8">
-                    <div className=" flex flex-col gap-16 z-50  pb-16"> 
+                    <div className=" flex flex-col gap-16 z-10  pb-16"> 
                         {/* line above is the parent */}
                         <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
                         {/* <Image 
