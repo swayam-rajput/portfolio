@@ -21,11 +21,15 @@ export const metadata: Metadata = {
                 url: '/og-image.png', // refers to /public/og.png
                 width: 1200,
                 height: 630,
-
-            }
+            },
         ],
         type: 'website',
-    }
+    },
+    icons: {
+        icon: '/favicon-v2.ico',
+        shortcut: "/favicon-v2.ico",
+        apple: "/favicon-v2.ico",
+    },
 };
 
 export default function RootLayout({
