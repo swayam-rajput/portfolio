@@ -24,7 +24,15 @@ export const metadata: Metadata = {
             },
         ],
         type: 'website',
+        
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "Swayam Rajput",
+        description: "AI Engineer · Software Engineer · Freelancer",
+        images: ["/og-image.png"],
+    },
+
     icons: {
         icon: '/favicon-v2.ico',
         shortcut: "/favicon-v2.ico",
