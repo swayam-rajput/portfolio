@@ -12,6 +12,10 @@ export const metadata: Metadata = {
     title: "Swayam Rajput | Porfolio",
     description: "AI Engineer | SWE | Freelancer",
     openGraph:{
+        title: "Swayam Rajput",
+        description: "AI Engineer · Software Engineer · Freelancer",
+        url: "https://swayamrajput.vercel.app",
+        siteName: "Portfolio",
         images: [
             {
                 url: '/og-image.png', // refers to /public/og.png
@@ -19,7 +23,8 @@ export const metadata: Metadata = {
                 height: 630,
 
             }
-        ]
+        ],
+        type: 'website',
     }
 };
 
