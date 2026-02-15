@@ -43,8 +43,8 @@ export const Navbar = () => {
         <>
         {catShown && <Cat/>}
 
-            <header className="sticky top-0 z-50 sm:pt-4">            
-                <div className="dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-lg -mx-2 px-4 pb-5 pt-6 backdrop-blur-[18px]">
+            <header className="sticky top-0 w-full z-50 sm:pt-4">            
+                <div className="dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-lg sm:mx-0 -mx-4 px-4 pb-5 pt-6 backdrop-blur-[18px]">
                     <nav  className="flex items-center justify-between " 
                         >
                         <ul ref = {navRef} onMouseLeave={handleMouseLeave}
