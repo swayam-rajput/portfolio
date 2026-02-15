@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import { ReactLenis } from "@/lib/lenis";
 export const metadata: Metadata = {
+    metadataBase: new URL("https://swayamrajput.vercel.app"),
     title: "Swayam Rajput | Porfolio",
     description: "AI Engineer | SWE | Freelancer",
     openGraph:{
