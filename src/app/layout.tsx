@@ -11,6 +11,16 @@ import { ReactLenis } from "@/lib/lenis";
 export const metadata: Metadata = {
     title: "Swayam Rajput | Porfolio",
     description: "AI Engineer | SWE | Freelancer",
+    openGraph:{
+        images: [
+            {
+                url: '/og-image.png', // refers to /public/og.png
+                width: 1200,
+                height: 630,
+
+            }
+        ]
+    }
 };
 
 export default function RootLayout({
