@@ -25,7 +25,7 @@ const GithubCalendarStats = ({username}:{username:string}) => {
             return React.cloneElement(block, {
                 strokeWidth: 0
             })
-        }} blockMargin={3} blockSize={10}  className=" custom-scrollbar overflow-x-hidden text-gray-500 pb-5" colorScheme={theme as "dark" | "light" | undefined} blockRadius={0} maxLevel={4} username={username} theme={github_theme} />
+        }} blockMargin={1.5} blockSize={11.5} fontSize={12} className=" custom-scrollbar pb-8" colorScheme={theme as "dark" | "light" | undefined} blockRadius={1} maxLevel={4} username={username} theme={github_theme} />
     );
 }
 
@@ -80,9 +80,9 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <section className="custom-scrollbar overflow-x-hidden text-muted-foreground w-full">
                         <GithubCalendarStats username="swayam-rajput" />
-                    </div>
+                    </section>
                     
 
                     <div className="flex gap-6 z-0 mb-10 sm:mx-0 mx-2 flex-col">
