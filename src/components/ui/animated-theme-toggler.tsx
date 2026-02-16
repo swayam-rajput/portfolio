@@ -14,7 +14,7 @@ interface AnimatedThemeTogglerProps extends React.ComponentPropsWithoutRef<"butt
 
 export const AnimatedThemeToggler = ({
   className,
-  duration = 600,
+  duration = 500,
   ...props
 }: AnimatedThemeTogglerProps) => {
   const { theme, setTheme, resolvedTheme } = useTheme()
@@ -31,17 +31,6 @@ export const AnimatedThemeToggler = ({
   const toggleTheme = useCallback(async () => {
     if (!buttonRef.current) return
 
-    if (!document.startViewTransition) {
-      setTheme(isDark ? "light" : "dark")
-      return
-    }
-
-    await document.startViewTransition(() => {
-      flushSync(() => {
-        setTheme(isDark ? "light" : "dark")
-      })
-    }).ready
-
     const { top, left, width, height } =
       buttonRef.current.getBoundingClientRect()
     const x = left + width / 2
@@ -50,6 +39,19 @@ export const AnimatedThemeToggler = ({
       Math.max(left, window.innerWidth - left),
       Math.max(top, window.innerHeight - top)
     )
+
+    if (!document.startViewTransition) {
+      setTheme(isDark ? "light" : "dark")
+      return
+    }
+
+    const transition = document.startViewTransition(() => {
+      flushSync(() => {
+        setTheme(isDark ? "light" : "dark")
+      })
+    })
+
+    await transition.ready
 
     document.documentElement.animate(
       {
