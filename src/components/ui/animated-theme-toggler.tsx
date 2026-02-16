@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import {  SunIcon } from "@/components/ui/sun"
 import {  MoonIcon } from "@/components/ui/moon"
 import { flushSync } from "react-dom"
+import { useTheme } from "next-themes"
 
 import { cn } from "@/lib/utils"
 
@@ -16,34 +17,28 @@ export const AnimatedThemeToggler = ({
   duration = 600,
   ...props
 }: AnimatedThemeTogglerProps) => {
-  const [isDark, setIsDark] = useState(true)
+  const { theme, setTheme, resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
   const buttonRef = useRef<HTMLButtonElement>(null)
 
+  // Avoid hydration mismatch
   useEffect(() => {
-    const updateTheme = () => {
-      setIsDark(document.documentElement.classList.contains("dark"))
-    }
-
-    updateTheme()
-
-    const observer = new MutationObserver(updateTheme)
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    })
-
-    return () => observer.disconnect()
+    setMounted(true)
   }, [])
+
+  const isDark = resolvedTheme === "dark"
 
   const toggleTheme = useCallback(async () => {
     if (!buttonRef.current) return
 
+    if (!document.startViewTransition) {
+      setTheme(isDark ? "light" : "dark")
+      return
+    }
+
     await document.startViewTransition(() => {
       flushSync(() => {
-        const newTheme = !isDark
-        setIsDark(newTheme)
-        document.documentElement.classList.toggle("dark")
-        localStorage.setItem("theme", newTheme ? "dark" : "light")
+        setTheme(isDark ? "light" : "dark")
       })
     }).ready
 
@@ -69,7 +64,19 @@ export const AnimatedThemeToggler = ({
         pseudoElement: "::view-transition-new(root)",
       }
     )
-  }, [isDark, duration])
+  }, [isDark, setTheme, duration])
+
+  if (!mounted) {
+    return (
+      <button
+        className={cn(className, "opacity-0")}
+        {...props}
+      >
+        <SunIcon />
+        <span className="sr-only">Toggle theme</span>
+      </button>
+    )
+  }
 
   return (
     <button

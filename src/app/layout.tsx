@@ -41,6 +41,8 @@ export const metadata: Metadata = {
     },
 };
 
+import { ThemeProvider } from "@/components/theme-provider";
+
 export default function RootLayout({
     children,
     }: Readonly<{
@@ -49,7 +51,7 @@ export default function RootLayout({
 {
     
     return (
-        <html lang="en" style={{"colorScheme":"dark"}} className=" dark">
+        <html lang="en" suppressHydrationWarning>
 
         <head>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -65,9 +67,13 @@ export default function RootLayout({
         </head>
         
             <body
-            // classNameName={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased mx-auto flex min-h-screen max-w-3xl flex-col px-6 font-spacegrotesk `}
             className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black border-r border-l border-double border-neutral-200 dark:border-neutral-800 font-spacegrotesk px-4 pb-8 sm:px-6 `}>
-            {/* <Providers> */}
+            <ThemeProvider
+                attribute="class"
+                defaultTheme="dark"
+                enableSystem
+                disableTransitionOnChange
+            >
                 <Navbar  />
                     <ReactLenis root>
                         {children}   
@@ -105,7 +111,7 @@ export default function RootLayout({
 
                     </div>
                 </div>
-
+            </ThemeProvider>
             </body>
         </html>
 

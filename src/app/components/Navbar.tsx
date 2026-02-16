@@ -6,18 +6,10 @@ import { SunIcon } from "@/components/ui/sun";
 import { MoonIcon } from "@/components/ui/moon";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 export const Navbar = () => {
-    const [isDark,setDark] = useState(false);
     const [hoverStyle, setHoverStyle] = useState({ left: 0, width: 0, opacity: 0 });
     const navRef = useRef<HTMLUListElement>(null);
     const [catShown, setCatShown] = useState(false)
-    
 
-
-    const toggleMode = ()=>{
-        document.documentElement.style.colorScheme =    isDark ? 'dark':'light'
-        document.documentElement.classList.replace(!isDark ? 'dark':'light',isDark ? 'dark':'light')
-        setDark(!isDark);
-	}
 
     const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
         const nav = navRef.current;
