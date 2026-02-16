@@ -8,11 +8,29 @@ import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
 import Image from "next/image";
 import Certificate from "./components/Certificate";
-import { ArrowRight , FileCode2Icon, TerminalIcon } from "lucide-react";
+import { ArrowRight , FileCode2Icon, Github, TerminalIcon } from "lucide-react";
 import AnimationWrapper from "@/components/ui/animwrapper";
 import { LinkPreview } from "@/components/ui/link-preview";
+import { GitHubCalendar } from "react-github-calendar";
+import { useTheme } from "next-themes";
+import React from "react";
+const GithubCalendarStats = ({username}:{username:string}) => {
+    const { theme } = useTheme();
+    const github_theme = {
+        light: ["#eef7f1", "#cfe9d6", "#9fd5b2", "#5fbf86", "#2e8f5a"],
+        dark:  ["#0f1a14", "#163524", "#1f5c3d", "#2f8a5a", "#4fc27f"],
+    };
+    return (
+        <GitHubCalendar renderBlock={(block) => {
+            return React.cloneElement(block, {
+                strokeWidth: 0
+            })
+        }} blockMargin={3} blockSize={10}  className=" custom-scrollbar overflow-x-hidden text-gray-500 pb-5" colorScheme={theme as "dark" | "light" | undefined} blockRadius={0} maxLevel={4} username={username}  />
+    );
+}
 
 export default function Home() {
+
     // const age = new Date().getFullYear() - 2005;    
     return (
         <AnimationWrapper>
@@ -62,6 +80,11 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                    <div>
+                        <GithubCalendarStats username="swayam-rajput" />
+                    </div>
+                    
+
                     <div className="flex gap-6 z-0 mb-10 sm:mx-0 mx-2 flex-col">
                         <span className="flex gap-2 flex-row items-center">
                             
