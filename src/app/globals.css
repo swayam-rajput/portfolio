@@ -66,8 +66,20 @@
     @apply bg-zinc-50 dark:bg-[#18181b]  text-white dark:text-foreground;
     /* font-family: 'Inter',sans-serif; */
   }
+    .custom-scrollbar::-webkit-scrollbar {
+    width: 2px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    /* background: rgba(255, 255, 255, 0.403); */
+    /* background: rgba(159, 158, 158, 0.471); */
+    background: oklch(74.756% 0.00996 243.122 / 0.359);
+    border-radius: 0px;
+  }
   body::-webkit-scrollbar{
-    width: 5px;
+    width: 4px;
 
   }
   body::-webkit-scrollbar-track {
@@ -106,7 +118,8 @@
   }
 }
 
-::view-transition-old(root), ::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
