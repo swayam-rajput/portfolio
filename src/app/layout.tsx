@@ -66,7 +66,7 @@ export default function RootLayout({
         
             <body
             // classNameName={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased mx-auto flex min-h-screen max-w-3xl flex-col px-6 font-spacegrotesk `}
-            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black font-spacegrotesk px-4 pb-8 sm:px-6 `}>
+            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black border-r border-l border-double border-neutral-200 dark:border-neutral-800 font-spacegrotesk px-4 pb-8 sm:px-6 `}>
             {/* <Providers> */}
                 <Navbar  />
                     <ReactLenis root>
