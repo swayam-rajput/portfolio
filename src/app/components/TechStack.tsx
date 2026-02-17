@@ -10,7 +10,7 @@ const StackDiv = ({title,children,isHidden}:Props) =>{
     return(
         <div  className={`flex flex-col pb-1 gap-y-4 ${isHidden && 'hidden'} `}>
             <h2 className='opacity-60 font-dmono'>{title}</h2>
-            <div className="flex gap-x-6 gap-y-8 flex-wrap">
+            <div className="flex sm:gap-x-6 gap-x-4 sm:gap-y-8 gap-y-6 flex-wrap">
                 {children}
             </div>
         </div>
@@ -19,7 +19,7 @@ const StackDiv = ({title,children,isHidden}:Props) =>{
 const TechStack = () => {
     return (
         // sm:gap-x-6 gap-x-7 sm:gap-y-10 gap-y-9
-        <div className='flex z-0 flex-col gap-y-8 '>
+        <div className='flex z-0 flex-col  gap-y-8 '>
             <StackDiv title='Frontend'>
                 <TechStackItem title='React' child={
                     <svg width="40" height="40" viewBox="0 0 32.00 32.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" 
