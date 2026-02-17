@@ -91,7 +91,7 @@ export const Navbar = () => {
                                 
                                 <button onMouseEnter={handleMouseEnter} onClick={()=>{setCatShown(prev=>!prev)}} className="transition  hover:text-accent-foreground duration-200 rounded-sm px-1 py-2">
                                 
-                                <svg width="28"  height="28" className={` dark:stroke-white stroke-black ${!catShown?'opacity-80':''}`} viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="28"  height="28" className={` stroke-current ${!catShown?'opacity-80':''}`} viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier">
                                         {
                                             catShown?
