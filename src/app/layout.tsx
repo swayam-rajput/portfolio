@@ -67,7 +67,7 @@ export default function RootLayout({
         </head>
         
             <body
-            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center dark:text-white text-black border-r border-l border-double border-neutral-200 dark:border-neutral-800 font-spacegrotesk px-4 pb-8 sm:px-6 `}>
+            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center  border-r border-l border-double border-neutral-200 dark:border-neutral-800 font-spacegrotesk px-4 pb-8 sm:px-6 `}>
             <ThemeProvider
                 attribute="class"
                 defaultTheme="dark"
@@ -81,6 +81,7 @@ export default function RootLayout({
                     </ReactLenis>
                     <Analytics/>
                 <Footer/>
+            </ThemeProvider>
                 <div className="fixed sm:flex hidden bottom-0 left-0 right-0 z-[101] h-20 w-full pointer-events-none opacity-100">
                     <div className="relative w-full h-full">
                         
@@ -111,7 +112,6 @@ export default function RootLayout({
 
                     </div>
                 </div>
-            </ThemeProvider>
             </body>
         </html>
 
