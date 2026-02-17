@@ -1,3 +1,4 @@
+'use client'
 import { TechStackItem } from './TechStackItem'
 type Props = {
     title:string,
@@ -9,7 +10,7 @@ const StackDiv = ({title,children,isHidden}:Props) =>{
     return(
         <div  className={`flex flex-col pb-1 gap-y-4 ${isHidden && 'hidden'} `}>
             <h2 className='opacity-60 font-dmono'>{title}</h2>
-            <div className="flex gap-x-6 gap-y-10 flex-wrap">
+            <div className="flex gap-x-6 gap-y-8 flex-wrap">
                 {children}
             </div>
         </div>

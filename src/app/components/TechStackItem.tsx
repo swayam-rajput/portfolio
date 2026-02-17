@@ -1,4 +1,4 @@
-
+'use client'
 import { ReactNode,useEffect,useState } from "react";
 import {
     Tooltip,
@@ -15,7 +15,7 @@ type Props = {
 
 export const TechStackItem = ({ title,child, className='', grayscale = 0 }: Props) => {
     if (grayscale > 0) {
-         className += ' grayscale'
+        //  className += ' grayscale'
     }
     const [stateOpen, setOpened] = useState(false);
     useEffect(() => {
