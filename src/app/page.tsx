@@ -14,48 +14,29 @@ import { LinkPreview } from "@/components/ui/link-preview";
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
 import React from "react";
-const GithubCalendarStats = ({username}:{username:string}) => {
-    const { theme } = useTheme();
-    const github_theme = {
-        // light: ["#f5f5f5", "#e5e5e5", "#d4d4d4", "#a3a3a3", "#737373"],
-        // dark:  ["#1f1f1f", "#2a2a2a", "#3a3a3a", "#525252", "#737373"],
+import { GithubStats } from "./components/GithubStats";
 
-        light: ["#eef7f1", "#cfe9d6", "#9fd5b2", "#5fbf86", "#2e8f5a"],
-        dark:  ["#202020", "#163524", "#1f5c3d", "#2f8a5a", "#4fc27f"],
-    };
-    return (
-        <GitHubCalendar renderBlock={(block) => {
-            return React.cloneElement(block, {
-                strokeWidth: 0
-            })
-        }} blockMargin={1.5} blockSize={11.5} fontSize={12} className=" custom-scrollbar pb-8" colorScheme={theme as "dark" | "light" | undefined} blockRadius={1} maxLevel={4} username={username} theme={github_theme} />
-    );
-}
 
 export default function Home() {
 
-    // const age = new Date().getFullYear() - 2005;    
     return (
         <AnimationWrapper>
-            <div className="flex flex-col sm:px-2 px-0 gap-16">
-                <div className="">
-                    {/* <Navbar/> */}
-                </div>
-                
+            <main className="flex flex-col sm:px-2 px-0 gap-16">
+                <div></div>
                 {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
-                <main className="grow flex flex-col gap-8">
+                <section className="grow flex flex-col gap-8">
                     <div className=" flex flex-col gap-16 z-10  pb-16"> 
                         {/* line above is the parent */}
                         <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
+                            <div className="flex flex-col gap-1 mr-2">
                         {/* <Image 
                                 alt="pfp" 
                                 fetchPriority="high" 
-                                width={175} 
-                                height={175} 
+                                width={120} 
+                                height={120} 
                                 className=" aspect-square md:translate-x-0 -translate-x-8 overflow-clip rounded-full shadow-md border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition object-cover" 
                                 src="/pfp-nobg.png"
                             /> */}
-                            <div className="flex flex-col gap-1 mr-2">
                                 {/* need to add my photo when hovered over the name https://dribbble.com/shots/12909488-Clipped-Image-Reveal-on-Hover */}
                                 <h1 className="text-3xl font-medium max-w-fit cursor-default  animate-underline">Swayam Rajput</h1>
 
@@ -83,15 +64,15 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <section className="custom-scrollbar overflow-x-hidden text-muted-foreground w-full">
-                        <GithubCalendarStats username="swayam-rajput" />
-                    </section>
+                    {/* <section className="custom-scrollbar overflow-x-hidden text-muted-foreground w-full"> */}
+                    <GithubStats username="swayam-rajput" ></GithubStats>
+                    {/* </section> */}
                     
 
                     <div className="flex gap-6 z-0 mb-10 sm:mx-0 mx-2 flex-col">
                         <span className="flex gap-2 flex-row items-center">
                             
-                            <h1 className=" font-semibold flex items-center text-xl">Tech Stack </h1>    
+                            <span className=" font-semibold flex items-center text-xl">Tech Stack </span>    
 
                         </span>
                         <TechStack/>
@@ -144,8 +125,8 @@ export default function Home() {
                             <Certificate showImage={false} limit={2}/>
                         {/* </div> */}
                     </div>
-                </main>
-            </div>
+                </section>
+            </main>
 
         </AnimationWrapper>
     );
