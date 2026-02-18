@@ -35,13 +35,14 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
     return (
         <li className="relative ml-10 py-4">
             {
-                <a target="_blank" className="absolute -left-16 top-4 flex items-center justify-center z-30 bg-background rounded-full " href={href}>
+                // <a target="_blank" className="absolute -left-16 top-4 flex items-center justify-center z-30 rounded-full " href={href}>
+                <span className="absolute -left-16 top-4 flex items-center justify-center z-30 rounded-full " >
                 {
                     logo.src
                     ?
                     <span className={`relative flex shrink-0 overflow-hidden border rounded-full size-12 `}>
                         <img
-                            className="aspect-square h-full  scale-50 w-full bg-background object-contain"
+                            className="aspect-square h-full  scale-50 w-full bg-muted/50 object-contain"
                             alt={logo.alt ?? null}
                             src={logo.src ?? ""}
                             loading="lazy"
@@ -49,7 +50,7 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                     </span>
                     :(
                         
-                        <span className="relative flex pr-0.5 pt-0.5 overflow-hidden rounded-full aspect-square size-12 border justify-center items-center ">
+                        <span className="relative flex pr-0.5 pt-0.5 overflow-hidden rounded-full aspect-square size-12 border dark:bg-muted bg-background justify-center items-center ">
                             { logo.type == 'edu' && <LucideGraduationCap strokeWidth={2} className=" opacity-60 size-5"/> || logo.type == 'work' && <LucideBriefcase strokeWidth={2} className="opacity-60 size-5"/>}
                             {/* {logo.svg} */}
                             {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -88,7 +89,8 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
 
                     )
                 }
-                </a>
+                </span>
+                // </a>
             }
 
 
