@@ -11,13 +11,13 @@ const Footer = () => {
                 <span>© {new Date().getFullYear()}</span> 
                 {/* <a className="link" href="/">tedawf.com</a>  */}
             </p>
-            <Link className="flex flex-row justify-center items-center py-4 opacity-85 hover:opacity-100 active:opacity-50 text-sm transition-all   text-gray-500 dark:text-gray-400 font-semibold" href={'/contact'}>
-            <Button variant={"link"} className="inline-flex  px-3 py-0.5 transition-all duration-200 shadow-white/20 shadow-xl hover:shadow-none ">
-            {/* inline-flex items-center text-xs max-w-full gap-2  font-medium cursor-pointer border border-border-tertiary border-dashed rounded-none group bg-bg-base font-mono text-white shadow-white/5 shadow-xl transition-all duration-200 hover:shadow-none */}
-                Contact Me
-            </Button>
-            {/* contact me */}</Link >
-            <Socials/>        
+            <Link className="py-4 opacity-85 hover:opacity-100 active:opacity-50 text-sm transition-all" href={'/contact'}>
+                <Button variant={"link"} className="inline-flex  px-3 py-0.5 transition-all duration-200 shadow-white/20 shadow-xl hover:shadow-none ">
+                    {/* inline-flex items-center text-xs max-w-full gap-2  font-medium cursor-pointer border border-border-tertiary border-dashed rounded-none group bg-bg-base font-mono text-white shadow-white/5 shadow-xl transition-all duration-200 hover:shadow-none */}
+                    Contact Me
+                </Button>
+            </Link >
+            <Socials/>
         </div>
     )
 }
