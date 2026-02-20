@@ -4,7 +4,7 @@
             "img_src":"untitled-project.png",
             "title":"Untitled App",
             "description":"A social web app that lets users save, organize, and share links (articles, videos, posts, etc.) into public or private groups",
-            "tech_stack":["NextJS","Prisma", "SQLite/PostgreSQL","TailwindCSS","Zod"],
+            "tech_stack":["NextJS","Prisma", "PostgreSQL","TailwindCSS","Zod"],
             "link":"Launching Soon!",
             "link_url":""
         },
