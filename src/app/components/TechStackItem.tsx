@@ -37,7 +37,7 @@ export const TechStackItem = ({ title,child, className='', grayscale = 0 }: Prop
                         {child}
                     </div>
                     </TooltipTrigger>
-                    <TooltipContent sideOffset={8} side="bottom" className=" dark:bg-[linear-gradient(145deg,#111111,#222222)] bg-[linear-gradient(145deg,#dfe1e3,#ffffff)] ">
+                    <TooltipContent sideOffset={8} side="bottom" className="rounded-md dark:bg-[linear-gradient(145deg,#111111,#222222)] bg-[linear-gradient(145deg,#dfe1e3,#ffffff)] ">
                         {title}
                     </TooltipContent>
                 </Tooltip>
