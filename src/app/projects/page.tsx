@@ -6,16 +6,11 @@ import { TerminalIcon } from "lucide-react";
 
 const page = () => {
     return (
-		<AnimationWrapper>
-
-			<div className="mt-8 px-2 flex flex-col gap-8 pb-16 ">
-				<h1 className="font-spacegrotesk text-2xl flex items-center font-bold gap-2"><TerminalIcon/>projects</h1>
-				
-				<Projects />
-			</div>
+		<div className="mt-8 px-2 flex flex-col gap-8 pb-16 ">
+			<h1 className="font-spacegrotesk text-2xl flex items-center font-bold gap-2"><TerminalIcon/>projects</h1>
 			
-		</AnimationWrapper>
-
+			<Projects />
+		</div>
 	)
 }
 export default page;

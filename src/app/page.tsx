@@ -20,8 +20,7 @@ import { GithubStats } from "./components/GithubStats";
 export default function Home() {
 
     return (
-        <AnimationWrapper>
-            <main className="flex flex-col sm:px-2 px-0 gap-16">
+        <main className="flex flex-col sm:px-2 px-0 gap-16">
                 <div></div>
                 {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
                 <section className="grow flex flex-col gap-8">
@@ -126,9 +125,7 @@ export default function Home() {
                         {/* </div> */}
                     </div>
                 </section>
-            </main>
-
-        </AnimationWrapper>
+        </main>
     );
         
 }
