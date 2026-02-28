@@ -219,7 +219,7 @@ const TechStack = () => {
                 
             </StackDiv>
             
-            <StackDiv title='Interested In'>  
+            <StackDiv title='Learning'>  
             
             
             <TechStackItem title='Framer' child={
