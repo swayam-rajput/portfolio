@@ -2,7 +2,7 @@
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 import { GitHubCalendar } from "react-github-calendar";
-
+import { motion } from "framer-motion";
 export const GithubStats = ({username}:{username:string}) => {
     const { theme } = useTheme();
     const github_theme = {
@@ -20,10 +20,19 @@ export const GithubStats = ({username}:{username:string}) => {
     if (!mounted) return null;
 
     return (
-        <GitHubCalendar renderBlock={(block) => {
-            return React.cloneElement(block, {
-                strokeWidth: 0
-            })
-        }} blockMargin={1.5} blockSize={11.5} fontSize={12} className="text-muted-foreground custom-scrollbar pb-8" colorScheme={theme as "dark" | "light" | undefined} blockRadius={1} maxLevel={4} username={username} theme={github_theme} />
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: .6, ease: 'linear' }}
+        >
+            <GitHubCalendar renderBlock={(block) => {
+                    return React.cloneElement(block, {
+                        strokeWidth: 0
+                    })
+                }} blockMargin={1.5} blockSize={11.5} fontSize={12} className="text-muted-foreground custom-scrollbar pb-8" colorScheme={theme as "dark" | "light" | undefined} blockRadius={1} maxLevel={4} username={username} theme={github_theme} 
+            />
+
+        </motion.div>
     );
 }
