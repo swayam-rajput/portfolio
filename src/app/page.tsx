@@ -15,6 +15,7 @@ import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
 import React from "react";
 import { GithubStats } from "./components/GithubStats";
+import { AnimatePresence, motion } from "framer-motion";
 
 
 export default function Home() {
@@ -78,9 +79,6 @@ export default function Home() {
                         {/* Simplify tech stack div to show it in text also, easy to copy */}
                         
                     </div>
-
-                    
-
                     {/* tab */}
                     <div className="">
                         <div className="flex flex-row pl-2 items-center gap-2.5">
@@ -91,22 +89,20 @@ export default function Home() {
                         <Experience />
 
                     </div>
-                    
-                    
                     <div className="flex flex-col mt-2 mb-6 px-2 gap-6">
-                        <div className="flex flex-row items-center justify-between">
-                            <Link href={'/projects'} className="flex w-full group justify-between">                        
-                                <div className="  items-center flex  gap-3">
-                                    <p className="text-2xl opacity-80 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all font-bold"><TerminalIcon/></p> 
-                                    <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70  font-spacegrotesk"> Proof of Work</p>
-                                </div>
-                                <p className="group-hover:translate-x-1.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight /></p>
-                                
-                            </Link>
-                        </div>
-                        {/* <div className="md:flex hidden"> */}
-                            <Projects limit={2}/>
-                        {/* </div> */}
+                            <div className="flex flex-row items-center justify-between">
+                                <Link href={'/projects'} className="flex w-full group justify-between">                        
+                                    <div className="  items-center flex  gap-3">
+                                        <p className="text-2xl opacity-80 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all font-bold"><TerminalIcon/></p> 
+                                        <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70  font-spacegrotesk"> Proof of Work</p>
+                                    </div>
+                                    <p className="group-hover:translate-x-1.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight /></p>
+                                    
+                                </Link>
+                            </div>
+                            {/* <div className="md:flex hidden"> */}
+                                <Projects limit={2}/>
+                            {/* </div> */}
                     </div>
                     
                     <div className="flex flex-col mt-2 px-2 gap-6">
