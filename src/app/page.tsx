@@ -104,7 +104,7 @@ export default function Home() {
                                 <Projects limit={2}/>
                             {/* </div> */}
                     </div>
-                    
+{/*                     
                     <div className="flex flex-col mt-2 px-2 gap-6">
                         <div className="flex group flex-row items-center ">
                             <Link href={'/certifications'} className="flex w-full justify-between group gap-4">
@@ -116,10 +116,8 @@ export default function Home() {
                                 
                             </Link>
                         </div>
-                        {/* <div className="md:flex hidden"> */}
-                            <Certificate showImage={false} limit={2}/>
-                        {/* </div> */}
-                    </div>
+                        <Certificate showImage={false} limit={2}/>
+                    </div> */}
                 </section>
         </main>
     );

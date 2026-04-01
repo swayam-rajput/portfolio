@@ -62,8 +62,8 @@ export const Navbar = () => {
                             </li>
 
                             <li className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5" onMouseEnter={handleMouseEnter}>
-                                <Link href={'/certifications'}  className={navitemstyle}>
-                                    certifications
+                                <Link href={'/contact'}  className={navitemstyle}>
+                                    contact
                                 </Link>
                             </li>
                             {/* <li className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5" onMouseEnter={handleMouseEnter}>
