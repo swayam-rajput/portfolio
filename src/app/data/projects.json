@@ -29,8 +29,8 @@
             "title": "Pomodoro TUI",
             "description": "A keyboard-driven Pomodoro timer built in Rust with a custom TUI, auto session transitions, and persistent user settings.",
             "tech_stack": ["Rust"],
-            "link": "Releasing Soon!",
-            "link_url":""
+            "link": "Download",
+            "link_url":"https://github.com/swayam-rajput/pomo-tui"
         },
         {
             "img_src":"./workconnect.png",
