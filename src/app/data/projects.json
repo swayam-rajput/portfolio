@@ -25,6 +25,14 @@
             "link_url":"https://github.com/swayam-rajput/lura"
         },
         {
+            "img_src": "./pomo-tui.png",
+            "title": "Pomodoro TUI",
+            "description": "A keyboard-driven Pomodoro timer built in Rust with a custom TUI, auto session transitions, and persistent user settings.",
+            "tech_stack": ["Rust"],
+            "link": "Releasing Soon!",
+            "link_url":""
+        },
+        {
             "img_src":"./workconnect.png",
             "title":"WorkConnect",
             "description":"Platform connecting residents with local vendors for management",
