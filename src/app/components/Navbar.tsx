@@ -72,7 +72,7 @@ export const Navbar = () => {
                                 </Link>
                             </li> */}
                         </ul>
-                        <div onMouseLeave={handleMouseLeave} className="flex justify-end flex-row-reverse gap-2 ">
+                        <div onMouseLeave={handleMouseLeave} className="flex justify-center items-center flex-row-reverse gap-2 ">
                             {/* <button onClick={toggleMode} onMouseEnter={handleMouseEnter} className="transition  hover:text-accent-foreground duration-300 rounded-sm px-2 py-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" >
                                     {
@@ -87,9 +87,9 @@ export const Navbar = () => {
                                 </svg>
                             </button> */}
 
-                            <AnimatedThemeToggler onMouseEnter={handleMouseEnter} className="transition  hover:text-accent-foreground duration-200 rounded-sm px-2 py-2"/>
+                            <AnimatedThemeToggler className="transition dark:hover:bg-zinc-600/40 hover:bg-zinc-300/60 rounded-full hover:text-accent-foreground duration-200 size-8 justify-center items-center flex cursor-default "/>
                                 
-                                <button onMouseEnter={handleMouseEnter} onClick={()=>{setCatShown(prev=>!prev)}} className="transition  hover:text-accent-foreground duration-200 rounded-sm px-1 py-2">
+                            <button onClick={()=>{setCatShown(prev=>!prev)}} className="transition  hover:text-accent-foreground duration-200 rounded-sm px-1 py-2">
                                 
                                 <svg width="28"  height="28" className={` stroke-current ${!catShown?'opacity-80':''}`} viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier">

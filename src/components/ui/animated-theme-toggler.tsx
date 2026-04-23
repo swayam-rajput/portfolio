@@ -11,7 +11,11 @@ import { cn } from "@/lib/utils"
 interface AnimatedThemeTogglerProps extends React.ComponentPropsWithoutRef<"button"> {
   duration?: number
 }
-
+const ThemeCircle = ({className}:{className:string})=>{
+  return (
+    <span className={cn("size-4 rounded-full flex", className)}></span>
+  )
+}
 export const AnimatedThemeToggler = ({
   className,
   duration = 600,
@@ -87,7 +91,9 @@ export const AnimatedThemeToggler = ({
       className={cn(className)}
       {...props}
     >
-      {isDark ? <SunIcon /> : <MoonIcon />}
+      {
+        isDark ? <ThemeCircle className="bg-[#9e9e9e]"/> : <ThemeCircle className="bg-[#9e9e9e]"/>
+      }
       <span className="sr-only">Toggle theme</span>
     </button>
   )
