@@ -92,7 +92,7 @@ export const AnimatedThemeToggler = ({
       {...props}
     >
       {
-        isDark ? <ThemeCircle className="bg-[#9e9e9e]"/> : <ThemeCircle className="bg-[#9e9e9e]"/>
+        isDark ? <ThemeCircle className="bg-[#9e9e9e]"/> : <ThemeCircle className="bg-[#2b2b2b]"/>
       }
       <span className="sr-only">Toggle theme</span>
     </button>
