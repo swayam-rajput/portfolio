@@ -28,8 +28,8 @@ export const MinimalTooltip = ({ children, text, position = "top", className = "
       <div
         className={`absolute ${positions[position]} px-2.5 py-1.5 dark:bg-zinc-600/40 bg-zinc-100 text-black dark:text-white text-xs border border-input font-medium rounded-md whitespace-nowrap pointer-events-none transition-all duration-100 ease-out z-50 ${
           isVisible 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-1'
+            ? 'opacity-100' 
+            : 'opacity-0'
         }`}
         style={{
           boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.2)'
