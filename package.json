@@ -25,7 +25,7 @@
     "qss": "^3.0.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "react-github-calendar": "^5.0.5",
+    "react-github-calendar": "^5.0.6",
     "shadcn-ui": "^0.2.3",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
