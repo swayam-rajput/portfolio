@@ -3,6 +3,8 @@ import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 import { GitHubCalendar } from "react-github-calendar";
 import { motion } from "framer-motion";
+// import 'react-github-calendar/tooltips.css'
+import './tooltips.css'
 export const GithubStats = ({username}:{username:string}) => {
     const { theme } = useTheme();
     const github_theme = {
@@ -31,6 +33,26 @@ export const GithubStats = ({username}:{username:string}) => {
                         strokeWidth: 0
                     })
                 }} blockMargin={1.5} blockSize={11.5} fontSize={12} className="text-muted-foreground custom-scrollbar pb-8" colorScheme={theme as "dark" | "light" | undefined} blockRadius={1} maxLevel={4} username={username} theme={github_theme} 
+                tooltips={
+                  {
+                    activity: {
+                      text: activity => {
+                        const date = new Date(activity.date);
+
+                        const formatted = new Intl.DateTimeFormat('en-US', {
+                            month: 'short',
+                            day: 'numeric',
+                            weekday:"short"
+                        }).format(date);
+ 
+                        return `[${activity.count}] ${formatted}`;
+                      },
+                      placement: "top",
+                      offset: 0,
+                      hoverRestMs: 50,    
+                    }
+                  }
+                } 
             />
 
         </motion.div>
