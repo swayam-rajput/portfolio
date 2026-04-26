@@ -1,6 +1,6 @@
 'use client'
 import { useTheme } from "next-themes";
-import React, { useEffect, useState } from "react";
+import React, { cloneElement, useEffect, useState } from "react";
 import { GitHubCalendar } from "react-github-calendar";
 import { motion } from "framer-motion";
 // import 'react-github-calendar/tooltips.css'
@@ -30,9 +30,11 @@ export const GithubStats = ({username}:{username:string}) => {
         >
             <GitHubCalendar renderBlock={(block) => {
                     return React.cloneElement(block, {
-                        strokeWidth: 0
+                        strokeWidth: 0,
+                        className: "hover:stroke-black dark:hover:stroke-[#fff] hover:stroke-1"
                     })
                 }} blockMargin={1.5} blockSize={11.5} fontSize={12} className="text-muted-foreground custom-scrollbar pb-8" colorScheme={theme as "dark" | "light" | undefined} blockRadius={1} maxLevel={4} username={username} theme={github_theme} 
+                
                 tooltips={
                   {
                     activity: {
