@@ -20,8 +20,8 @@ const CONTRIBUTION_COLORS = [
   "#e8ede9", // 0 — very light grey-green (shows empty tiles clearly)
   "#cfe9d6", // 1 — light mint
   "#9fd5b2", // 2 — medium green
-  "#5fbf86", // 3 — vivid green
-  "#2f8a5a", // 4 — deep green
+  "#8ecdb2", // 3 — vivid green
+  "#5eb891", // 4 — deep green
 ] as const;
 
 const HOVER_COLOR = "#ffffff"; // bright white — subtle pop against the pastels
@@ -66,8 +66,8 @@ export function getBarHeight(count: number, max: number): number {
 }
 
 /** Spacing constants for the grid */
-export const BAR_SIZE = 0.4; // width / depth of each cube
-export const GAP = 0.01;      // gap — slightly wider for the airy look
+export const BAR_SIZE = 0.2; // width / depth of each cube
+export const GAP = 0.1;      // gap — slightly wider for the airy look
 export const STEP = BAR_SIZE + GAP; // total stride per cell
 
 /** Flatten weeks → flat list of days with grid coordinates */
@@ -78,25 +78,45 @@ export interface FlatDay extends ContributionDay {
 }
 
 export function flattenWeeks(weeks: ContributionWeek[]): FlatDay[] {
-  const result: FlatDay[] = [];
-  let id = 0;
-  weeks.forEach((week, wi) => {
-    week.contributionDays.forEach((day, di) => {
-      result.push({ ...day, weekIdx: wi, dayIdx: di, instanceId: id++ });
+  const allDays: ContributionDay[] = [];
+  weeks.forEach((week) => {
+    week.contributionDays.forEach((day) => {
+      allDays.push(day);
     });
   });
-  return result;
+
+  // Filter out days with 0 contributions to create a "contour" of activity
+  const activeDays = allDays.filter((d) => d.contributionCount > 0);
+
+  return activeDays.map((day, i) => ({
+    ...day,
+    weekIdx: 0, // No longer used for positioning
+    dayIdx: 0,  // No longer used for positioning
+    instanceId: i,
+  }));
 }
 
-/** Compute grid world position for a day (base center at y=0) */
+/** Compute grid world position for a day based on its sequential index */
 export function getDayPosition(
-  weekIdx: number,
-  dayIdx: number,
-  totalWeeks: number
+  index: number,
+  totalActiveDays: number
 ): [number, number, number] {
-  const xOffset = -(totalWeeks * STEP) / 2;
-  const zOffset = -(7 * STEP) / 2;
-  return [xOffset + weekIdx * STEP, 0, zOffset + dayIdx * STEP];
+  // Arrange into a square grid based on the count of active days
+  const cols = Math.ceil(Math.sqrt(totalActiveDays));
+  const rowIdx = Math.floor(index / cols);
+  const colIdx = index % cols;
+  const rows = Math.ceil(totalActiveDays / cols);
+
+  const gridWidth = cols * STEP;
+  const gridDepth = rows * STEP;
+
+  const xOffset = -gridWidth / 2;
+  const zOffset = -gridDepth / 2;
+
+  const x = xOffset + colIdx * STEP;
+  const z = zOffset + rowIdx * STEP;
+
+  return [x, 0, z];
 }
 
 /** Format a date string to a readable label */

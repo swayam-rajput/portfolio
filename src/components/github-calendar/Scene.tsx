@@ -53,9 +53,9 @@ export function Scene({ weeks, totalContributions }: SceneProps) {
         // No `shadows` prop — eliminates all shadow rendering entirely
         dpr={[1, 2]}
         camera={{
-          // Isometric-ish: slightly elevated, looking at the centre from front-left
-          position: [18, 16, 22],
-          fov: 42,
+          // Adjusted for square layout: closer and more centered
+          position: [12, 10, 12],
+          fov: 20,
           near: 0.1,
           far: 200,
         }}

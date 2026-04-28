@@ -64,7 +64,7 @@ export function ContributionBars({ weeks }: ContributionBarsProps) {
 
     for (let i = 0; i < instanceCount; i++) {
       const day = days[i];
-      const [bx, , bz] = getDayPosition(day.weekIdx, day.dayIdx, totalWeeks);
+      const [bx, , bz] = getDayPosition(i, instanceCount);
 
       // Start with a near-zero height so bars animate upward
       _scale.set(BAR_SIZE, 0.0001, BAR_SIZE);
@@ -103,8 +103,7 @@ export function ContributionBars({ weeks }: ContributionBarsProps) {
         currentHeights.current[i] = next;
         matrixDirty = true;
 
-        const day = days[i];
-        const [bx, , bz] = getDayPosition(day.weekIdx, day.dayIdx, totalWeeks);
+        const [bx, , bz] = getDayPosition(i, instanceCount);
         _scale.set(BAR_SIZE, next, BAR_SIZE);
         _pos.set(bx, next / 2, bz);
         _matrix.compose(_pos, _quat, _scale);
@@ -135,7 +134,7 @@ export function ContributionBars({ weeks }: ContributionBarsProps) {
       document.body.style.cursor = "pointer";
 
       const day = days[id];
-      const [bx, , bz] = getDayPosition(day.weekIdx, day.dayIdx, totalWeeks);
+      const [bx, , bz] = getDayPosition(id, instanceCount);
       const h = currentHeights.current[id];
       setTooltip({
         date: day.date,
