@@ -6,7 +6,9 @@ import Link from "next/link";
 import { Socials } from "./components/Socials";
 import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
-import Image from "next/image";
+import { GithubStats } from "./components/GithubStats";
+import { AnimatePresence, motion } from "framer-motion";
+import { Tree } from "./components/Tree";
 import Certificate from "./components/Certificate";
 import { ArrowRight , FileCode2Icon, Github, TerminalIcon } from "lucide-react";
 import AnimationWrapper from "@/components/ui/animwrapper";
@@ -14,8 +16,6 @@ import { LinkPreview } from "@/components/ui/link-preview";
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
 import React from "react";
-import { GithubStats } from "./components/GithubStats";
-import { AnimatePresence, motion } from "framer-motion";
 
 
 export default function Home() {
@@ -38,13 +38,23 @@ export default function Home() {
                                 src="/pfp-nobg.png"
                             /> */}
                                 {/* need to add my photo when hovered over the name https://dribbble.com/shots/12909488-Clipped-Image-Reveal-on-Hover */}
-                                <h1 className="text-3xl font-medium max-w-fit cursor-default  animate-underline">Swayam Rajput</h1>
+                                <div className="flex">
+                                    <Tree />
+                                </div>
+                                    
+                                {/* <div className="flex flex-row-reverse items-end gap-5"> */}
 
-                                <div className=" w-fit text-gray-500 text-center flex gap-1 cursor-default text-background ">
-                                    <p className="animate-underline">20</p> • 
-                                    <p className="animate-underline">programmer</p> • 
-                                    <p className="animate-underline">designer</p>
-                                </div>  
+                                    <div className="">
+                                        <h1 className="text-3xl font-medium max-w-fit cursor-default  animate-underline">Swayam Rajput</h1>
+
+                                        <div className=" w-fit text-gray-500 text-center flex gap-1 cursor-default text-background ">
+                                            <p className="animate-underline">20</p> • 
+                                            <p className="animate-underline">programmer</p> • 
+                                            <p className="animate-underline">designer</p>
+                                        </div>  
+
+                                    </div>
+                                {/* </div> */}
                                 {/* <div className="opacity-90 text-background"></div>   */}
                                 <div className="mt-8 flex items-center gap-10">
 
