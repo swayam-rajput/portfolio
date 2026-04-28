@@ -65,7 +65,7 @@ export const Tree = () => {
         <div className="relative h-fit">
             <Image 
                 alt="" 
-                src={'/summer.png'} 
+                src={'/tree.png'} 
                 width={73} 
                 height={81} 
                 style={{ imageRendering: "pixelated" }} 
