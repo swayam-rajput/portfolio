@@ -18,7 +18,7 @@ const ThemeCircle = ({className}:{className:string})=>{
 }
 export const AnimatedThemeToggler = ({
   className,
-  duration = 600,
+  duration = 100,
   ...props
 }: AnimatedThemeTogglerProps) => {
   const { theme, setTheme, resolvedTheme } = useTheme()
@@ -58,6 +58,9 @@ export const AnimatedThemeToggler = ({
     await transition.ready
 
     document.documentElement.animate(
+      {
+            opacity: [0, 1],
+      },
       {
         duration,
         easing: "ease-in-out",
