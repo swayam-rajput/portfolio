@@ -58,7 +58,7 @@ export const Tree = () => {
     const [leaves, setLeaves] = useState<number[]>([])
 
     useEffect(() => {
-        setLeaves(Array.from({ length: 15 }, (_, i) => i))
+        setLeaves(Array.from({ length: 10 }, (_, i) => i))
     }, [])
 
     return (
