@@ -38,7 +38,7 @@ export const GithubStats = ({username}:{username:string}) => {
             <GitHubCalendar renderBlock={(block,activity) => {
                     return React.cloneElement(block, {
                         strokeWidth: 0,
-                        className: "cursor-pointer hover:opacity-50",
+                        className: "cursor-pointer hover:opacity-50 hover:stroke-black hover:stroke-2",
                         onMouseOver: (e) => {
                             if (hideTimeout.current) clearTimeout(hideTimeout.current)
                             setHovered({count:activity.count, date:activity.date, x:e.clientX, y:e.clientY})
@@ -46,7 +46,7 @@ export const GithubStats = ({username}:{username:string}) => {
                         onMouseLeave: () => {
                             hideTimeout.current = setTimeout(() => {
                                 setHovered(null)
-                            }, 100) 
+                            }, 10) 
                         }
                     })
                 }} blockMargin={1.5} blockSize={11.5} fontSize={12} className="text-muted-foreground custom-scrollbar  " colorScheme={theme as "dark" | "light" | undefined} blockRadius={1} maxLevel={4} username={username} theme={github_theme} 
@@ -55,10 +55,10 @@ export const GithubStats = ({username}:{username:string}) => {
             {hovered && (
                 <div
                     className="
-                        fixed z-50 md:block hidden duration-100
+                        fixed z-50 md:block hidden
                         px-2 py-1 text-[11px] font-medium
                         rounded-md min-w-24 text-center
-                        bg-zinc-100 dark:bg-zinc-700
+                        bg-zinc-200 dark:bg-zinc-700
                         pointer-events-none
                         shadow-md
                     "
@@ -77,7 +77,7 @@ export const GithubStats = ({username}:{username:string}) => {
                         weekday: 'short',
                     }).format(date)
 
-                    return `[${hovered.count}] ${formatted}`
+                    return `${hovered.count == 0 ? 'No' : hovered.count } ${hovered.count > 1 ? 'contributions' : 'contribution'} on ${formatted}`
                     })()}
                 </div>
                 )}
