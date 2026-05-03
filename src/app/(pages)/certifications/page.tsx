@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Certificate from '../components/Certificate'
+import Certificate from '../../components/Certificate'
 import { FileCode2Icon } from 'lucide-react'
 import AnimationWrapper from '@/components/ui/animwrapper'
 
