@@ -32,6 +32,13 @@ export const GithubStats = ({username}:{username:string}) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            onMouseOver={(e) => {
+                setHovered((prev) =>
+                prev
+                    ? { ...prev, x: e.clientX, y: e.clientY }
+                    : null
+                )
+            }}
             onMouseLeave={() => setHovered(null)}
             transition={{ duration: .4, ease: 'linear' }}
         >
@@ -41,15 +48,18 @@ export const GithubStats = ({username}:{username:string}) => {
                         className: "cursor-pointer hover:opacity-50 hover:stroke-black hover:stroke-2",
                         onMouseEnter: (e) => {
                             if (hideTimeout.current) clearTimeout(hideTimeout.current)
-                            setHovered({count:activity.count, date:activity.date, x:e.clientX, y:e.clientY})
+                            const rect = (e.currentTarget).getBoundingClientRect()
+
+                            const centerX = rect.left + rect.width / 2
+                            const centerY = rect.top + rect.height / 2
+
+                            setHovered({
+                                count: activity.count,
+                                date: activity.date,
+                                x: centerX,
+                                y: centerY
+                            })
                         },
-                        // onMouseMove: (e) => {
-                        //     setHovered((prev) =>
-                        //         prev
-                        //         ? { ...prev, x: e.clientX, y: e.clientY }
-                        //         : null
-                        //     )
-                        // },
                         onMouseLeave: () => {
                             hideTimeout.current = setTimeout(() => {
                                 setHovered(null)
@@ -62,8 +72,8 @@ export const GithubStats = ({username}:{username:string}) => {
                 <div
                     className="
                         fixed z-50 md:block hidden
-                        px-3 py-1 text-[12px] font-medium
-                        rounded-md w-fit transition-all text-center
+                        px-2 py-1 text-[12px] font-medium
+                        rounded-md text-center
                         bg-zinc-200 dark:bg-zinc-700
                         pointer-events-none
                         shadow-md
@@ -76,14 +86,14 @@ export const GithubStats = ({username}:{username:string}) => {
                     }}
                     >
                     {(() => {
-                    const date = new Date(hovered.date)
-                    const formatted = new Intl.DateTimeFormat('en-US', {
-                        month: 'short',
-                        day: 'numeric',
-                        weekday: 'short',
-                    }).format(date)
+                        const date = new Date(hovered.date)
+                        const formatted = new Intl.DateTimeFormat('en-US', {
+                            month: 'short',
+                            day: 'numeric',
+                            weekday: 'short',
+                        }).format(date)
 
-                    return `${hovered.count == 0 ? 'No' : hovered.count } ${hovered.count > 1 ? 'contributions' : 'contribution'} on ${formatted}`
+                        return `${hovered.count == 0 ? 'No' : hovered.count } ${hovered.count > 1 ? 'contributions' : 'contribution'} on ${formatted}`
                     })()}
                 </div>
                 )}
