@@ -71,7 +71,7 @@ export const GithubStats = ({username}:{username:string}) => {
             {hovered && (
                 <div
                     className="
-                        fixed z-50 md:block hidden
+                        fixed md:block hidden
                         px-2 py-1 text-[12px] font-medium
                         rounded-md text-center
                         bg-zinc-200 dark:bg-zinc-700
