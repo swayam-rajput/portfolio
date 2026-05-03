@@ -2,7 +2,7 @@
 import { useTheme } from "next-themes";
 import React, { cloneElement, useEffect, useRef, useState } from "react";
 import { GitHubCalendar } from "react-github-calendar";
-import { hover, motion } from "framer-motion";
+import { AnimatePresence, hover, motion } from "framer-motion";
 // import 'react-github-calendar/tooltips.css'
 import './tooltips.css'
 export const GithubStats = ({username}:{username:string}) => {
@@ -39,32 +39,38 @@ export const GithubStats = ({username}:{username:string}) => {
                     return React.cloneElement(block, {
                         strokeWidth: 0,
                         className: "cursor-pointer hover:opacity-50 hover:stroke-black hover:stroke-2",
-                        onMouseOver: (e) => {
+                        onMouseEnter: (e) => {
                             if (hideTimeout.current) clearTimeout(hideTimeout.current)
                             setHovered({count:activity.count, date:activity.date, x:e.clientX, y:e.clientY})
                         },
+                        // onMouseMove: (e) => {
+                        //     setHovered((prev) =>
+                        //         prev
+                        //         ? { ...prev, x: e.clientX, y: e.clientY }
+                        //         : null
+                        //     )
+                        // },
                         onMouseLeave: () => {
                             hideTimeout.current = setTimeout(() => {
                                 setHovered(null)
-                            }, 10) 
+                            }, 80) 
                         }
                     })
                 }} blockMargin={1.5} blockSize={11.5} fontSize={12} className="text-muted-foreground custom-scrollbar  " colorScheme={theme as "dark" | "light" | undefined} blockRadius={1} maxLevel={4} username={username} theme={github_theme} 
             />
-            
             {hovered && (
                 <div
                     className="
                         fixed z-50 md:block hidden
-                        px-2 py-1 text-[11px] font-medium
-                        rounded-md min-w-24 text-center
+                        px-3 py-1 text-[12px] font-medium
+                        rounded-md w-fit transition-all text-center
                         bg-zinc-200 dark:bg-zinc-700
                         pointer-events-none
                         shadow-md
                     "
                     style={{
                         left: hovered.x,
-                        top: hovered.y - 30,
+                        top: hovered.y - 35,
                         transform: 'translateX(-50%)',
                         maxWidth: 'calc(100vw - 80px)',
                     }}
@@ -81,6 +87,6 @@ export const GithubStats = ({username}:{username:string}) => {
                     })()}
                 </div>
                 )}
-        </motion.div>
+            </motion.div>
     );
 }
