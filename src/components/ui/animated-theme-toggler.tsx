@@ -18,7 +18,7 @@ const ThemeCircle = ({className}:{className:string})=>{
 }
 export const AnimatedThemeToggler = ({
   className,
-  duration = 100,
+  duration = 200,
   ...props
 }: AnimatedThemeTogglerProps) => {
   const { theme, setTheme, resolvedTheme } = useTheme()
@@ -34,15 +34,6 @@ export const AnimatedThemeToggler = ({
 
   const toggleTheme = useCallback(async () => {
     if (!buttonRef.current) return
-
-    const { top, left, width, height } =
-      buttonRef.current.getBoundingClientRect()
-    const x = left + width / 2
-    const y = top + height / 2
-    const maxRadius = Math.hypot(
-      Math.max(left, window.innerWidth - left),
-      Math.max(top, window.innerHeight - top)
-    )
 
     if (!document.startViewTransition) {
       setTheme(isDark ? "light" : "dark")
@@ -67,7 +58,7 @@ export const AnimatedThemeToggler = ({
         pseudoElement: "::view-transition-new(root)",
       }
     )
-  }, [isDark, setTheme, duration])
+  }, [isDark, theme, duration])
 
   if (!mounted) {
     return (
