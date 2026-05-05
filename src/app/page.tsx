@@ -60,8 +60,7 @@ export default function Home() {
 
                                         <LinkPreview  className="flex flex-row rounded-sm border border-border"  isStatic imageSrc="/resume.png" url="https://drive.google.com/file/d/1jPTrLtIH0V0E5whY0t2JqudRM-DLBFEE/view?usp=drive_link">
                                             {/* <Link href= target="_blank" rel="noopener noreferrer"> */}
-                                            <Button variant={'outline'}  className="bg-transparent shadow-md hover:shadow hover:bg-zinc-100 dark:hover:bg-accent hover:border-zinc-100  border-zinc-300 dark:border-zinc-800
-                                        dark:hover:border-zinc-800">
+                                            <Button variant={'outline'}  className="bg-transparent shadow-md hover:shadow   ">
                                             
                                             Resume
                                             <svg width="18" className="ml-2" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

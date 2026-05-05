@@ -86,17 +86,9 @@ module.exports = {
 				'sans-serif'
 			],
   			sans: [
-  				'Space Grotesk',
+  				'Geist Mono',
   				'sans-serif'
   			],
-  			quicksand: [
-  				'Quicksand',
-  				'mono'
-  			],
-			formulaone: [
-				'Formula1 Display-Regular',
-				'mono'
-			]
   		}
   	}
   },

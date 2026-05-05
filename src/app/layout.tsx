@@ -3,7 +3,7 @@
 import type { Metadata } from "next";
 /* @ts-ignore */
 import "./globals.css";
-
+import {Geist_Mono} from "next/font/google";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next";
@@ -42,7 +42,11 @@ export const metadata: Metadata = {
 };
 
 import { ThemeProvider } from "@/components/theme-provider";
-
+const geistmono = Geist_Mono({
+    subsets: ["latin"],
+    variable: "--font-geistmono",
+    weight: "400",
+});
 export default function RootLayout({
     children,
     }: Readonly<{
@@ -58,16 +62,12 @@ export default function RootLayout({
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"></link>
-            <link
-                href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-                rel="stylesheet"
-            />
-            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet"/>
+            
 
         </head>
         
             <body
-            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center  border-r border-l border-double border-neutral-200 dark:border-neutral-800 font-spacegrotesk px-4 pb-8 sm:px-6 `}>
+            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center  border-r border-l border-double border-neutral-200 dark:border-neutral-800 font-spacegrotesk px-4 pb-8 sm:px-6 ${geistmono.variable} `}>
             <ThemeProvider
                 attribute="class"
                 defaultTheme="dark"
