@@ -81,13 +81,14 @@ module.exports = {
   			
   		},
   		fontFamily: {
-  			spacegrotesk: [
-				'Space Grotesk',
+  			outfit: [
+				'Outfit',
 				'sans-serif'
 			],
-  			sans: [
+
+  			mono: [
   				'Geist Mono',
-  				'sans-serif'
+  				'monospace'
   			],
   		}
   	}
