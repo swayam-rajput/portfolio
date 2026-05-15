@@ -1,7 +1,7 @@
 [
 
         {
-            "img_src":"untitled-project.png",
+            "img_src":"./projects/untitled-project.png",
             "title":"Untitled App",
             "description":"A social web app that lets users save, organize, and share links (articles, videos, posts, etc.) into public or private groups",
             "tech_stack":["NextJS","Supabase","Prisma", "PostgreSQL","TailwindCSS"],
@@ -9,7 +9,7 @@
             "link_url":""
         },
         {
-            "img_src":"./soko.png",
+            "img_src":"./projects/soko.png",
             "title":"Soko",
             "description":"Agentic RAG-based intelligent file system built with LangGraph for semantic search, deduplication, and question answering.",
             "tech_stack":["Python","RAG","ChromaDB", "LangGraph", "Gemini API"],
@@ -17,7 +17,7 @@
             "link_url":"https://github.com/swayam-rajput/soko"
         },
         {
-            "img_src":"./lura.png",
+            "img_src":"./projects/lura.png",
             "title":"Lura",
             "description":"Local RAG engine with FAISS, GGUF, and multi-format ingestion.",
             "tech_stack":["Python","RAG","FAISS"],
@@ -25,7 +25,16 @@
             "link_url":"https://github.com/swayam-rajput/lura"
         },
         {
-            "img_src": "./pomo-tui.png",
+            "img_src":"./projects/notion-brief.png",
+            "title":"Notion Brief",
+            "description":"A terminal-based productivity tool that extracts Notion page content, generates AI-driven briefings, and manages daily tasks in a single, streamlined interface.",
+            "tech_stack":["Go", "Ollama"],
+            "link":"Source Code",
+            "link_url":"https://github.com/swayam-rajput/notion-brief"
+
+        },
+        {
+            "img_src": "./projects/pomo-tui.png",
             "title": "Pomodoro TUI",
             "description": "A keyboard-driven Pomodoro timer built in Rust with a custom TUI, auto session transitions, and persistent user settings.",
             "tech_stack": ["Rust"],
@@ -33,7 +42,7 @@
             "link_url":"https://github.com/swayam-rajput/pomo-tui"
         },
         {
-            "img_src":"./workconnect.png",
+            "img_src":"./projects/workconnect.png",
             "title":"WorkConnect",
             "description":"Platform connecting residents with local vendors for management",
             "tech_stack":["Django","Python","Bootstrap","JavaScript"],
@@ -49,16 +58,16 @@
             "link_url": "https://github.com/swayam-rajput/Banking-Management-Sys"
         },
         {
-            "img_src": "./portfolio.png",
+            "img_src": "./projects/portfolio.png",
             "title": "Portfolio Website",
             "description": "A personal portfolio website to showcase projects and skills.",
             "tech_stack": ["JavaScript", "TailwindCSS", "NextJS"],
             "link": "Visit Site",
-            "link_url": "https://swayamrajput.vercel.app"
+            "link_url": "https://github.com/swayam-rajput/portfolio"
         },
         
         {
-            "img_src": "./pomodoro.png",
+            "img_src": "./projects/pomodoro.png",
             "title": "Pomodoro",
             "description": "Pomodoro app for focus.",
             "tech_stack": ["JavaScript", "TailwindCSS", "NextJS"],
