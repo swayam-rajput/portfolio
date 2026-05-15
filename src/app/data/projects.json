@@ -50,14 +50,6 @@
             "link_url":"https://github.com/swayam-rajput/WorkConnect"
         },
         {
-            "img_src":"https://raw.githubusercontent.com/swayam-rajput/Banking-Management-Sys/refs/heads/main/snapshots/customer_creation.png?fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "title": "Banking System",
-            "description": "A Swing-based banking app with JDBC, role-based access, and data security.",
-            "tech_stack": ["Java", "Swing","MySQL"],
-            "link": "Source Code",
-            "link_url": "https://github.com/swayam-rajput/Banking-Management-Sys"
-        },
-        {
             "img_src": "./projects/portfolio.png",
             "title": "Portfolio Website",
             "description": "A personal portfolio website to showcase projects and skills.",
