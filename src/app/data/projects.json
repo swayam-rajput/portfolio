@@ -27,7 +27,7 @@
         {
             "img_src":"./projects/notion-brief.png",
             "title":"Notion Brief",
-            "description":"A terminal-based productivity tool that extracts Notion page content, generates AI-driven briefings, and manages daily tasks in a single, streamlined interface.",
+            "description":"TUI tool that extracts Notion page content, generates AI briefings, and manages daily tasks in a single interface.",
             "tech_stack":["Go", "Ollama"],
             "link":"Source Code",
             "link_url":"https://github.com/swayam-rajput/notion-brief"
