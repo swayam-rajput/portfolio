@@ -21,11 +21,11 @@ export const ProjectCard = ({
                 <div className="descript text-sm text-gray-500 mb-6">{description}</div>
 
             </div>
-            <div className=" flex font-sans flex-col items-start justify-between gap-4">
+            <div className=" flex font-mono flex-col items-start justify-between gap-4">
 
                 <div className="gap-1.5 flex-wrap text-xs flex ">
                     {tech_stack.map((tag,index)=>(
-                        <div key={index} className="dark:bg-zinc-700 duration-150 bg-zinc-300/70 px-2 py-1 shadow opacity-80 hover:opacity-100  text-xs scale-95 rounded-none cursor-default">{tag}</div>
+                        <div key={index} className="dark:bg-zinc-700 duration-150 bg-zinc-300/70 px-2 py-1 shadow opacity-80 hover:opacity-100  text-xs scale-95 rounded-[2px] cursor-default">{tag}</div>
                     ))}
                 </div>
                 <div className="link">
