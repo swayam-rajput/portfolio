@@ -26,9 +26,10 @@ Python · FAISS
 
 
 
-• **LinkVault** *(Launching Soon)*  
+• **Linkun**   
 Social bookmarking platform to save, organize, and share links in public or private collections.  
-Next.js · Prisma · PostgreSQL · Tailwind
+Next.js · Supabase · Prisma · PostgreSQL · Tailwind
+[Visit Site](https://linkun.vercel.app)
 
 • [see all projects](https://github.com/swayam-rajput?tab=repositories)
 
