@@ -1,12 +1,12 @@
 [
 
         {
-            "img_src":"./projects/untitled-project.png",
-            "title":"Untitled App",
+            "img_src":"./projects/linkun.png",
+            "title":"Linkun",
             "description":"A social web app that lets users save, organize, and share links (articles, videos, posts, etc.) into public or private groups",
             "tech_stack":["NextJS","Supabase","Prisma", "PostgreSQL","TailwindCSS"],
-            "link":"Launching Soon!",
-            "link_url":""
+            "link":"Visit Site",
+            "link_url":"https://linkun.vercel.app"
         },
         {
             "img_src":"./projects/soko.png",
