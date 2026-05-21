@@ -8,9 +8,10 @@ const Footer = () => {
     return (
         
         <div className=" flex justify-center items-center flex-col-reverse sm:flex-row gap-6 sm:justify-between px-4 my-4 top-0 py-6">
-            <span className=" flex flex-col font-outfit text-[13px] text-muted-foreground">
-                <span>Designed by <p className="animate-underline text-foreground pb-0.5 font-medium">Swayam</p></span>
-                <span>© {new Date().getFullYear()}</span> 
+            <span className=" flex flex-col md:items-start items-center font-outfit text-[13px] text-muted-foreground">
+                {/* <span>© {new Date().getFullYear()}</span>  */}
+                <p>Designed by</p>
+                <p className="animate-underline text-foreground font-medium">Swayam</p>
             </span>
             {/* <Image alt="" width={73} height={81} src={"/summer.png"}/> */}
             <Link className="py-4 opacity-85 hover:opacity-100 active:opacity-50 text-sm transition-all" href={'/contact'}>
