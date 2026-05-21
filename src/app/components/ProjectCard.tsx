@@ -11,7 +11,7 @@ export const ProjectCard = ({
 ) => {
     console.log(img_src);
     return (
-        <div className="flex flex-col p-8 rounded-lg justify-between shadow hover:shadow-md border transition ">
+        <div className="flex flex-col p-8 rounded-sm justify-between shadow hover:shadow-md border transition ">
             <div className="flex flex-col gap-2">
                 <div className="img">
                     <img src={img_src}  alt={title} width={600} loading="lazy" className="flex rounded-md md:h-44  w-full object-cover "/>
