@@ -25,7 +25,7 @@ export default function Home() {
                 <div></div>
                 {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
                 <section className="grow flex flex-col gap-8">
-                    <div className=" flex flex-col gap-16 z-10  pb-16"> 
+                    <div className=" flex flex-col z-10 "> 
                         {/* line above is the parent */}
                         <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
                             <div className="flex flex-col gap-1 mr-2">
@@ -85,12 +85,12 @@ export default function Home() {
 
                     
                     {/* tab */}
-                    <div className="flex flex-col mt-2 mb-6 px-2 gap-6">
+                    <div className="flex flex-col mt-2 mb-6 md:px-0 px-2 gap-6">
                             <div className="flex flex-row items-center justify-between">
                                 <Link href={'/projects'} className="flex w-full group justify-between">                        
                                     <div className="  items-center flex  gap-3">
                                         <p className="text-2xl opacity-80 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all font-bold"><TerminalIcon/></p> 
-                                        <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70  font-spacegrotesk"> Proof of Work</p>
+                                        <p className="text-lg opacity-80 group-hover:opacity-100 font-medium dark:opacity-100  transition-all  dark:group-hover:opacity-70"> Proof of Work</p>
                                     </div>
                                     <p className="group-hover:translate-x-1.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight /></p>
                                     
@@ -100,10 +100,10 @@ export default function Home() {
                                 <Projects limit={2}/>
                             {/* </div> */}
                     </div>
-                    <div className="flex gap-6 z-0 mb-10 sm:mx-0 mx-2 flex-col">
+                    <div className="flex gap-6 z-0 sm:mx-0 mx-2 flex-col">
                         <span className="flex gap-2 flex-row items-center">
                             
-                            <span className=" font-semibold flex items-center text-xl">Tech Stack </span>    
+                            <span className=" font-medium flex items-center text-xl">Tech Stack </span>    
 
                         </span>
                         <TechStack/>
@@ -113,7 +113,7 @@ export default function Home() {
                     <div className="">
                         <div className="flex flex-row pl-2 items-center gap-2.5">
                             
-                            <h1 className=" font-semibold flex text-xl">Experience</h1>
+                            <h1 className=" font-medium flex text-xl">Experience</h1>
 
                         </div>
                         <Experience />
