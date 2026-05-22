@@ -6,8 +6,9 @@ interface TooltipProps {
   text: string
   position?: 'top' | 'bottom' | 'left' | 'right'
   className?: string
+  duration?: number
 }
-export const MinimalTooltip = ({ children, text, position = "top", className = "" }: TooltipProps) => {
+export const MinimalTooltip = ({ children, text, position = "top", className = "", duration=100 }: TooltipProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const positions = {
@@ -19,14 +20,14 @@ export const MinimalTooltip = ({ children, text, position = "top", className = "
 
   return (
     <div 
-      className={`relative select-none whitespace-nowrap inline-flex ${className}`}
+      className={`relative select-none whitespace-nowrap inline-flex `}
       onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}
+      onMouseLeave={() => setTimeout(()=>setIsVisible(false),duration)}
     >
       {children}
       
       <div
-        className={`absolute ${positions[position]} px-2.5 py-1.5 dark:bg-zinc-600/40 bg-zinc-100 text-black dark:text-white text-xs border border-input font-medium rounded-md whitespace-nowrap pointer-events-none transition-all duration-100 ease-out z-50 ${
+        className={`absolute ${positions[position]} px-2.5 py-1.5 dark:bg-zinc-600/40 bg-zinc-100 text-black dark:text-white text-xs border border-input font-medium rounded-md whitespace-nowrap pointer-events-none transition-all duration-100 ease-out z-50 ${className} ${
           isVisible 
             ? 'opacity-100' 
             : 'opacity-0'
