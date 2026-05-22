@@ -83,26 +83,8 @@ export default function Home() {
                     {/* </section> */}
                     
 
-                    <div className="flex gap-6 z-0 mb-10 sm:mx-0 mx-2 flex-col">
-                        <span className="flex gap-2 flex-row items-center">
-                            
-                            <span className=" font-semibold flex items-center text-xl">Tech Stack </span>    
-
-                        </span>
-                        <TechStack/>
-                        {/* Simplify tech stack div to show it in text also, easy to copy */}
-                        
-                    </div>
+                    
                     {/* tab */}
-                    <div className="">
-                        <div className="flex flex-row pl-2 items-center gap-2.5">
-                            
-                            <h1 className=" font-semibold flex text-xl">Experience</h1>
-
-                        </div>
-                        <Experience />
-
-                    </div>
                     <div className="flex flex-col mt-2 mb-6 px-2 gap-6">
                             <div className="flex flex-row items-center justify-between">
                                 <Link href={'/projects'} className="flex w-full group justify-between">                        
@@ -117,6 +99,25 @@ export default function Home() {
                             {/* <div className="md:flex hidden"> */}
                                 <Projects limit={2}/>
                             {/* </div> */}
+                    </div>
+                    <div className="flex gap-6 z-0 mb-10 sm:mx-0 mx-2 flex-col">
+                        <span className="flex gap-2 flex-row items-center">
+                            
+                            <span className=" font-semibold flex items-center text-xl">Tech Stack </span>    
+
+                        </span>
+                        <TechStack/>
+                        {/* Simplify tech stack div to show it in text also, easy to copy */}
+                        
+                    </div>
+                    <div className="">
+                        <div className="flex flex-row pl-2 items-center gap-2.5">
+                            
+                            <h1 className=" font-semibold flex text-xl">Experience</h1>
+
+                        </div>
+                        <Experience />
+
                     </div>
 {/*                     
                     <div className="flex flex-col mt-2 px-2 gap-6">
