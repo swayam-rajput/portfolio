@@ -5,6 +5,7 @@ import Cat from "./Cat";
 import { SunIcon } from "@/components/ui/sun";
 import { MoonIcon } from "@/components/ui/moon";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { Highlight, HighlightItem } from "@/components/ui/highlight";
 export const Navbar = () => {
     const [hoverStyle, setHoverStyle] = useState({ left: 0, width: 0, opacity: 0 });
     const navRef = useRef<HTMLUListElement>(null);
@@ -39,39 +40,40 @@ export const Navbar = () => {
                 <div className="dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-none sm:mx-0 -mx-4 px-4 pb-5 pt-6 backdrop-blur-[18px]">
                     <nav  className="flex items-center justify-between " 
                         >
-                        <ul ref = {navRef} onMouseLeave={handleMouseLeave}
-                            className="relative  flex text-sm sm:text-base  gap-0.5 md:gap-4 ">
-                                <div
+                    
+                        <Highlight hover  containerClassName="flex text-sm sm:text-base flex-row gap-0.5 md:gap-4" mode="parent" controlledItems
+                            >
+                                {/* <div
                                     className="absolute py-4 shadow -z-20 top-1/2 -translate-y-1/2 h-7 sm:h-9 rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60 transition-all duration-200"
                                     style={{
                                         left: hoverStyle.left,
                                         width: hoverStyle.width,
                                         opacity: hoverStyle.opacity
                                     }}
-                                />
-                            <li className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5" onMouseEnter={handleMouseEnter}>
+                                /> */}
+                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5">
                                 <Link href={'/'}  className={navitemstyle}>
                                     home
                                 </Link>
-                            </li>
+                            </HighlightItem>
 
-                            <li className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5" onMouseEnter={handleMouseEnter}>
+                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5">
                                 <Link href={'/projects'}  className={navitemstyle}>
                                     projects
                                 </Link>
-                            </li>
+                            </HighlightItem>
 
-                            <li className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5" onMouseEnter={handleMouseEnter}>
+                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5">
                                 <Link href={'/contact'}  className={navitemstyle}>
                                     contact
                                 </Link>
-                            </li>
+                            </HighlightItem>
                             {/* <li className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5" onMouseEnter={handleMouseEnter}>
                                 <Link href={'/contact'}  className={navitemstyle}>
                                     contact
                                 </Link>
                             </li> */}
-                        </ul>
+                        </Highlight>
                         <div onMouseLeave={handleMouseLeave} className="flex justify-center items-center flex-row-reverse gap-2 ">
                             {/* <button onClick={toggleMode} onMouseEnter={handleMouseEnter} className="transition  hover:text-accent-foreground duration-300 rounded-sm px-2 py-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" >
