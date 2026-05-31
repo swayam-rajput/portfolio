@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { LucideBriefcase, LucideGraduationCap, ChevronDown } from "lucide-react";
+import { CaretDownIcon, BriefcaseIcon, GraduationCapIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { motion } from "motion/react";
 
@@ -37,7 +37,7 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                 </span>
                 :(
                     <span className="relative flex pr-0.5 pt-0.5 overflow-hidden rounded-full aspect-square size-12 border dark:bg-muted bg-background justify-center items-center ">
-                        { logo.type == 'edu' ? <LucideGraduationCap strokeWidth={2} className="opacity-60 size-5"/> : <LucideBriefcase strokeWidth={2} className="opacity-60 size-5"/>}
+                        { logo.type == 'edu' ? <GraduationCapIcon strokeWidth={2} className="opacity-60 size-5"/> : <BriefcaseIcon strokeWidth={2} className="opacity-60 size-5"/>}
                     </span>
                 )
             }
@@ -72,7 +72,7 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                             transition={{ type: "spring", stiffness: 480, damping: 28 }}
                             className="inline-flex size-8 shrink-0 items-center justify-center text-muted-foreground mt-1"
                         >
-                            <ChevronDown className="size-4" />
+                            <CaretDownIcon className="size-4" />
                         </motion.span>
                     )}
                 </div>
