@@ -34,7 +34,7 @@ const page = () => {
     
     return (
         <article className="mt-8 flex flex-col gap-8  pb-16">
-            <h1 className="title font-spacegrotesk text-2xl md:text-5xl">contact me.</h1>
+            <h1 className="title font-spacegrotesk text-2xl md:text-3xl">contact me.</h1>
             <form className="font-spacegrotesk" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                     <div className=" h-8">
