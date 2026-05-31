@@ -1,6 +1,22 @@
 {
     "career": [
         {
+            "name": "Technosoft Software Solutions",
+            "href": "",
+            "title": "Full Stack Web Developer Intern",
+            "logo": {
+                "src": "",
+                "type": "work",
+                "alt": "TSS"
+            },
+            "start": "Jan 2026",
+            "end": "Apr 2026",
+            "description": [
+                "Developed full-stack web applications using React, Node.js, and MySQL.",
+                "Implemented authentication, CRUD operations, API Integration and real-world software development workflows."
+            ]
+        },
+        {
             "name": "Compilers Technologies",
             "href": "",
             "title": "Java Developer (Intern)",
