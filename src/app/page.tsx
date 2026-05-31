@@ -16,6 +16,7 @@ import { LinkPreview } from "@/components/ui/link-preview";
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
 import React from "react";
+import { CurrentLocalTimeItem } from "@/components/current-local-time";
 
 
 export default function Home() {
@@ -74,6 +75,7 @@ export default function Home() {
                                         </LinkPreview>
                                     
                                         <Socials/>
+                                {/* <CurrentLocalTimeItem timeZone="Asia/Kolkata"/> */}
                                 </div>
                             </div>
                         </div>
