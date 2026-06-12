@@ -3,7 +3,7 @@
 import type { Metadata } from "next";
 /* @ts-ignore */
 import "./globals.css";
-import {Geist_Mono, Outfit} from "next/font/google";
+import {Geist, Geist_Mono, Outfit} from "next/font/google";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next";
@@ -47,6 +47,10 @@ const geistmono = Geist_Mono({
     variable: "--font-geistmono",
     weight: "400",
 });
+const geist = Geist({
+    variable: "--font-geist",
+    weight: ["400","500"]
+})
 const outfit = Outfit({
     weight:"400",
     variable: "--font-outfit"
@@ -70,7 +74,7 @@ export default function RootLayout({
         </head>
         
             <body
-            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center  border-r border-l border-double cursor-default border-neutral-200 dark:border-neutral-800 px-4 pb-8 sm:px-6 ${geistmono.variable} ${outfit.variable} font-outfit `}>
+            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center  border-r border-l border-double cursor-default border-neutral-200 dark:border-neutral-800 px-4 pb-8 sm:px-6 ${geistmono.variable} ${outfit.variable} font-outfit text-[16px] tracking-[-0.0em] leading-[1.62] font-medium `}>
             <ThemeProvider
                 attribute="class"
                 defaultTheme="dark"
