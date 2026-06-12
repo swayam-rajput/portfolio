@@ -46,7 +46,7 @@ export default function Home() {
                                 {/* <div className="flex flex-row-reverse items-end gap-5"> */}
 
                                     <div className="">
-                                        <h1 className="text-3xl font-medium max-w-fit cursor-default  animate-underline">Swayam Rajput</h1>
+                                        <h1 className="text-xl font-medium max-w-fit cursor-default  animate-underline">Swayam Rajput</h1>
 
                                         <div className=" w-fit text-gray-500 text-center flex gap-1 cursor-default text-background ">
                                             <p className="animate-underline">20</p> • 
