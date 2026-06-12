@@ -17,6 +17,20 @@
             "link_url":"https://github.com/swayam-rajput/soko"
         },
         {
+            "img_src": "./projects/sloppy.png",
+            "title": "Sloppy",
+            "description": "An AI text detection system that classifies a piece of text as human-written or AI-generated using a fine-tuned BERT model trained on synthetic and human text datasets.",
+            "tech_stack": [
+                "Python",
+                "Hugging Face",
+                "PEFT/LoRA",
+                "Ollama",
+                "Wikipedia API"
+            ],
+            "link": "Source Code",
+            "link_url": "https://github.com/swayam-rajput/sloppy"
+        },
+        {
             "img_src":"./projects/lura.png",
             "title":"Lura",
             "description":"Local RAG engine with FAISS, GGUF, and multi-format ingestion.",

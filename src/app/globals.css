@@ -115,7 +115,7 @@
   body {
     
     @apply bg-background  text-foreground;
-    font-family: 'Geist Mono',sans-serif;
+    /* font-family: 'Geist Mono',sans-serif; */
   }
     .custom-scrollbar::-webkit-scrollbar {
     width: 2px;
