@@ -50,6 +50,8 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                 >
                     <div className="flex flex-col gap-1">
                         <h2 className="font-medium leading-none">{name}</h2>
+                        <p className="text-[13.5px] opacity-60 mt-1">{title}</p>
+
                         <div className="text-xs text-muted-foreground/90 mt-1">
                             {start && end ?
                                 (<>
@@ -62,7 +64,6 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                                 : <span></span>
                             }
                         </div>
-                        <p className="text-sm font-medium text-muted-foreground mt-1">{title}</p>
                     </div>
                     
                     {hasContent && (
@@ -92,7 +93,7 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                     >
                         <div className="pt-2">
                             {description && (
-                                <ul className="ml-4 opacity-60 list-outside list-disc">
+                                <ul className="ml-4 opacity-50 list-outside list-disc">
                                     {description.map((desc, i) => (
                                     <li key={i} className="pr-8 text-sm dark:prose-invert">
                                         {desc}
