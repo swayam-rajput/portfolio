@@ -34,10 +34,25 @@ export const ProjectCard = ({
                     {
                         link_url!==''?(
                             <Link target="_blank" href={link_url}>
-                                <Button className="md:h-8 group px-2.5 text-xs shadow shadow-inherit  hover:bg-opacity-80 uppercase dark:hover:bg-opacity-70 font-medium" variant={'default'} size={"sm"}>{link}
-
-                                    <svg width="16" height="16" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg" className="group-hover:rotate-45 transition-transform fill-white dark:fill-black" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z"></path> </g> </g></svg>
                                 
+                                <Button className="md:h-8 group px-2.5 text-xs shadow shadow-inherit  hover:bg-opacity-80 uppercase dark:hover:bg-opacity-70 font-medium group" variant={'default'} size={"sm"}>
+                                    
+                                    <span className="relative flex h-[1.2em] flex-col overflow-hidden">
+                                        <span className="flex transition-transform duration-300 group-hover:-translate-y-full">
+                                            {link}
+
+                                            <svg width="16" height="16" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg" className="group-hover:rotate-45 transition-transform fill-white dark:fill-black" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z"></path> </g> </g></svg>
+                                
+                                        </span>
+                                        <span className="flex transition-transform duration-300 group-hover:-translate-y-full">
+                                            {link}
+
+                                            <svg width="16" height="16" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg" className="group-hover:rotate-45 transition-transform fill-white dark:fill-black" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z"></path> </g> </g></svg>
+                                
+                                    
+                                        </span>
+                                    </span>
+                                    
                                 </Button>
                             </Link>
 

@@ -61,8 +61,15 @@ export default function Home() {
 
                                         <LinkPreview  className="flex flex-row rounded-sm border border-border"  isStatic imageSrc="/resume.png" url="https://drive.google.com/drive/u/0/folders/1MJV7_5G_e9njzuqrwRilTFHKYX5-2uOo">
                                             {/* <Link href= target="_blank" rel="noopener noreferrer"> */}
-                                            <Button variant={'outline'}  className="bg-transparent shadow-md hover:shadow   ">
-                                            
+                                            <Button variant={'outline'}  className="bg-transparent shadow-md hover:shadow  group ">
+                                            {/* <span className="relative flex h-[1.2em] flex-col overflow-hidden">
+                                                <span className="transition-transform duration-300 group-hover:-translate-y-full">
+                                                    Resume
+                                                </span>
+                                                <span className="transition-transform duration-300 group-hover:-translate-y-full">
+                                                    Resume
+                                                </span>
+                                            </span> */}
                                             Resume
                                             <svg width="18" className="ml-2" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M26.7075 10.2925L19.7075 3.2925C19.6146 3.19967 19.5042 3.12605 19.3829 3.07586C19.2615 3.02568 19.1314 2.9999 19 3H7C6.46957 3 5.96086 3.21071 5.58579 3.58579C5.21071 3.96086 5 4.46957 5 5V14C5 14.2652 5.10536 14.5196 5.29289 14.7071C5.48043 14.8946 5.73478 15 6 15C6.26522 15 6.51957 14.8946 6.70711 14.7071C6.89464 14.5196 7 14.2652 7 14V5H18V11C18 11.2652 18.1054 11.5196 18.2929 11.7071C18.4804 11.8946 18.7348 12 19 12H25V27H22C21.7348 27 21.4804 27.1054 21.2929 27.2929C21.1054 27.4804 21 27.7348 21 28C21 28.2652 21.1054 28.5196 21.2929 28.7071C21.4804 28.8946 21.7348 29 22 29H25C25.5304 29 26.0391 28.7893 26.4142 28.4142C26.7893 28.0391 27 27.5304 27 27V11C27.0001 10.8686 26.9743 10.7385 26.9241 10.6172C26.8739 10.4958 26.8003 10.3854 26.7075 10.2925ZM20 6.41375L23.5863 10H20V6.41375Z" fill="currentColor"></path>

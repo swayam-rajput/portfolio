@@ -51,21 +51,43 @@ export const Navbar = () => {
                                         opacity: hoverStyle.opacity
                                     }}
                                 /> */}
-                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5">
+                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
                                 <Link href={'/'}  className={navitemstyle}>
-                                    home
+                                    <div className="flex relative h-7 flex-col overflow-hidden">
+                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
+                                            home
+                                        </div>
+                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
+                                            home
+                                        </div>
+                                    </div>
                                 </Link>
                             </HighlightItem>
 
-                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5">
+                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
                                 <Link href={'/projects'}  className={navitemstyle}>
-                                    projects
+                                    <div className="flex relative h-7 flex-col overflow-hidden">
+                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
+                                            projects
+                                        </div>
+                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
+                                            projects
+                                        </div>
+                                    </div>
                                 </Link>
                             </HighlightItem>
 
-                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5">
+                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
                                 <Link href={'/contact'}  className={navitemstyle}>
-                                    contact
+                                    <div className="flex relative h-7 flex-col overflow-hidden">
+                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
+                                            contact
+                                        </div>
+                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
+                                            contact
+                                        </div>
+                                    </div>
+                                    
                                 </Link>
                             </HighlightItem>
                             {/* <li className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5" onMouseEnter={handleMouseEnter}>
