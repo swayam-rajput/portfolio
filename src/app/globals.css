@@ -133,6 +133,9 @@
     width: 4px;
 
   }
+  ::selection {
+    background: rgba(45, 108, 223, 0.21);
+  }
   body::-webkit-scrollbar-track {
     background: none    ;    /* color of the tracking area */
   }
