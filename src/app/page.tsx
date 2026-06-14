@@ -59,7 +59,7 @@ export default function Home() {
                                 {/* <div className="opacity-90 text-background"></div>   */}
                                 <div className="mt-8 flex items-center gap-10">
 
-                                        <LinkPreview  className="flex flex-row rounded-sm border border-border"  isStatic imageSrc="/resume.png" url="https://drive.google.com/drive/u/0/folders/1MJV7_5G_e9njzuqrwRilTFHKYX5-2uOo">
+                                        <LinkPreview  className="flex flex-row rounded-sm border border-border"  isStatic imageSrc="/resume.png" url="https://drive.google.com/file/d/15TDS1Isfa2dY03CRT1Cp98Tb9G8F24_e/view?usp=sharing">
                                             {/* <Link href= target="_blank" rel="noopener noreferrer"> */}
                                             <Button variant={'outline'}  className="bg-transparent shadow-md hover:shadow  group ">
                                             {/* <span className="relative flex h-[1.2em] flex-col overflow-hidden">
