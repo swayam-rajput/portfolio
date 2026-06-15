@@ -35,7 +35,7 @@ export const ProjectCard = ({
                         link_url!==''?(
                             <Link target="_blank" href={link_url}>
                                 
-                                <Button className="md:h-8 group px-2.5 text-xs shadow shadow-inherit  hover:bg-opacity-80 uppercase dark:hover:bg-opacity-70 font-medium group" variant={'default'} size={"sm"}>
+                                <Button className="md:h-8 group px-2.5 text-xs cursor-crosshair shadow shadow-inherit  hover:bg-opacity-80 uppercase dark:hover:bg-opacity-70 font-medium group" variant={'default'} size={"sm"}>
                                     
                                     <span className="relative flex h-[1.2em] flex-col overflow-hidden">
                                         <span className="flex transition-transform duration-300 group-hover:-translate-y-full">

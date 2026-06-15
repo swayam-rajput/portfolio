@@ -24,7 +24,7 @@ const Footer = () => {
             </span>
             {/* <Image alt="" width={73} height={81} src={"/summer.png"}/> */}
             <Link className="py-4 opacity-85 hover:opacity-100 active:opacity-50 text-sm transition-all" href={'/contact'}>
-                <Button variant={"ghost"} className="inline-flex group px-3 py-0.5 transition-all duration-200  ">
+                <Button variant={"ghost"} className="inline-flex cursor-crosshair group px-3 py-0.5 transition-all duration-200  ">
                     <span className="relative flex h-5 flex-col overflow-hidden">
                         <span className="transition-transform duration-300 group-hover:-translate-y-full">
                         Contact Me
