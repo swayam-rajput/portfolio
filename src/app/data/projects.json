@@ -31,14 +31,6 @@
             "link_url": "https://github.com/swayam-rajput/sloppy"
         },
         {
-            "img_src":"./projects/lura.png",
-            "title":"Lura",
-            "description":"Local RAG engine with FAISS, GGUF, and multi-format ingestion.",
-            "tech_stack":["Python","RAG","FAISS"],
-            "link":"Source Code",
-            "link_url":"https://github.com/swayam-rajput/lura"
-        },
-        {
             "img_src":"./projects/notion-brief.png",
             "title":"Notion Brief",
             "description":"TUI tool that extracts Notion page content, generates AI briefings, and manages daily tasks in a single interface.",
@@ -46,6 +38,14 @@
             "link":"Source Code",
             "link_url":"https://github.com/swayam-rajput/notion-brief"
 
+        },
+        {
+            "img_src":"./projects/lura.png",
+            "title":"Lura",
+            "description":"Local RAG engine with FAISS, GGUF, and multi-format ingestion.",
+            "tech_stack":["Python","RAG","FAISS"],
+            "link":"Source Code",
+            "link_url":"https://github.com/swayam-rajput/lura"
         },
         {
             "img_src": "./projects/pomo-tui.png",
