@@ -49,7 +49,7 @@ export default function Home() {
                                         <h1 className="text-xl font-medium max-w-fit cursor-default  animate-underline">Swayam Rajput</h1>
 
                                         <div className=" w-fit text-gray-500 text-center flex gap-1 cursor-default text-background ">
-                                            <p className="animate-underline">20</p> • 
+                                            <p className="animate-underline">21</p> • 
                                             <p className="animate-underline">programmer</p> • 
                                             <p className="animate-underline">designer</p>
                                         </div>  
