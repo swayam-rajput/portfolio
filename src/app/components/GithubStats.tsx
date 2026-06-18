@@ -45,7 +45,7 @@ export const GithubStats = ({username}:{username:string}) => {
             <GitHubCalendar renderBlock={(block,activity) => {
                     return React.cloneElement(block, {
                         strokeWidth: 0,
-                        className: "cursor-pointer hover:opacity-50 hover:stroke-black hover:stroke-2",
+                        className: " hover:opacity-50 hover:stroke-black hover:stroke-2",
                         onMouseEnter: (e) => {
                             if (hideTimeout.current) clearTimeout(hideTimeout.current)
                             const rect = (e.currentTarget).getBoundingClientRect()
