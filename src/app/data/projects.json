@@ -17,6 +17,14 @@
             "link_url":"https://github.com/swayam-rajput/soko"
         },
         {
+            "img_src":"./projects/duffer.png",
+            "title":"Duffer",
+            "description":"CLI tool that analyzes Git diffs and generates descriptive commit messages using local and cloud LLMs.",
+            "tech_stack":["Python","Ollama"],
+            "link":"Source Code",
+            "link_url":"https://github.com/swayam-rajput/duffer"
+        },
+        {
             "img_src": "./projects/sloppy.png",
             "title": "Sloppy",
             "description": "An AI text detection system that classifies a piece of text as human-written or AI-generated using a fine-tuned BERT model trained on synthetic and human text datasets.",
