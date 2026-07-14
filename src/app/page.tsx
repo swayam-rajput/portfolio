@@ -90,9 +90,16 @@ export default function Home() {
                     {/* <section className="custom-scrollbar overflow-x-hidden text-muted-foreground w-full"> */}
                     <GithubStats username="swayam-rajput" ></GithubStats>
                     {/* </section> */}
-                    
 
-                    
+                    <div className="">
+                        <div className="flex flex-row pl-2 items-center gap-2.5">
+                            
+                            <h1 className=" font-medium flex text-xl">Experience</h1>
+
+                        </div>
+                        <Experience />
+
+                    </div>
                     {/* tab */}
                     <div className="flex flex-col mt-2 mb-6 md:px-0 px-2 gap-6">
                             <div className="flex flex-row items-center justify-between">
@@ -119,15 +126,7 @@ export default function Home() {
                         {/* Simplify tech stack div to show it in text also, easy to copy */}
                         
                     </div>
-                    <div className="">
-                        <div className="flex flex-row pl-2 items-center gap-2.5">
-                            
-                            <h1 className=" font-medium flex text-xl">Experience</h1>
 
-                        </div>
-                        <Experience />
-
-                    </div>
 {/*                     
                     <div className="flex flex-col mt-2 px-2 gap-6">
                         <div className="flex group flex-row items-center ">
