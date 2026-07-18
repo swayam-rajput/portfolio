@@ -37,11 +37,12 @@ export const Navbar = () => {
         {catShown && <Cat/>}
 
             <header className="sticky top-0 w-full z-50 sm:pt-4">            
-                <div className="dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-none sm:mx-0 -mx-4 px-4 pb-5 pt-6 backdrop-blur-[18px]">
+                <div className="dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-sm sm:mx-0 -mx-4 px-4 
+                py-2.5 backdrop-blur-[18px]">
                     <nav  className="flex items-center justify-between " 
                         >
                     
-                        <Highlight hover  containerClassName="flex text-sm sm:text-base flex-row gap-0.5 md:gap-4" mode="parent" controlledItems
+                        <Highlight hover  containerClassName="flex text-sm sm:text-base flex-row gap-3 md:gap-4" mode="parent" controlledItems
                             >
                                 {/* <div
                                     className="absolute py-4 shadow -z-20 top-1/2 -translate-y-1/2 h-7 sm:h-9 rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60 transition-all duration-200"
