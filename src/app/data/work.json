@@ -1,6 +1,21 @@
 {
     "career": [
         {
+            "name": "Anix AI",
+            "href": "",
+            "title": "AI Engineer Intern",
+            "logo": {
+                "src": "",
+                "type": "work",
+                "alt": "ANIX"
+            },
+            "start": "July 2026",
+            "end": "Present",
+            "description": [
+                
+            ]
+        },
+        {
             "name": "Technosoft Software Solutions",
             "href": "",
             "title": "Full Stack Web Developer Intern",
