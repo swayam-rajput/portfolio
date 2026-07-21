@@ -1,5 +1,12 @@
 [
-
+        {
+            "img_src":"./projects/elk.png",
+            "title":"Elk",
+            "description":"A local-first password manager that securely stores credentials in an AES-256-GCM encrypted vault, with optional GitHub synchronization, import/export, and a terminal-based interface.",
+            "tech_stack":["Python","Textual","Cryptography","Argon2id","GitHub API"],
+            "link":"To be released.",
+            "link_url":""
+        },
         {
             "img_src":"./projects/linkun.png",
             "title":"Linkun",
