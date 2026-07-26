@@ -36,9 +36,9 @@ export const Navbar = () => {
         <>
         {catShown && <Cat/>}
 
-            <header className="sticky top-0 w-full z-50 sm:pt-4">            
-                <div className="dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-sm sm:mx-0 -mx-4 px-4 
-                py-2.5 backdrop-blur-[18px]">
+            <header className="sticky top-0 w-full z-50 sm:pt-0">            
+                <div className="dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-none sm:-mx-6 -mx-4 px-4 
+                py-3 backdrop-blur-[18px]">
                     <nav  className="flex items-center justify-between " 
                         >
                     
