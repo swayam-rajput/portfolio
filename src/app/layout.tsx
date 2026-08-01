@@ -63,6 +63,7 @@ export default function RootLayout({
 {
     
     return (
+                <ReactLenis root>
         <html lang="en" suppressHydrationWarning>
 
         <head>
@@ -82,10 +83,8 @@ export default function RootLayout({
                 disableTransitionOnChange
             >
                 <Navbar  />
-                    <ReactLenis root>
                         {children}   
 
-                    </ReactLenis>
                     <Analytics/>
                 <Footer/>
             </ThemeProvider>
@@ -94,26 +93,26 @@ export default function RootLayout({
                         
                         <div
                         className="absolute inset-0 opacity-100
-                                [mask-image:linear-gradient(transparent_0%,black_25%,black_50%,transparent_60%)]
-                                backdrop-blur-[0.25rem]">
+                        [mask-image:linear-gradient(transparent_0%,black_25%,black_50%,transparent_60%)]
+                        backdrop-blur-[0.25rem]">
                         </div>
 
                         <div
                         className="absolute inset-0 opacity-100
-                                [mask-image:linear-gradient(transparent_20%,black_50%,black_75%,transparent_80%)]
-                                backdrop-blur-[0.375rem]">
+                        [mask-image:linear-gradient(transparent_20%,black_50%,black_75%,transparent_80%)]
+                        backdrop-blur-[0.375rem]">
                         </div>
 
                         <div
                         className="absolute inset-0 opacity-100
-                                [mask-image:linear-gradient(transparent_40%,black_75%,black_100%,transparent_100%)]
-                                backdrop-blur-[0.5rem]">
+                        [mask-image:linear-gradient(transparent_40%,black_75%,black_100%,transparent_100%)]
+                        backdrop-blur-[0.5rem]">
                         </div>
 
                         <div
                         className="absolute inset-0 opacity-100
-                                [mask-image:linear-gradient(transparent_60%,black_100%,black_100%)]
-                                backdrop-blur-[0.625rem]">
+                        [mask-image:linear-gradient(transparent_60%,black_100%,black_100%)]
+                        backdrop-blur-[0.625rem]">
                         </div>
 
 
@@ -121,6 +120,7 @@ export default function RootLayout({
                 </div>
             </body>
         </html>
+        </ReactLenis>
 
     );
 }
