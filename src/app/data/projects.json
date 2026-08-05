@@ -32,6 +32,23 @@
             "link_url":"https://github.com/swayam-rajput/duffer"
         },
         {
+            "img_src": "./projects/obsidian-brief.png",
+            "title": "Obsidian Brief",
+            "description": "Terminal-based AI briefing tool that scans an Obsidian vault, displays its folder tree, summarizes notes with local AI models, and manages tasks in a distraction-free TUI.",
+            "tech_stack": ["Go", "Bubble Tea", "Ollama"],
+            "link": "Source Code",
+            "link_url": "https://github.com/swayam-rajput/obsidian-brief"
+            },
+        {
+            "img_src":"./projects/notion-brief.png",
+            "title":"Notion Brief",
+            "description":"TUI tool that extracts Notion page content, generates AI briefings, and manages daily tasks in a single interface.",
+            "tech_stack":["Go", "Ollama"],
+            "link":"Source Code",
+            "link_url":"https://github.com/swayam-rajput/notion-brief"
+
+        },
+        {
             "img_src": "./projects/sloppy.png",
             "title": "Sloppy",
             "description": "An AI text detection system that classifies a piece of text as human-written or AI-generated using a fine-tuned BERT model trained on synthetic and human text datasets.",
@@ -44,15 +61,6 @@
             ],
             "link": "Source Code",
             "link_url": "https://github.com/swayam-rajput/sloppy"
-        },
-        {
-            "img_src":"./projects/notion-brief.png",
-            "title":"Notion Brief",
-            "description":"TUI tool that extracts Notion page content, generates AI briefings, and manages daily tasks in a single interface.",
-            "tech_stack":["Go", "Ollama"],
-            "link":"Source Code",
-            "link_url":"https://github.com/swayam-rajput/notion-brief"
-
         },
         {
             "img_src":"./projects/lura.png",
