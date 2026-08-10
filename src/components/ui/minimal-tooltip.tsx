@@ -27,7 +27,7 @@ export const MinimalTooltip = ({ children, text, position = "top", className = "
       {children}
       
       <div
-        className={`absolute ${positions[position]} px-2.5 py-1.5 dark:bg-zinc-600/40 bg-zinc-100 text-black dark:text-white text-xs border border-input font-medium rounded-md whitespace-nowrap pointer-events-none transition-all duration-100 ease-out z-50 ${className} ${
+        className={`absolute ${positions[position]} px-2.5 py-1.5 dark:bg-zinc-600/40 bg-zinc-100 text-black dark:text-white text-xs border border-input font-medium rounded-md whitespace-nowrap pointer-events-none transition-all duration-100 ease-out -z-50 ${className} ${
           isVisible 
             ? 'opacity-100' 
             : 'opacity-0'
