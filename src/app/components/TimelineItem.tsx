@@ -91,7 +91,7 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                         }}
                         className="overflow-hidden"
                     >
-                        <div className="pt-2">
+                        <div>
                             {description && (
                                 <ul className="ml-4 opacity-50 list-outside list-disc">
                                     {description.map((desc, i) => (
@@ -102,10 +102,10 @@ const TimelineItem = ({ name,href,title,logo,start,end,description,links }:Prop)
                                 </ul>
                             )}
                             {links && links.length > 0 && (
-                                <div className="mt-3 flex flex-row flex-wrap items-start gap-2 pb-1" onClick={(e) => e.stopPropagation()}>
+                                <div className=" flex flex-row flex-wrap items-start gap-2 pb-1" onClick={(e) => e.stopPropagation()}>
                                 {links?.map((link, idx) => (
                                     <Link href={link.href} target="_blank" key={idx} className="flex">
-                                        <Button className="dark:text-white text-black shadow-sm h-7 text-xs hover:bg-zinc-200 dark:hover:bg-zinc-200 bg-transparent dark:hover:bg-accent border dark:border-zinc-800 border-zinc-200" variant={"default"} size={"sm"}>
+                                        <Button className="shadow-sm h-7 text-xs  border " variant={"default"} size={"sm"}>
                                             {link.name}
                                         </Button>
                                     </Link>
