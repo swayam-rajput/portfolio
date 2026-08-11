@@ -2,6 +2,7 @@
 'use client'
 import AnimationWrapper from "@/components/ui/animwrapper";
 import { Button } from "@/components/ui/button";
+import { PhoneIcon } from "@phosphor-icons/react";
 import { FormEvent,  useState } from "react";
 import React from 'react'
 
@@ -61,6 +62,10 @@ const page = () => {
                     </Button>
                 </div>
             </form>
+            {/* <Button variant={'outline'}  className="w-fit group">
+                Schedule a call <PhoneIcon
+                size={16} className="group-hover:-rotate-12 transition-transform"/>
+            </Button> */}
         </article>
     )
 }
