@@ -31,14 +31,23 @@ export const Navbar = () => {
     };
 
     const navitemstyle = 'flex relative px-2 py-1 flex-row opacity-80 active:opacity-100  hover:opacity-100 cursor-pointer'
-    
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
     return (
         <>
         {catShown && <Cat/>}
 
             <header className="sticky top-0 w-full z-50 sm:pt-0">            
-                <div className="dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-none sm:-mx-6 -mx-4 px-4 
-                py-3 backdrop-blur-[18px]">
+                <div className={`dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-none sm:-mx-6 -mx-4 px-4 py-3 ${scrolled ? "backdrop-blur-[24px]" : "backdrop-blur-[8px]"}`}>
                     <nav  className="flex items-center justify-between " 
                         >
                     
