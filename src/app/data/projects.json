@@ -1,5 +1,13 @@
 [
         {
+            "img_src":"./projects/tbd.png",
+            "title":"TBD",
+            "description":"A local-first personal knowledge base that imports AI conversations, generates embeddings for semantic search, and uses RAG to provide citation-backed answers from your conversation history.",
+            "tech_stack":["Next.js","TypeScript","Prisma","SQLite","LanceDB","Ollama","Tailwind CSS"],
+            "link":"IN PRODUCTION",
+            "link_url":""
+        },
+        {
             "img_src":"./projects/elk.png",
             "title":"Elk",
             "description":"A local-first password manager that securely stores credentials in an AES-256-GCM encrypted vault, with optional GitHub synchronization, import/export, and a terminal-based interface.",
