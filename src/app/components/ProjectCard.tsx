@@ -28,7 +28,7 @@ export const ProjectCard = ({
                         <div key={index} className="dark:bg-zinc-700 duration-150 bg-zinc-300/70 px-2 py-1 shadow opacity-80 hover:opacity-100  text-xs scale-95 rounded-[2px] cursor-default">{tag}</div>
                     ))}
                 </div>
-                <div className="link">
+                <div data-cuelume-press='release' className="link">
                     {/* add a github link for the project */}
                     
                     {

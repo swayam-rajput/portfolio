@@ -61,7 +61,7 @@ export default function Home() {
 
                                         <LinkPreview  className="flex flex-row rounded-sm border border-border"  isStatic imageSrc="/resume.png" url="https://drive.google.com/file/d/15TDS1Isfa2dY03CRT1Cp98Tb9G8F24_e/view?usp=sharing">
                                             {/* <Link href= target="_blank" rel="noopener noreferrer"> */}
-                                            <Button variant={'outline'}  className="bg-transparent shadow-md hover:shadow  group ">
+                                            <Button  data-cuelume-hover='tick' variant={'outline'}  className="bg-transparent shadow-md hover:shadow  group ">
                                             {/* <span className="relative flex h-[1.2em] flex-col overflow-hidden">
                                                 <span className="transition-transform duration-300 group-hover:-translate-y-full">
                                                     Resume
@@ -88,7 +88,7 @@ export default function Home() {
                         </div>
                     </div>
                     {/* <section className="custom-scrollbar overflow-x-hidden text-muted-foreground w-full"> */}
-                    <GithubStats username="swayam-rajput" ></GithubStats>
+                    {/* <GithubStats username="swayam-rajput" ></GithubStats> */}
                     {/* </section> */}
 
                     <div className="">

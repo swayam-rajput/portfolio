@@ -61,7 +61,7 @@ export const Navbar = () => {
                                         opacity: hoverStyle.opacity
                                     }}
                                 /> */}
-                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
+                            <HighlightItem data-cuelume-press='release' activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
                                 <Link href={'/'}  className={navitemstyle}>
                                     <div className="flex relative h-6 flex-col overflow-hidden">
                                         <div className="transition-transform duration-300 group-hover:-translate-y-full">
@@ -74,7 +74,7 @@ export const Navbar = () => {
                                 </Link>
                             </HighlightItem>
 
-                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
+                            <HighlightItem data-cuelume-press='release' activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
                                 <Link href={'/projects'}  className={navitemstyle}>
                                     <div className="flex relative h-6 flex-col overflow-hidden">
                                         <div className="transition-transform duration-300 group-hover:-translate-y-full">
@@ -87,7 +87,7 @@ export const Navbar = () => {
                                 </Link>
                             </HighlightItem>
 
-                            <HighlightItem activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
+                            <HighlightItem data-cuelume-press='release' activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
                                 <Link href={'/contact'}  className={navitemstyle}>
                                     <div className="flex relative h-6 flex-col overflow-hidden">
                                         <div className="transition-transform duration-300 group-hover:-translate-y-full">
@@ -121,9 +121,9 @@ export const Navbar = () => {
                                 </svg>
                             </button> */}
 
-                            <AnimatedThemeToggler className="transition dark:hover:bg-zinc-600/40 hover:bg-zinc-300/60 rounded-full hover:text-accent-foreground duration-200 size-8 justify-center items-center flex cursor-default "/>
+                            <AnimatedThemeToggler data-cuelume-press='toggle' className="transition dark:hover:bg-zinc-600/40 hover:bg-zinc-300/60 rounded-full hover:text-accent-foreground duration-200 size-8 justify-center items-center flex cursor-default "/>
                                 
-                            <button onClick={()=>{setCatShown(prev=>!prev)}} className="transition  hover:text-accent-foreground duration-200 rounded-sm px-1 py-2">
+                            <button data-cuelume-press='pulse' onClick={()=>{setCatShown(prev=>!prev)}} className="transition  hover:text-accent-foreground duration-200 rounded-sm px-1 py-2">
                                 
                                 <svg width="28"  height="28" className={` stroke-current ${!catShown?'opacity-80':''}`} viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier">
