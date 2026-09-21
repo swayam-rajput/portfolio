@@ -8,9 +8,9 @@ type Props = {
 const StackDiv = ({title,children,isHidden}:Props) =>{
     
     return(
-        <div  className={`flex flex-col mb-2 gap-y-3 ${isHidden && 'hidden'} `}>
+        <div  className={`flex flex-col mb-0 gap-y-0 ${isHidden && 'hidden'} `}>
             <h2 className='text-zinc-500'>{title}</h2>
-            <div className="flex sm:gap-x-4 sm:gap-y-8 gap-y-6 flex-wrap">
+            <div className="flex sm:gap-x-2 sm:gap-y-1 gap-y-0 flex-wrap">
                 {children}
             </div>
         </div>
