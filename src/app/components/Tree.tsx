@@ -61,8 +61,12 @@ const SpawnedLeaf = ({
 }
 
 const AmbientLeaf = ({ delay }: { delay: number }) => {
-    const [config] = useState(() => makeLeafConfig(0, 0, 0))
+    const [config, setConfig] = useState<ReturnType<typeof makeLeafConfig> | null>(null)
+    useEffect(() => {
+        setConfig(makeLeafConfig(0, 0, 0))
+    }, [])
 
+    if (!config) return null
     return (
         <motion.div
             initial={{ x: config.xKeyframes[0], y: 5, opacity: 0, rotate: 0 }}
@@ -96,16 +100,11 @@ type SpawnedLeafData = { id: number; originX: number; originY: number; windDirX:
 
 export const Tree = () => {
     const treeRef = useRef<HTMLDivElement>(null)
-    const hoverIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
-    const lastMouseXRef = useRef(0)
-    const prevMouseXRef = useRef(0)
     const nextId = useRef(0)
 
     const [spawnedLeaves, setSpawnedLeaves] = useState<SpawnedLeafData[]>([])
-    const [isHovered, setIsHovered] = useState(false)
     const [isPressed, setIsPressed] = useState(false)
-    const [tiltX, setTiltX] = useState(0) // for x-axis rotation on hover
-
+    
     const ambientLeaves = Array.from({ length: 8 }, (_, i) => i)
 
     const getSpawnOrigin = useCallback(() => {
@@ -127,36 +126,6 @@ export const Tree = () => {
         setSpawnedLeaves(prev => prev.filter(l => l.id !== id))
     }, [])
 
-    // Hover: start trickling leaves + tilt
-    const handleMouseEnter = useCallback(() => {
-        setIsHovered(true)
-        hoverIntervalRef.current = setInterval(() => {
-            const windDir = (lastMouseXRef.current - prevMouseXRef.current) > 0 ? 1 : -1
-            spawnLeaf(windDir * 0.3)
-        }, 350)
-    }, [spawnLeaf])
-
-    const handleMouseMove = useCallback((e: React.MouseEvent) => {
-        const rect = treeRef.current?.getBoundingClientRect()
-        if (!rect) return
-        prevMouseXRef.current = lastMouseXRef.current
-        lastMouseXRef.current = e.clientX
-
-        // Tilt: map cursor X across tree width to -15..15deg rotation on Y axis
-        // (gives the "rotating on X axis" leaning effect)
-        const relX = (e.clientX - rect.left) / rect.width // 0..1
-        const tilt = (relX - 0.5) * 30 // -15..15
-        setTiltX(tilt)
-    }, [])
-
-    const handleMouseLeave = useCallback(() => {
-        setIsHovered(false)
-        setTiltX(0)
-        if (hoverIntervalRef.current) {
-            clearInterval(hoverIntervalRef.current)
-            hoverIntervalRef.current = null
-        }
-    }, [])
 
     // Click: burst of wind-blown leaves + contract from top
     const handlePointerDown = useCallback((e: React.PointerEvent) => {
@@ -179,14 +148,10 @@ export const Tree = () => {
         setIsPressed(false)
     }, [])
 
-    useEffect(() => {
-        return () => {
-            if (hoverIntervalRef.current) clearInterval(hoverIntervalRef.current)
-        }
-    }, [])
+
 
     return (
-        <motion.div data-cuelume-press='close'
+        <motion.div data-cuelume-press='count' data-cuelume-theme='mech' data-cuelume-emphasis='subtle'
             ref={treeRef}
             className="relative select-none"
             style={{
@@ -196,15 +161,10 @@ export const Tree = () => {
                 transformOrigin: 'bottom center',
                 perspective: 200,
             }}
-            onMouseEnter={handleMouseEnter}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
             onPointerDown={handlePointerDown}
             onPointerUp={handlePointerUp}
             onPointerLeave={handlePointerUp}
             animate={{
-                // Tilt on Y axis gives the "rotate on X" leaning feel
-                rotateY: isHovered ? tiltX : 0,
                 // Contract from top on press: scaleY from top origin
                 scaleY: isPressed ? 0.92 : 1,
                 scaleX: isPressed ? 1.04 : 1,
