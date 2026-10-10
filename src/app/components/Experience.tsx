@@ -27,22 +27,22 @@ const Experience = () => {
         aria-orientation="horizontal"
         className={`mb-2 grid w-full grid-cols-2 items-center justify-center rounded-lg bg-muted/90 p-1 text-muted-foreground dark:bg-muted/30 `}
       >
-        <Button
+        <Button data-cuelume-press='count' data-cuelume-emphasis='subtle' data-cuelume-theme='mech'
           variant="radio"
           aria-selected={activeTab === 'work'}
           data-state={activeTab === 'work' ? 'active' : 'inactive'}
           onClick={() => switchTab('work')}
-          className=" font-medium overflow-hidden  dark:data-[state=active]:bg-muted  opacity-100 rounded-lg transition-all duration-200 ease-linear"
+          className=" font-medium overflow-hidden  dark:data-[state=active]:bg-muted  opacity-100 rounded-lg transition-all duration-50 ease-linear"
         >
           Work
         </Button>
 
-        <Button
+        <Button data-cuelume-press='count' data-cuelume-emphasis='subtle' data-cuelume-theme='mech'
           variant="radio"
           aria-selected={activeTab === 'education'}
           data-state={activeTab === 'education' ? 'active' : 'inactive'}
           onClick={() => switchTab('education')}
-          className=" font-medium overflow-hidden   dark:data-[state=active]:bg-muted  opacity-100 rounded-lg transition-all duration-200 ease-linear"
+          className=" font-medium overflow-hidden   dark:data-[state=active]:bg-muted  opacity-100 rounded-lg transition-all duration-50 ease-linear"
         >
           Education
         </Button>
@@ -50,7 +50,7 @@ const Experience = () => {
 
       <div
         className={`
-          transition-all sm:duration-50 duration-200 overflow-hidden ease-out
+          transition-all sm:duration-50 duration-150 overflow-hidden ease-out
           ${isAnimating
             ? 'opacity-0 scale-95 blur-sm'
             : 'opacity-100 scale-100 blur-0'}

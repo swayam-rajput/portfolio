@@ -5,7 +5,7 @@ import { bind, setVolume } from 'cuelume';
 export default function Template({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     bind();
-    setVolume(0.2);
+    setVolume(0.4);
     
   }, []);
   return <AnimationWrapper>{children}</AnimationWrapper>;
