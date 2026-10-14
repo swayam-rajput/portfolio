@@ -121,7 +121,7 @@ export const Navbar = () => {
                                 </svg>
                             </button> */}
 
-                            <AnimatedThemeToggler data-cuelume-press='select' data-cuelume-theme='mech' className="transition dark:hover:bg-zinc-600/40 hover:bg-zinc-300/60 rounded-full hover:text-accent-foreground duration-200 size-8 justify-center items-center flex cursor-default "/>
+                            <AnimatedThemeToggler data-cuelume-toggle='toggle' data-cuelume-theme='press' className="transition dark:hover:bg-zinc-600/40 hover:bg-zinc-300/60 rounded-full hover:text-accent-foreground duration-200 size-8 justify-center items-center flex cursor-default "/>
                                 
                             <button data-cuelume-press='pulse' onClick={()=>{setCatShown(prev=>!prev)}} className="transition  hover:text-accent-foreground duration-200 rounded-sm px-1 py-2">
                                 
