@@ -77,7 +77,7 @@ export default function RootLayout({
         </head>
         
             <body
-            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center  border-r border-l border-double cursor-default border-neutral-200 dark:border-neutral-800 px-4 pb-8 sm:px-6 ${geistmono.variable} ${outfit.variable} font-outfit text-[16px] tracking-[-0.0em] leading-[1.62] font-medium `}>
+            className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center  border-r border-l border-double cursor-default border-neutral-200 dark:border-neutral-800 px-4 pb-8 sm:px-6 ${geistmono.variable} ${outfit.variable} font-outfit text-[16px] tracking-[-0.02em] leading-[1.62] font-medium `}>
             <ThemeProvider
                 attribute="class"
                 defaultTheme="dark"
