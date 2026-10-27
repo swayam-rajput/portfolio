@@ -133,6 +133,16 @@
     width: 4px;
 
   }
+
+  
+.font-geist-pixel {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ELSH" 0;
+}
   ::selection {
     background: rgba(45, 108, 223, 0.21);
   }
@@ -145,7 +155,7 @@
 
   }
     .animate-underline {
-    --top: 100%;
+    --top: 98%;
     display: inline;
     text-decoration: none;
 

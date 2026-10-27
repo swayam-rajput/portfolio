@@ -45,7 +45,7 @@ export default function Home() {
                                     
                                 {/* <div className="flex flex-row-reverse items-end gap-5"> */}
 
-                                    <div className="">
+                                    <div className="font-geist-pixel">
                                         <h1 className="text-xl font-medium max-w-fit cursor-default  animate-underline">Swayam Rajput</h1>
 
                                         <div className=" w-fit text-gray-500 text-center flex gap-1 cursor-default text-background ">
@@ -88,7 +88,6 @@ export default function Home() {
                         </div>
                     </div>
                     {/* <section className="custom-scrollbar overflow-x-hidden text-muted-foreground w-full"> */}
-                    {/* <GithubStats username="swayam-rajput" ></GithubStats> */}
                     {/* </section> */}
 
                     <div className="">
@@ -116,7 +115,7 @@ export default function Home() {
                                 <Projects limit={2}/>
                             {/* </div> */}
                     </div>
-                    <div className="flex gap-6 z-0 sm:mx-0 mx-2 flex-col">
+                    <div className="flex gap-6 mb-4 z-0 sm:mx-0 mx-2 flex-col">
                         <span className="flex gap-2 flex-row items-center">
                             
                             <span className=" font-medium flex items-center text-xl">Tech Stack </span>    
@@ -126,23 +125,25 @@ export default function Home() {
                         {/* Simplify tech stack div to show it in text also, easy to copy */}
                         
                     </div>
+                    <GithubStats username="swayam-rajput" />
 
 {/*                     
                     <div className="flex flex-col mt-2 px-2 gap-6">
-                        <div className="flex group flex-row items-center ">
-                            <Link href={'/certifications'} className="flex w-full justify-between group gap-4">
-                                <div className="flex items-center justify-between  gap-2">
-                                    <p className="text-2xl opacity-80  scale-90 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><FileCode2Icon strokeWidth={1.5}/></p>
-                                    <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70 font-spacegrotesk">Certifications</p>
-                                </div>
-                                <p className="group-hover:translate-x-1.5 translate-y-0.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight/></p>
-                                
-                            </Link>
-                        </div>
-                        <Certificate showImage={false} limit={2}/>
+                    <div className="flex group flex-row items-center ">
+                    <Link href={'/certifications'} className="flex w-full justify-between group gap-4">
+                    <div className="flex items-center justify-between  gap-2">
+                    <p className="text-2xl opacity-80  scale-90 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><FileCode2Icon strokeWidth={1.5}/></p>
+                    <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70 font-spacegrotesk">Certifications</p>
+                    </div>
+                    <p className="group-hover:translate-x-1.5 translate-y-0.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight/></p>
+                    
+                    </Link>
+                    </div>
+                    <Certificate showImage={false} limit={2}/>
                     </div> */}
+
                 </section>
         </main>
     );
-        
+    
 }

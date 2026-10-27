@@ -72,7 +72,8 @@ export default function RootLayout({
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet"></link>
-            
+            <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap" rel="stylesheet"/>
+
 
         </head>
         
