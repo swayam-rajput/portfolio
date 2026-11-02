@@ -24,6 +24,20 @@
             "link_url":"https://linkun.vercel.app"
         },
         {
+            "img_src": "./projects/recallx.png",
+            "title": "RecallX",
+            "description": "A local-first CLI tool that archives X bookmarks and likes, with substring-based search, highlighted results, regex and LLM-powered classification, analytics, and data export.",
+            "tech_stack": [
+                "TypeScript",
+                "Node.js",
+                "SQLite",
+                "FTS5",
+                "Ollama"
+            ],
+            "link": "Source Code",
+            "link_url": "https://github.com/swayam-rajput/recallx"
+        },
+        {
             "img_src":"./projects/soko.png",
             "title":"Soko",
             "description":"Agentic RAG-based intelligent file system built with LangGraph for semantic search, deduplication, and question answering.",
