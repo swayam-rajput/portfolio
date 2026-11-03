@@ -6,24 +6,16 @@ import { SunIcon } from "@/components/ui/sun";
 import { MoonIcon } from "@/components/ui/moon";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { Highlight, HighlightItem } from "@/components/ui/highlight";
+import { usePathname } from "next/navigation";
 export const Navbar = () => {
     const [hoverStyle, setHoverStyle] = useState({ left: 0, width: 0, opacity: 0 });
     const navRef = useRef<HTMLUListElement>(null);
     const [catShown, setCatShown] = useState(false)
 
-
-    const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
-        const nav = navRef.current;
-        const target = e.currentTarget;
-        if (nav && target) {
-            const navRect = nav.getBoundingClientRect();
-            const itemRect = target.getBoundingClientRect();
-            setHoverStyle({
-                left: itemRect.left - navRect.left,
-                width: itemRect.width,
-                opacity: 1
-            });
-        }
+    const pathname = usePathname();
+    const isActive = (href: string) => {
+        if (href === "/") return pathname === "/";
+        return pathname === href || pathname.startsWith(`${href}/`);
     };
 
     const handleMouseLeave = () => {
@@ -51,60 +43,43 @@ export const Navbar = () => {
                     <nav  className="flex items-center justify-between " 
                         >
                     
-                        <Highlight hover  containerClassName="flex text-sm sm:text-base flex-row gap-3 md:gap-4" mode="parent" controlledItems
-                            >
-                                {/* <div
-                                    className="absolute py-4 shadow -z-20 top-1/2 -translate-y-1/2 h-7 sm:h-9 rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60 transition-all duration-200"
-                                    style={{
-                                        left: hoverStyle.left,
-                                        width: hoverStyle.width,
-                                        opacity: hoverStyle.opacity
-                                    }}
-                                /> */}
-                            <HighlightItem data-cuelume-press='select' activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
-                                <Link href={'/'}  className={navitemstyle}>
-                                    <div className="flex relative h-6 flex-col overflow-hidden">
-                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
-                                            home
-                                        </div>
-                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
-                                            home
-                                        </div>
-                                    </div>
-                                </Link>
-                            </HighlightItem>
+                    <Highlight
+                            hover 
+                            containerClassName="flex text-sm sm:text-base flex-row gap-3 md:gap-4"
+                            mode="parent"
+                            controlledItems
+                        >
+                            {[
+                                { href: "/", label: "home" },
+                                { href: "/projects", label: "projects" },
+                                { href: "/contact", label: "contact" },
+                            ].map(({ href, label }) => {
+                                const active = isActive(href);
 
-                            <HighlightItem data-cuelume-press='select' activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
-                                <Link href={'/projects'}  className={navitemstyle}>
-                                    <div className="flex relative h-6 flex-col overflow-hidden">
-                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
-                                            projects
-                                        </div>
-                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
-                                            projects
-                                        </div>
-                                    </div>
-                                </Link>
-                            </HighlightItem>
-
-                            <HighlightItem data-cuelume-press='select' activeClassName="rounded-sm dark:bg-zinc-600/40 bg-zinc-300/60" className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5 group">
-                                <Link href={'/contact'}  className={navitemstyle}>
-                                    <div className="flex relative h-6 flex-col overflow-hidden">
-                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
-                                            contact
-                                        </div>
-                                        <div className="transition-transform duration-300 group-hover:-translate-y-full">
-                                            contact
-                                        </div>
-                                    </div>
-                                    
-                                </Link>
-                            </HighlightItem>
-                            {/* <li className="sm:px-1 transition sm:opacity-80 opacity-60 hover:opacity-100 px-0.5" onMouseEnter={handleMouseEnter}>
-                                <Link href={'/contact'}  className={navitemstyle}>
-                                    contact
-                                </Link>
-                            </li> */}
+                                return (
+                                    <HighlightItem
+                                        key={href}
+                                        data-cuelume-press="select"
+                                        activeClassName="dark:bg-zinc-600/20 bg-zinc-300/60"
+                                        className={`sm:px-1 transition px-0.5 group ${
+                                            active
+                                                ? "opacity-100 " + {navitemstyle}
+                                                : "sm:opacity-60 opacity-60 hover:opacity-100"
+                                        }`}
+                                    >
+                                        <Link href={href} className={navitemstyle}>
+                                            <div className="flex relative h-6 flex-col overflow-hidden">
+                                                <div className="opacity-100">
+                                                    {label}
+                                                </div>
+                                                {/* <div className="transition-transform duration-300 group-hover:-translate-y-full">
+                                                    {label}
+                                                </div> */}
+                                            </div>
+                                        </Link>
+                                    </HighlightItem>
+                                );
+                            })}
                         </Highlight>
                         <div onMouseLeave={handleMouseLeave} className="flex justify-center items-center flex-row-reverse gap-2 ">
                             {/* <button onClick={toggleMode} onMouseEnter={handleMouseEnter} className="transition  hover:text-accent-foreground duration-300 rounded-sm px-2 py-2">
