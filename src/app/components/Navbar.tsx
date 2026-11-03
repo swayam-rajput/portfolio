@@ -38,14 +38,14 @@ export const Navbar = () => {
         <>
         {catShown && <Cat/>}
 
-            <header className="sticky top-0 w-full z-50 sm:pt-0">            
+            <header className="sticky top-0 w-full z-50 sm:pt-0">
                 <div className={`dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-none sm:-mx-6 -mx-4 px-4 py-3 ${scrolled ? "backdrop-blur-[24px]" : "backdrop-blur-[8px]"}`}>
-                    <nav  className="flex items-center justify-between " 
+                    <nav  className="flex items-center justify-between "
                         >
-                    
+
                     <Highlight
-                            hover 
-                            containerClassName="flex text-sm sm:text-base flex-row gap-3 md:gap-4"
+                            hover
+                            containerClassName="flex group text-sm sm:text-base flex-row gap-3 md:gap-4"
                             mode="parent"
                             controlledItems
                         >
@@ -60,14 +60,14 @@ export const Navbar = () => {
                                     <HighlightItem
                                         key={href}
                                         data-cuelume-press="select"
-                                        activeClassName="dark:bg-zinc-600/20 bg-zinc-300/60"
-                                        className={`sm:px-1 transition px-0.5 group ${
+                                        // activeClassName="dark:bg-zinc-600/20 bg-zinc-300/60"
+                                        className={`sm:px-1 transition px-0.5 ${
                                             active
-                                                ? "opacity-100 " + {navitemstyle}
-                                                : "sm:opacity-60 opacity-60 hover:opacity-100"
+                                                ? "opacity-100 "
+                                                : "sm:opacity-50 hover:opacity-100"
                                         }`}
                                     >
-                                        <Link href={href} className={navitemstyle}>
+                                        <Link href={href} className={navitemstyle + '  '}>
                                             <div className="flex relative h-6 flex-col overflow-hidden">
                                                 <div className="opacity-100">
                                                     {label}
@@ -91,15 +91,15 @@ export const Navbar = () => {
                                             </>)
                                         :
                                         (<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>)
-                                    
+
                                     }
                                 </svg>
                             </button> */}
 
                             <AnimatedThemeToggler data-cuelume-toggle='toggle' data-cuelume-theme='press' className="transition dark:hover:bg-zinc-600/40 hover:bg-zinc-300/60 rounded-full hover:text-accent-foreground duration-200 size-8 justify-center items-center flex cursor-default "/>
-                                
+
                             <button data-cuelume-press='pulse' onClick={()=>{setCatShown(prev=>!prev)}} className="transition  hover:text-accent-foreground duration-200 rounded-sm px-1 py-2">
-                                
+
                                 <svg width="28"  height="28" className={` stroke-current ${!catShown?'opacity-80':''}`} viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier">
                                         {
@@ -109,7 +109,7 @@ export const Navbar = () => {
                                             (<path d="M320 320 80 80"  strokeWidth={18}></path>)
 
                                         }
-                                        
+
                                         <path d="M104.841 145.759C84.3825 103.24 113.976 93.8934 138.062 126.769"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M278.45 125.67C310.018 85.9248 316.458 123.485 306.365 156.355"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M174.149 149.888C174.479 144.709 174.812 139.541 175.142 134.374"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M208.585 156.344C208.228 146.42 209.43 136.477 210.574 126.629"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M241.358 149.884C243.072 144.904 242.021 139.545 242.355 134.378"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M164.116 198.803C205.073 198.238 196.821 210.153 161.861 223.33"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M237.844 197.687C203.614 212.709 210.546 206.414 236.697 223.526"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M196.887 254.533C179.946 255.472 195.528 273.667 210.195 255.646"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M193.39 286.642C181.827 291.678 175.892 289.505 167.537 282.956"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M197.268 282.956C206.418 297.428 220.936 292.334 232.171 282.956"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M109.366 231.278C96.7847 231.121 76.1524 227.207 68 226.11"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M111.951 256.852C96.0698 257.608 82.1144 261.134 69.2927 267.182"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M333 214.223C316.165 216.03 302.204 220.205 289.049 228.707"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M331.965 262.448C318.367 258.875 304.68 258.572 290.599 258.572"  strokeOpacity="0.9" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round"></path> </g>
                                     </svg>
                             </button>
@@ -117,9 +117,8 @@ export const Navbar = () => {
                     </nav>
                 </div>
             </header>
-        
+
         </>
-        
+
     );
 }
-
