@@ -7,16 +7,9 @@ import { Socials } from "./components/Socials";
 import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
 import { GithubStats } from "./components/GithubStats";
-import { AnimatePresence, motion } from "framer-motion";
 import { Tree } from "./components/Tree";
-import Certificate from "./components/Certificate";
-import { ArrowRight , FileCode2Icon, Github, TerminalIcon } from "lucide-react";
-import AnimationWrapper from "@/components/ui/animwrapper";
+import { ArrowRight , TerminalIcon } from "lucide-react";
 import { LinkPreview } from "@/components/ui/link-preview";
-import { GitHubCalendar } from "react-github-calendar";
-import { useTheme } from "next-themes";
-import React from "react";
-import { CurrentLocalTimeItem } from "@/components/current-local-time";
 
 
 export default function Home() {
@@ -26,33 +19,33 @@ export default function Home() {
                 <div></div>
                 {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start"> */}
                 <section className="grow flex flex-col gap-8">
-                    <div className=" flex flex-col z-10 "> 
+                    <div className=" flex flex-col z-10 ">
                         {/* line above is the parent */}
                         <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
                             <div className="flex flex-col gap-1 mr-2">
-                        {/* <Image 
-                                alt="pfp" 
-                                fetchPriority="high" 
-                                width={120} 
-                                height={120} 
-                                className=" aspect-square md:translate-x-0 -translate-x-8 overflow-clip rounded-full shadow-md border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition object-cover" 
+                        {/* <Image
+                                alt="pfp"
+                                fetchPriority="high"
+                                width={120}
+                                height={120}
+                                className=" aspect-square md:translate-x-0 -translate-x-8 overflow-clip rounded-full shadow-md border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition object-cover"
                                 src="/pfp-nobg.png"
                             /> */}
                                 {/* need to add my photo when hovered over the name https://dribbble.com/shots/12909488-Clipped-Image-Reveal-on-Hover */}
                                 <div className="flex">
                                     <Tree />
                                 </div>
-                                    
+
                                 {/* <div className="flex flex-row-reverse items-end gap-5"> */}
 
                                     <div className="font-geist-pixel">
                                         <h1 className="text-xl font-medium max-w-fit cursor-default  animate-underline">Swayam Rajput</h1>
 
                                         <div className=" w-fit text-gray-500 text-center flex gap-1 cursor-default text-background ">
-                                            <p className="animate-underline">21</p> • 
-                                            <p className="animate-underline">programmer</p> • 
+                                            <p className="animate-underline">21</p> •
+                                            <p className="animate-underline">programmer</p> •
                                             <p className="animate-underline">designer</p>
-                                        </div>  
+                                        </div>
 
                                     </div>
                                 {/* </div> */}
@@ -80,7 +73,7 @@ export default function Home() {
                                         </Button>
                                         {/* </Link> */}
                                         </LinkPreview>
-                                    
+
                                         <Socials/>
                                 {/* <CurrentLocalTimeItem timeZone="Asia/Kolkata"/> */}
                                 </div>
@@ -92,7 +85,7 @@ export default function Home() {
 
                     <div className="">
                         <div className="flex flex-row pl-2 items-center gap-2.5">
-                            
+
                             <h1 className=" font-medium flex text-xl">Experience</h1>
 
                         </div>
@@ -102,13 +95,13 @@ export default function Home() {
                     {/* tab */}
                     <div className="flex flex-col mt-2 mb-6 md:px-0 px-2 gap-6">
                             <div className="flex flex-row items-center justify-between">
-                                <Link href={'/projects'} className="flex w-full group justify-between">                        
+                                <Link href={'/projects'} className="flex w-full group justify-between">
                                     <div className="  items-center flex  gap-3">
-                                        <p className="text-2xl opacity-80 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all font-bold"><TerminalIcon/></p> 
+                                        <p className="text-2xl opacity-80 group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all font-bold"><TerminalIcon/></p>
                                         <p className="text-lg opacity-80 group-hover:opacity-100 font-medium dark:opacity-100  transition-all  dark:group-hover:opacity-70"> Proof of Work</p>
                                     </div>
                                     <p className="group-hover:translate-x-1.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight /></p>
-                                    
+
                                 </Link>
                             </div>
                             {/* <div className="md:flex hidden"> */}
@@ -117,17 +110,17 @@ export default function Home() {
                     </div>
                     <div className="flex gap-6 mb-4 z-0 sm:mx-0 mx-2 flex-col">
                         <span className="flex gap-2 flex-row items-center">
-                            
-                            <span className=" font-medium flex items-center text-xl">Tech Stack </span>    
+
+                            <span className=" font-medium flex items-center text-xl">Tech Stack </span>
 
                         </span>
                         <TechStack/>
                         {/* Simplify tech stack div to show it in text also, easy to copy */}
-                        
+
                     </div>
                     <GithubStats username="swayam-rajput" />
 
-{/*                     
+{/*
                     <div className="flex flex-col mt-2 px-2 gap-6">
                     <div className="flex group flex-row items-center ">
                     <Link href={'/certifications'} className="flex w-full justify-between group gap-4">
@@ -136,7 +129,7 @@ export default function Home() {
                     <p className="text-lg opacity-80 group-hover:opacity-100 font-semibold dark:opacity-100  transition-all  dark:group-hover:opacity-70 font-spacegrotesk">Certifications</p>
                     </div>
                     <p className="group-hover:translate-x-1.5 translate-y-0.5 text-2xl opacity-80 scale-90  group-hover:opacity-85 dark:opacity-100 dark:group-hover:opacity-70 transition-all  "><ArrowRight/></p>
-                    
+
                     </Link>
                     </div>
                     <Certificate showImage={false} limit={2}/>
@@ -145,5 +138,5 @@ export default function Home() {
                 </section>
         </main>
     );
-    
+
 }
