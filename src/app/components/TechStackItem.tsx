@@ -15,26 +15,15 @@ export const TechStackItem = ({
     className = '',
 }: Props) => {
     return (
-        <div
-            className="
-                group
-                flex
-                h-12
-                w-fit
-                shrink-0
-                items-center
-                mt-1
-            "
-        >
+        <div className="group flex h-8 w-fit shrink-0 items-center mt-1">
+
             {/* Icon */}
             <div
                 className={`
-                    flex
-                    size-12
-                    shrink-0
-                    items-center
-                    justify-center
+                    flex size-8 shrink-0
+                    items-center justify-center
                     rounded-full
+                    [&_svg]:!size-6
                     ${className}
                 `}
             >
@@ -53,19 +42,12 @@ export const TechStackItem = ({
                 "
             >
                 <div className="overflow-hidden">
-                    <span
-                        className="
-                            text-xs
-                            block
-                            whitespace-nowrap
-                            pl-1
-                            pr-2
-                        "
-                    >
+                    <span className="block whitespace-nowrap pl-1 pr-2 text-sm">
                         {title}
                     </span>
                 </div>
             </div>
+
         </div>
     );
 };
