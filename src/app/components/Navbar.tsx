@@ -1,9 +1,7 @@
 'use client'
 import Link from "next/link";
-import { useState, useRef, useEffect, ReactElement } from "react";
+import { useState, useRef, useEffect } from "react";
 import Cat from "./Cat";
-import { SunIcon } from "@/components/ui/sun";
-import { MoonIcon } from "@/components/ui/moon";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { Highlight, HighlightItem } from "@/components/ui/highlight";
 import { usePathname } from "next/navigation";
