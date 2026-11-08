@@ -1,63 +1,36 @@
-import { Button } from "@/components/ui/button";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Timeline } from "./Timeline";
 import { useState } from "react";
 import career from "@/app/data/work.json";
 
 const Experience = () => {
-  const [activeTab, setTab] = useState<'work' | 'education'>('work');
-  const [data, setData] = useState(career.career);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const switchTab = (tab: 'work' | 'education') => {
-    if (tab === activeTab) return;
-
-    setIsAnimating(true);
-
-    setTimeout(() => {
-      setTab(tab);
-      setData(tab === 'work' ? career.career : career.education);
-      setIsAnimating(false);
-    }, 150);
-  };
+  const [activeTab, setActiveTab] = useState<'work' | 'education'>('work');
 
   return (
-    <div className="flex flex-col mx-1 mt-6  mb-6">
-      <div
-        role="tablist"
-        aria-orientation="horizontal"
-        className={`mb-2 grid w-full grid-cols-2 items-center justify-center rounded-lg bg-muted/90 p-1 text-muted-foreground dark:bg-muted/30 `}
+    <div className="flex flex-col mx-1 mt-6 mb-6">
+      <Tabs
+        defaultValue="work"
+        value={activeTab}
+        onValueChange={(value) => setActiveTab(value as 'work' | 'education')}
+        className="-z-0"
       >
-        <Button data-cuelume-press='count' data-cuelume-emphasis='subtle' data-cuelume-theme='mech'
-          variant="radio"
-          aria-selected={activeTab === 'work'}
-          data-state={activeTab === 'work' ? 'active' : 'inactive'}
-          onClick={() => switchTab('work')}
-          className=" font-medium overflow-hidden  dark:data-[state=active]:bg-muted  opacity-100 rounded-lg transition-all duration-50 ease-linear"
-        >
-          Work
-        </Button>
+        <TabsList variant="default" className="w-full mb-2 h-12 justify-center rounded-xl p-1 dark:bg-muted/50">
+          <TabsTrigger value="work" className="data-[state=active]:border-destructive hover:text-foreground data-[state=active]:text-foreground  dark:hover:text-foreground dark:data-[state=active]:text-foreground font-medium">
+            Work
+          </TabsTrigger>
+          <TabsTrigger value="education" className="data-[state=active]:border-destructive hover:text-foreground data-[state=active]:text-foreground  dark:hover:text-foreground dark:data-[state=active]:text-foreground font-medium">
+            Education
+          </TabsTrigger>
+        </TabsList>
 
-        <Button data-cuelume-press='count' data-cuelume-emphasis='subtle' data-cuelume-theme='mech'
-          variant="radio"
-          aria-selected={activeTab === 'education'}
-          data-state={activeTab === 'education' ? 'active' : 'inactive'}
-          onClick={() => switchTab('education')}
-          className=" font-medium overflow-hidden   dark:data-[state=active]:bg-muted  opacity-100 rounded-lg transition-all duration-50 ease-linear"
-        >
-          Education
-        </Button>
-      </div>
+        <TabsContent value="work">
+          <Timeline info={career.career} />
+        </TabsContent>
 
-      <div
-        className={`
-          transition-all sm:duration-50 duration-150 overflow-hidden ease-out
-          ${isAnimating
-            ? 'opacity-0 scale-95 blur-sm'
-            : 'opacity-100 scale-100 blur-0'}
-        `}
-      >
-        <Timeline info={data} />
-      </div>
+        <TabsContent value="education">
+          <Timeline info={career.education} />
+        </TabsContent>
+      </Tabs>
     </div>
   );
 };
