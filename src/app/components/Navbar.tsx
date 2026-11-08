@@ -50,7 +50,7 @@ export const Navbar = () => {
                             {[
                                 { href: "/", label: "home" },
                                 { href: "/projects", label: "projects" },
-                                { href: "/connect", label: "connect" },
+                                { href: "/contact", label: "contact" },
                             ].map(({ href, label }) => {
                                 const active = isActive(href);
 

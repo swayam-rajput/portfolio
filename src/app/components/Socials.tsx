@@ -11,7 +11,7 @@ export const Socials = () => {
             </a>
             </MinimalTooltip>
             <MinimalTooltip text="Email" position="bottom">
-             <a data-cuelume-hover='error' data-cuelume-emphasis='subtle' data-cuelume-theme='mech' href="connect" target="_blank" className="group-hover:opacity-40 hover:!opacity-100 transition text-muted-foreground opacity-60" rel="noopener noreferrer" title="Work Email"><span className="sr-only">Email</span>
+             <a data-cuelume-hover='error' data-cuelume-emphasis='subtle' data-cuelume-theme='mech' href="contact" target="_blank" className="group-hover:opacity-40 hover:!opacity-100 transition text-muted-foreground opacity-60" rel="noopener noreferrer" title="Work Email"><span className="sr-only">Email</span>
                 {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/svg:opacity-100 hover:stroke-red-600 transition-colors lucide size-5" aria-hidden="true"> <path d="M2 3.5H22V20.5H2V3.5Z" strokeLinejoin="round"></path><path d="M2 7L12 12L22 7"></path></svg>*/}
                 <svg className="group-hover/svg:opacity-100 hover:text-red-600 transition-colors " xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 2 24 24"><path d="M20 20H4v-2h16v2ZM4 18H2V6h2v12Zm18 0h-2V6h2v12Zm-8-4h-4v-2h4v2Zm-4-2H8v-2h2v2Zm6 0h-2v-2h2v2Zm-8-2H6V8h2v2Zm10 0h-2V8h2v2Zm2-4H4V4h16v2Z"/></svg>
             </a>
