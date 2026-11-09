@@ -14,11 +14,11 @@ const Experience = () => {
         onValueChange={(value) => setActiveTab(value as 'work' | 'education')}
         className="-z-0"
       >
-        <TabsList variant="default" className="w-full mb-2 h-12 justify-center rounded-xl p-1 dark:bg-muted/50">
-          <TabsTrigger value="work" className="data-[state=active]:border-destructive hover:text-foreground data-[state=active]:text-foreground  dark:hover:text-foreground dark:data-[state=active]:text-foreground font-medium">
+        <TabsList variant="default" className="w-full mb-2 h-12 justify-center rounded-xl p-1 dark:bg-muted/50" data-cuelume-press='error' data-cuelume-emphasis='subtle'>
+          <TabsTrigger value="work" className="data-[state=active]:border-destructive hover:text-foreground data-[state=active]:text-foreground  dark:hover:text-foreground dark:data-[state=active]:text-foreground font-medium" data-cuelume-press='error' data-cuelume-emphasis='subtle'>
             Work
           </TabsTrigger>
-          <TabsTrigger value="education" className="data-[state=active]:border-destructive hover:text-foreground data-[state=active]:text-foreground  dark:hover:text-foreground dark:data-[state=active]:text-foreground font-medium">
+          <TabsTrigger value="education" className="data-[state=active]:border-destructive hover:text-foreground data-[state=active]:text-foreground  dark:hover:text-foreground dark:data-[state=active]:text-foreground font-medium" data-cuelume-press='error' data-cuelume-emphasis='subtle'>
             Education
           </TabsTrigger>
         </TabsList>
