@@ -11,10 +11,10 @@ import { ReactLenis } from "@/lib/lenis";
 export const metadata: Metadata = {
     metadataBase: new URL("https://swayamrajput.vercel.app"),
     title: "Swayam Rajput | Porfolio",
-    description: "AI Engineer | SWE | Freelancer",
+    description: "AI Engineer | SWE",
     openGraph:{
         title: "Swayam Rajput",
-        description: "AI Engineer · Software Engineer · Freelancer",
+        description: "AI Engineer · Software Engineer",
         url: "https://swayamrajput.vercel.app",
         siteName: "Portfolio",
         images: [
@@ -25,12 +25,12 @@ export const metadata: Metadata = {
             },
         ],
         type: 'website',
-        
+
     },
     twitter: {
         card: "summary_large_image",
         title: "Swayam Rajput",
-        description: "AI Engineer · Software Engineer · Freelancer",
+        description: "AI Engineer · Software Engineer",
         images: ["/og-image.png"],
     },
 
@@ -59,9 +59,9 @@ export default function RootLayout({
     children,
     }: Readonly<{
     children: React.ReactNode;
-}>) 
+}>)
 {
-    
+
     return (
         <ReactLenis root>
         <html lang="en" suppressHydrationWarning>
@@ -76,7 +76,7 @@ export default function RootLayout({
 
 
         </head>
-        
+
             <body
             className={` antialiased mx-auto flex min-h-screen max-w-3xl flex-col justify-items-center  border-r border-l border-double cursor-default border-neutral-200 dark:border-neutral-800 px-4 pb-8 sm:px-6 ${geistmono.variable} ${outfit.variable} font-outfit text-[16px] tracking-[-0.02em] leading-[1.62] font-medium `}>
             <ThemeProvider
@@ -86,14 +86,14 @@ export default function RootLayout({
                 disableTransitionOnChange
             >
                 <Navbar  />
-                        {children}   
+                        {children}
 
                     <Analytics/>
                 <Footer/>
             </ThemeProvider>
                 <div className="fixed sm:flex hidden bottom-0 left-0 right-0 z-[101] h-20 w-full pointer-events-none opacity-100">
                     <div className="relative w-full h-full">
-                        
+
                         <div
                         className="absolute inset-0 opacity-100
                         [mask-image:linear-gradient(transparent_0%,black_25%,black_50%,transparent_60%)]
