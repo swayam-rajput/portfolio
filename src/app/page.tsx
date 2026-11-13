@@ -11,7 +11,7 @@ import { Tree } from "./components/Tree";
 import { ArrowRight , TerminalIcon } from "lucide-react";
 import { LinkPreview } from "@/components/ui/link-preview";
 
-
+const RESUME_URL = 'https://drive.google.com/file/d/1YsbPDLg731XVDFanJSHo9nsl-jPWvF3m/view?usp=drive_link';
 export default function Home() {
 
     return (
@@ -52,7 +52,7 @@ export default function Home() {
                                 {/* <div className="opacity-90 text-background"></div>   */}
                                 <div className="mt-8 flex items-center gap-10">
 
-                                        <LinkPreview  className="flex flex-row rounded-sm border border-border"  isStatic imageSrc="/resume.png" url="https://drive.google.com/file/d/15TDS1Isfa2dY03CRT1Cp98Tb9G8F24_e/view?usp=sharing">
+                                        <LinkPreview  className="flex flex-row rounded-sm border border-border"  isStatic imageSrc="/resume.png" url={RESUME_URL}>
                                             {/* <Link href= target="_blank" rel="noopener noreferrer"> */}
                                             <Button  data-cuelume-hover='tick' variant={'outline'}  className="bg-transparent shadow-md hover:shadow  group ">
                                             {/* <span className="relative flex h-[1.2em] flex-col overflow-hidden">
