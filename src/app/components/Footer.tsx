@@ -1,8 +1,7 @@
 import Link from "next/link"
 import { Socials } from "./Socials"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
-
+import { GlitchText } from "@/components/ui/glitch-text"
 const Footer = () => {
 
     return (
@@ -13,11 +12,11 @@ const Footer = () => {
                 <p>Designed by</p>
                 <span className="group relative flex h-5 flex-col overflow-hidden">
                     <span data-cuelume-hover='count' data-cuelume-theme='bubble'  className="transition-transform duration-300 group-hover:-translate-y-full">
-                        <p className="text-foreground font-medium">Swayam</p>
+                        <p className="text-foreground font-medium"><GlitchText mode="burst" >Swayam</GlitchText></p>
 
                     </span>
                     <span className="transition-transform duration-300 group-hover:-translate-y-full">
-                        <p className="text-foreground font-medium">Swayam</p>
+                        <p className="text-foreground font-medium"><GlitchText mode="hover" >Swayam</GlitchText></p>
 
                     </span>
                 </span>

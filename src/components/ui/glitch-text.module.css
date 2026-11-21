@@ -1,8 +1,8 @@
 .glitch {
   position: relative;
   display: inline-block;
-  --glitch-a: #ff2bd6;
-  --glitch-b: #00e5ff;
+  --glitch-a: #D26760;
+  --glitch-b: #75B09C;
   --glitch-blend: screen; /* use "multiply" on a light background */
 }
 
@@ -40,10 +40,10 @@
 
 @keyframes glitch-main {
   0%   { transform: translate(0, 0); }
-  20%  { transform: translate(-1px, 0) skewX(-2deg); }
-  40%  { transform: translate(1px, 1px); }
-  60%  { transform: translate(0, -1px) skewX(2deg); }
-  80%  { transform: translate(-1px, 1px); }
+  /*25%  { transform: translate(-1px, 0) skewX(-2deg); }*/
+  25%  { transform: translate(1px, 1px); }
+  50%  { transform: translate(0, -1px)  }
+  75%  { transform: translate(-1px, 1px); }
   100% { transform: translate(0, 0); }
 }
 
