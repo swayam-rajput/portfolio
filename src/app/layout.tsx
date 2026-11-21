@@ -3,12 +3,12 @@
 import type { Metadata } from "next";
 /* @ts-ignore */
 import "./globals.css";
-import {Geist, Geist_Mono, Outfit} from "next/font/google";
+import {Geist_Mono, Outfit} from "next/font/google";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import { ReactLenis } from "@/lib/lenis";
-import { KoiPond } from "./components/KoiPond";
+// import { KoiPond } from "./components/KoiPond";
 export const metadata: Metadata = {
     metadataBase: new URL("https://swayamrajput.vercel.app"),
     title: "Swayam Rajput | Porfolio",
@@ -48,10 +48,10 @@ const geistmono = Geist_Mono({
     variable: "--font-geistmono",
     weight: "400",
 });
-const geist = Geist({
-    variable: "--font-geist",
-    weight: ["400","500"]
-})
+// const geist = Geist({
+//     variable: "--font-geist",
+//     weight: ["400","500"]
+// })
 const outfit = Outfit({
     weight:"400",
     variable: "--font-outfit"
@@ -87,7 +87,7 @@ export default function RootLayout({
                 disableTransitionOnChange
             >
               <Navbar />
-              <KoiPond contentWidth={960} />
+              {/*<KoiPond contentWidth={960} />*/}
 
                         {children}
 
