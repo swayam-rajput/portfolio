@@ -1,11 +1,11 @@
 [
         {
-            "img_src":"./projects/tbd.png",
-            "title":"TBD",
-            "description":"A local-first personal knowledge base that imports AI conversations, generates embeddings for semantic search, and uses RAG to provide citation-backed answers from your conversation history.",
-            "tech_stack":["RAG","NextJS","TypeScript","Prisma","SQLite","LanceDB","Ollama"],
-            "link":"IN PRODUCTION",
-            "link_url":""
+            "img_src":"./projects/monomind.png",
+            "title":"Monomind",
+            "description":"A local-first personal knowledge base that imports AI conversations (ChatGPT exports), generates embeddings for semantic search, and uses RAG with citation-backed answers from your conversation history. Features anonymous multi-user isolation via UUID cookies — zero auth required.",
+            "tech_stack":["RAG","NextJS","TypeScript","Prisma", "PostgreSQL (Neon)","LanceDB","Ollama"],
+            "link":"Source Code",
+            "link_url":"https://github.com/swayam-rajput/monomind"
         },
         {
             "img_src":"./projects/elk.png",
@@ -116,7 +116,7 @@
             "link": "Visit Site",
             "link_url": "https://github.com/swayam-rajput/portfolio"
         },
-        
+
         {
             "img_src": "./projects/pomodoro.png",
             "title": "Pomodoro",
@@ -125,8 +125,7 @@
             "link": "Visit Site",
             "link_url": "https://swayam-rajput.github.io/pomodoro"
         }
-        
-        
-        
+
+
+
 ]
-    

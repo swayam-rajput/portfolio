@@ -8,6 +8,7 @@ import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import { ReactLenis } from "@/lib/lenis";
+import { KoiPond } from "./components/KoiPond";
 export const metadata: Metadata = {
     metadataBase: new URL("https://swayamrajput.vercel.app"),
     title: "Swayam Rajput | Porfolio",
@@ -85,7 +86,9 @@ export default function RootLayout({
                 enableSystem
                 disableTransitionOnChange
             >
-                <Navbar  />
+              <Navbar />
+              <KoiPond contentWidth={960} />
+
                         {children}
 
                     <Analytics/>
