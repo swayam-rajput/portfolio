@@ -133,7 +133,7 @@ export const LinkPreview = ({
                     src={isStatic ? imageSrc : src}
                     width={width}
                     height={height}
-                    className={cn("rounded-none",className)}
+                    className={cn("rounded-sm",className)}
                     alt="preview image"
                   />
                 </a>

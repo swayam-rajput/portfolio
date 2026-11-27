@@ -37,7 +37,7 @@ export const Navbar = () => {
         {catShown && <Cat/>}
 
             <header className="sticky top-0 w-full z-50 sm:pt-0">
-                <div className={`dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-none sm:-mx-6 -mx-4 px-4 py-3 ${scrolled ? "backdrop-blur-[24px]" : "backdrop-blur-[8px]"}`}>
+                <div className={`dark:bg-[#29292980]/25  bg-zinc-300/30 shadow-sm rounded-sm sm:-mx-6 -mx-4 px-4 py-3 ${scrolled ? "backdrop-blur-[24px]" : "backdrop-blur-[8px]"}`}>
                     <nav  className="flex items-center justify-between "
                         >
 

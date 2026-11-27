@@ -38,13 +38,13 @@ export default function Home() {
 
                                 {/* <div className="flex flex-row-reverse items-end gap-5"> */}
 
-                <div className="font-geist-pixel">
+                <div className="">
 
-                    <h1 className="text-xl font-medium max-w-fit cursor-default  animate-underline">
+                    <div className="text-xl  max-w-fit cursor-default  animate-underline">
                   <GlitchText  mode="burst" >
                       Swayam Rajput
                                       </GlitchText>
-                    </h1>
+                    </div>
 
                                         <div className=" w-fit text-gray-500 text-center flex gap-1 cursor-default text-background ">
                                             <p className="animate-underline">21</p> •
