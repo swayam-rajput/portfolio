@@ -38,7 +38,7 @@ function Tabs({ className, orientation = "horizontal", layoutId: customLayoutId,
 }
 
 const tabsListVariants = cva(
-    "rounded-xl p-[3px] group-data-horizontal/tabs:h-9 data-[variant=line]:rounded-none group/tabs-list text-muted-foreground inline-flex w-fit items-center justify-center group-data-[orientation=vertical]/tabs:h-fit group-data-[orientation=vertical]/tabs:flex-col relative",
+    "rounded-xl p-[3px] group-data-horizontal/tabs:h-9 data-[variant=line]:rounded-sm group/tabs-list text-muted-foreground inline-flex w-fit items-center justify-center group-data-[orientation=vertical]/tabs:h-fit group-data-[orientation=vertical]/tabs:flex-col relative",
   {
         variants: {
             variant: {
